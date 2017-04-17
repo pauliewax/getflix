@@ -4,7 +4,7 @@
 
 [Trello][trello]
 
-[trello]: https://trello.com/
+[trello]: https://trello.com/b/Pkp5ruxr/getflix-app
 [heroku]: https://www.heroku.com/
 
 ## Minimum Viable Product
