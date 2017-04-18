@@ -13,8 +13,8 @@
     "postinstall": "webpack"
   },
   "engines": {
-    "node": "4.1.1",
-    "npm": "2.1.x"
+    "node": "6.10.0",
+    "npm": "3.10.10"
   },
   "repository": {
     "type": "git",
