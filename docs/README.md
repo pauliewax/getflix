@@ -5,7 +5,7 @@
 [Trello][trello]
 
 [trello]: https://trello.com/b/Pkp5ruxr/getflix-app
-[heroku]: https://www.heroku.com/
+[heroku]: https://getflix-app.herokuapp.com/
 
 ## Minimum Viable Product
 GetFlix is a full-stack application built on RoR and React/Redux. Over two weeks of development, the Netflix-inspired web app will implement the following key features:
