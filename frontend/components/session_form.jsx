@@ -10,7 +10,7 @@ class SessionForm extends React.Component {
     super(props);
     this.state = { email: "", password: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleErrors = this.handleErrors.bind(this);
+    this.resetInput = this.resetInput.bind(this);
   }
 
   update(field) {
@@ -19,15 +19,21 @@ class SessionForm extends React.Component {
 		});
 	}
 
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     this.props.processForm({email: this.state.email, password: this.state.password})
       .then(() => this.props.router.push("/"));
   }
 
-  handleErrors() {
-    this.props.receiveErrors({});
+  componentWillReceiveProps(newProps) {
+    if (this.props.errors === newProps.errors) {
+      this.props.receiveErrors({});
+    }
   }
 
+  resetInput() {
+    this.setState({ email: "", password: "" });
+  }
 
   render() {
     const formType = this.props.formType;
@@ -36,7 +42,7 @@ class SessionForm extends React.Component {
     const otherForm = this.props.formType === "/login" ? "/signup" : "/login";
     const otherLinkText = formType === "/login" ? "New to Getflix? " : "Already a member? ";
     const otherFormText = this.props.formType === "/login" ? "Sign up now." : "Sign in now.";
-    const errors = this.props.errors.responseJSON != undefined ? this.props.errors.responseJSON.join(", ") : this.props.errors.responseText;
+    const errors = this.props.errors.responseJSON != undefined ? this.props.errors.responseJSON.join(", ") : undefined;
 
     let errorBox;
 
@@ -63,7 +69,7 @@ class SessionForm extends React.Component {
 
             <label className="otherForm">
               { otherLinkText }
-              <Link to={otherForm} onClick={this.handleErrors} className="otherLink">{otherFormText}</Link>
+              <Link to={otherForm} onClick={this.resetInput} className="otherLink">{otherFormText}</Link>
             </label>
           </form>
 
