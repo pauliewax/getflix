@@ -1,0 +1,32 @@
+.navBar {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  font-family: sans-serif;
+}
+
+.navBar img {
+  margin-left: 35px;
+}
+
+.navBar button {
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #e50914;
+  color: white;
+  border-radius: 2px;
+  margin-right: 35px;
+  width: 84px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+.navBar button:hover {
+  background-color: #f40612;
+}

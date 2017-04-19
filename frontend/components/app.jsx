@@ -3,7 +3,7 @@ import NavBar from './nav_bar';
 
 const App = ({children}) => (
   <div>
-    <NavBar />
+    <NavBar children={children} />
     {children}
   </div>
 );

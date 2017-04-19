@@ -41,3 +41,7 @@ q:before, q:after {
 blockquote, q {
   quotes: "" "";
 }
+
+button:hover {
+  cursor: pointer;
+}
