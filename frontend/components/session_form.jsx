@@ -42,7 +42,7 @@ class SessionForm extends React.Component {
     const otherForm = this.props.formType === "/login" ? "/signup" : "/login";
     const otherLinkText = formType === "/login" ? "New to Getflix? " : "Already a member? ";
     const otherFormText = this.props.formType === "/login" ? "Sign up now." : "Sign in now.";
-    const errors = Array.isArray(this.props.errors.responseJSON) ? this.props.errors.responseJSON.join(", ") : undefined;
+    const errors = this.props.errors.responseJSON !== undefined ? this.props.errors.responseJSON.join(", ") : undefined;
 
     let errorBox;
 
