@@ -16,8 +16,8 @@
   background-color: #f3f3f3;
 }
 .splashImg {
-  width: 100%;
-  overflow: hidden;
+  height: 100%;
+  // overflow: hidden;
 }
 
 .formWindow label {
@@ -58,6 +58,10 @@
   margin-bottom: 20px;
   font-size: 18px;
   color: white;
+}
+
+.submitBtn:hover {
+  cursor: pointer;
 }
 
 .otherForm {

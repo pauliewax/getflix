@@ -48,26 +48,25 @@ class SessionForm extends React.Component {
 
     return (
       <div className="sessionForm">
-        <section className="formWindow" >
 
-          <h1>{header}</h1>
-          {errorBox}
+          <form className="formWindow" onSubmit={this.handleSubmit} >
+            <h1>{header}</h1>
+            {errorBox}
+            <label> Email
+              <input type="text" onChange={this.update('email')} value={this.state.email} />
+            </label>
+            <label> Password
+              <input type="password" onChange={this.update('password')} value={this.state.password} />
+            </label>
 
-          <label> Email
-            <input type="text" onChange={this.update('email')} value={this.state.email} />
-          </label>
-          <label> Password
-            <input type="password" onChange={this.update('password')} value={this.state.password} />
-          </label>
+            <button className="submitBtn" >{ buttonText }</button>
 
-          <button className="submitBtn" onClick={this.handleSubmit}>{ buttonText }</button>
+            <label className="otherForm">
+              { otherLinkText }
+              <Link to={otherForm} onClick={this.handleErrors} className="otherLink">{otherFormText}</Link>
+            </label>
+          </form>
 
-          <label className="otherForm">
-            { otherLinkText }
-            <Link to={otherForm} onClick={this.handleErrors} className="otherLink">{otherFormText}</Link>
-          </label>
-
-        </section>
         <img className="splashImg" src="https://assets.nflxext.com/ffe/siteui/acquisition/login/login-the-crown_2-1500x1000.jpg" />
       </div>
     );

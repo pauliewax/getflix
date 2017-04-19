@@ -1,0 +1,43 @@
+.landing {
+  position: relative;
+  font-family: sans-serif;
+}
+
+.landing img {
+  // width: 100%;
+  overflow: hidden;
+
+}
+
+.landingBlock {
+  position: absolute;
+  top: 38%;
+  color: white;
+  margin: -50px 35px 0px 35px;
+}
+
+.landingBlock h2 {
+  font-size: 5.5vw;
+  font-weight: bold;
+  margin-bottom: 12px
+
+}
+
+.landingBlock p {
+  font-size: 1.85vw;
+  margin-bottom: 12px;
+}
+
+.landingBlock button {
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #e50914;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 2px;
+}
+
+.landingBlock button:hover {
+  cursor: pointer;
+  background-color: #f40612;
+}
