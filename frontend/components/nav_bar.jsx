@@ -27,7 +27,7 @@ class NavBar extends React.Component {
     return(
       <div>
         <nav className="navBar">
-          <img className="navLogo" src="https://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333" />
+          <img className="navLogo" onClick={()=>hashHistory.push("/")} src="https://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333" />
           { navButton }
         </nav>
       </div>

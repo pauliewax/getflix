@@ -1,12 +1,7 @@
 .landing {
   position: relative;
   font-family: sans-serif;
-}
-
-.landing img {
-  // width: 100%;
-  overflow: hidden;
-
+  background-color: red;
 }
 
 .landingBlock {
@@ -19,8 +14,7 @@
 .landingBlock h2 {
   font-size: 5.5vw;
   font-weight: bold;
-  margin-bottom: 12px
-
+  margin-bottom: 12px;
 }
 
 .landingBlock p {
