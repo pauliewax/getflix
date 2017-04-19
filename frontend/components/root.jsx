@@ -7,9 +7,10 @@ import SessionForm from './session_form';
 const Root = ({ store }) => (
   <Provider store={ store }>
     <Router history={ hashHistory } >
-      <Route path="/" component={ App } />
-      <Route path="/login" component={ SessionForm } />
-      <Route path="/signup" component={ SessionForm } />
+      <Route path="/" component={ App }>
+        <Route path="/login" component={ SessionForm } />
+        <Route path="/signup" component={ SessionForm } />
+      </Route>
     </Router>
   </Provider>
 );
