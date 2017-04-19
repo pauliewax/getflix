@@ -1,11 +1,14 @@
 import React from 'react';
 import NavBar from './nav_bar';
 
-const App = ({children}) => (
-  <div>
-    <NavBar children={children} />
-    {children}
-  </div>
-);
+const App = ({children, location}) => {
+  return(
+    <div>
+      <NavBar location={location} />
+      {children}
+    </div>
+
+  );
+};
 
 export default App;

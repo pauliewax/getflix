@@ -16,7 +16,9 @@ class NavBar extends React.Component {
   render() {
     let navButton;
 
-    if (this.props.loggedIn) {
+    if (!(this.props.formType === "/")) {
+      navButton = <div></div>;
+    } else if (this.props.loggedIn) {
       navButton = <button className="button" onClick={this.logout}>Log Out</button>;
     } else {
       navButton = <button className="button" onClick={()=>hashHistory.push("/login")}>Sign In</button>;
@@ -37,7 +39,7 @@ class NavBar extends React.Component {
 const mapStateToProps = (state, ownProps) => {
   return {
     loggedIn: state.session.currentUser ? true : false,
-    // formType: ownProps.location.pathname
+    formType: ownProps.location.pathname
   };
 };
 
