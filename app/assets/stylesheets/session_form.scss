@@ -1,0 +1,70 @@
+.sessionForm {
+  position: relative;
+  font-family: sans-serif;
+}
+.formWindow {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  margin-left: -230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 460px;
+  // height: 501px;
+  background-color: #f3f3f3;
+}
+.splashImg {
+  width: 100%;
+  overflow: hidden;
+}
+
+.formWindow label {
+  width: 380px;
+  font-size: 16px;
+  margin-bottom: 22px;
+}
+
+.formWindow label input {
+  height: 44px;
+  width: 380px;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.formWindow h1 {
+  width: 380px;
+  font-size: 32px;
+  margin-top: 22px;
+  margin-bottom: 20px;
+}
+
+.errorBox {
+  padding: 20px 10px;
+  width: 380px;
+  background-color: gray;
+  color: white;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.submitBtn {
+  width: 380px;
+  height: 50px;
+  background-color: rgb(229, 9, 20);
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: white;
+}
+
+.otherForm {
+  border-top: 1px solid gray;
+  padding-top: 20px;
+}
+
+.otherLink {
+  text-decoration: none;
+}

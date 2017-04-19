@@ -3,13 +3,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import { login, signup } from '../actions/session_actions';
+import { login, signup, receiveErrors } from '../actions/session_actions';
 
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { email: "", password: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleErrors = this.handleErrors.bind(this);
   }
 
   update(field) {
@@ -23,25 +24,52 @@ class SessionForm extends React.Component {
       .then(() => this.props.router.push("/"));
   }
 
+  handleErrors() {
+    this.props.receiveErrors({});
+  }
+
 
   render() {
-    const header = this.props.formType === "/login" ? "Log In!" : "Sign Up!";
+    const formType = this.props.formType;
+    const header = formType === "/login" ? "Sign In" : "Sign Up";
+    const buttonText = formType === "/login" ? "Sign In" : "Sign Up";
     const otherForm = this.props.formType === "/login" ? "/signup" : "/login";
-    const otherFormText = this.props.formType === "/login" ? "Sign Up instead!" : "Log In instead!";
-    const errors = this.props.errors.responseText === undefined ? "" : this.props.errors.responseJSON.join(", ");
+    const otherLinkText = formType === "/login" ? "New to Getflix? " : "Already a member? ";
+    const otherFormText = this.props.formType === "/login" ? "Sign up now." : "Sign in now.";
+    const errors = this.props.errors.responseJSON != undefined ? this.props.errors.responseJSON.join(", ") : this.props.errors.responseText;
+
+    let errorBox;
+
+    if (errors) {
+      errorBox = <detail className="errorBox" >{errors}</detail>;
+    } else {
+      errorBox = <detail></detail>;
+    }
+
     return (
-      <section>
-        <h1>{header}</h1>
-        <h2>{errors}</h2>
-        <h3> Enter Email: </h3>
-          <input type="text" onChange={this.update('email')} value={this.state.email} />
-        <h3> Enter Password: </h3>
-          <input type="password" onChange={this.update('password')} value={this.state.password} />
-        <br />
-        <button className="button" onClick={this.handleSubmit}>Submit</button>
-        <br />
-        <Link to={otherForm} className="otherform">{otherFormText}</Link>
-      </section>
+      <div className="sessionForm">
+        <section className="formWindow" >
+
+          <h1>{header}</h1>
+          {errorBox}
+
+          <label> Email
+            <input type="text" onChange={this.update('email')} value={this.state.email} />
+          </label>
+          <label> Password
+            <input type="password" onChange={this.update('password')} value={this.state.password} />
+          </label>
+
+          <button className="submitBtn" onClick={this.handleSubmit}>{ buttonText }</button>
+
+          <label className="otherForm">
+            { otherLinkText }
+            <Link to={otherForm} onClick={this.handleErrors} className="otherLink">{otherFormText}</Link>
+          </label>
+
+        </section>
+        <img className="splashImg" src="https://assets.nflxext.com/ffe/siteui/acquisition/login/login-the-crown_2-1500x1000.jpg" />
+      </div>
     );
   }
 
@@ -60,11 +88,13 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   const formAction = ownProps.location.pathname;
   if (formAction === '/login') {
       return {
-        processForm: (user) => (dispatch(login(user)))
+        processForm: (user) => (dispatch(login(user))),
+        receiveErrors: (errors) => (dispatch(receiveErrors(errors)))
       };
     } else {
       return {
-        processForm: (user) => (dispatch(signup(user)))
+        processForm: (user) => (dispatch(signup(user))),
+        receiveErrors: (errors) => (dispatch(receiveErrors(errors)))
       };
     }
 };
