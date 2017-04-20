@@ -1,8 +1,6 @@
 .navBar {
   display: flex;
   position: absolute;
-  top: 0;
-  left: 0;
   z-index: 1;
   justify-content: space-between;
   align-items: flex-start;
@@ -18,12 +16,20 @@
 
 .fixed {
   position: fixed;
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,0) );
+  margin-top: 0px;
+  padding-top: 18px;
+  height: 71px;
 }
 
 .navBar img {
   margin-left: 57px;
   cursor: pointer;
   width: 166px;
+}
+
+.fixed img {
+  width: 118px;
 }
 
 .navBar button {

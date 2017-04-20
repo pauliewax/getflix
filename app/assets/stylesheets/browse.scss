@@ -1,3 +1,8 @@
+.browser {
+  display: flex;
+  flex-direction: column;
+}
+
 .browse-splash {
   overflow: hidden;
   height: 762px;
@@ -12,7 +17,6 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  z-index: 1;
   top: 26%;
   left: 4%;
   width: 37%;

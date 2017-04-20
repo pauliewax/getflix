@@ -8,7 +8,7 @@ class Browse extends React.Component {
 
  render()  {
    return(
-     <div>
+     <div className="browser" >
        <section className="browse-splash">
          <img className="splash-bg" src="https://art-s.nflximg.net/ce088/9f320e03ceeb25b80f10cc180dc94aafd56ce088.webp" />
 
@@ -17,6 +17,11 @@ class Browse extends React.Component {
            <text>They look alike, they sound alike and they both hate Richard Nixon. These twins are bringing the high to low-key comedy.</text>
          </aside>
        </section>
+
+       <section>
+         <h1>I'M GONNA BE A VIDEO WHEN I GROW UP</h1>
+       </section>
+
      </div>
    );
  }
