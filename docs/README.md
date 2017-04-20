@@ -11,10 +11,11 @@
 GetFlix is a full-stack application built on RoR and React/Redux. Over two weeks of development, the Netflix-inspired web app will implement the following key features:
 
 - [ ] New account creation, login, and guest/demo log-in
+- [ ] Production README
 - [ ] Hosting on Heroku
 - [ ] Streaming video
-- [ ] Search
-- [ ] Categories
+- [ ] Search / Browse by Category
+- [ ] Adding reviews
 - [ ] Adding videos to Watch List
 
 
