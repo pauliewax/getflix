@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
     super(props);
     this.state = { email: "", password: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuest = this.handleGuest.bind(this);
     this.resetInput = this.resetInput.bind(this);
   }
 
@@ -18,6 +19,12 @@ class SessionForm extends React.Component {
 			[field]: e.currentTarget.value
 		});
 	}
+
+  handleGuest(e) {
+    e.preventDefault();
+    this.props.processForm({email: "guest", password: "password"})
+      .then(() => this.props.router.push("/"));
+  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -53,7 +60,7 @@ class SessionForm extends React.Component {
     let guestLogin = <div></div>;
 
     if (formType === "/login") {
-      guestLogin = <Link className="guestLogin" to="/" >Sign in as a guest?</Link>;
+      guestLogin = <Link className="guestLogin" onClick={this.handleGuest} to="/" >Sign in as a guest?</Link>;
     }
 
     return (

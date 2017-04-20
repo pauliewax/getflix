@@ -65,6 +65,10 @@
  margin-bottom: 19px;
 }
 
+.guestLogin:hover {
+  text-decoration: underline;
+}
+
 .otherForm {
   border-top: 1px solid #CCCCCC;
   padding-top: 20px;
@@ -72,4 +76,8 @@
 
 .otherLink {
   text-decoration: none;
+}
+
+.otherLink:hover {
+  text-decoration: underline;
 }
