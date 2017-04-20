@@ -6,7 +6,7 @@ class Api::SessionsController < ApplicationController
       log_in(@user)
       render :show
     else
-      render json: ["Sorry, we can't find an account with this email address/password combination."], status: 422
+      render json: ["Sorry, we can't find an account with this email address and password combination."], status: 422
     end
   end
 
