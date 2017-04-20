@@ -19,15 +19,23 @@ class NavBar extends React.Component {
     if (!(this.props.formType === "/")) {
       navButton = <div></div>;
     } else if (this.props.loggedIn) {
-      navButton = <button className="button" onClick={this.logout}>Log Out</button>;
+      navButton = <button onClick={this.logout}>Log Out</button>;
     } else {
-      navButton = <button className="button" onClick={()=>hashHistory.push("/login")}>Sign In</button>;
+      navButton = <button onClick={()=>hashHistory.push("/login")}>Sign In</button>;
+    }
+
+    let navPosition;
+
+    if (this.props.formType === "/browse") {
+      navPosition = "navBar fixed";
+    } else {
+      navPosition = "navBar absolute";
     }
 
     return(
       <div>
-        <nav className="navBar">
-          <img className="navLogo" onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
+        <nav className={ navPosition }>
+          <img onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
           { navButton }
         </nav>
       </div>

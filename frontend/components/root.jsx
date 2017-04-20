@@ -4,6 +4,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import SessionForm from './session_form';
 import Landing from './landing';
+import Browse from './browse';
 
 const Root = ({ store }) => (
   <Provider store={ store }>
@@ -12,6 +13,7 @@ const Root = ({ store }) => (
         <IndexRoute component={ Landing } />
         <Route path="/login" component={ SessionForm } />
         <Route path="/signup" component={ SessionForm } />
+        <Route path="/browse" component={ Browse } />
       </Route>
     </Router>
   </Provider>
