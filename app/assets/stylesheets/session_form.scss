@@ -42,7 +42,7 @@
 .errorBox {
   padding: 20px 10px;
   width: 380px;
-  background-color: gray;
+  background-color: #999999;
   color: white;
   box-sizing: border-box;
   margin-bottom: 20px;
@@ -58,8 +58,15 @@
   color: white;
 }
 
+.guestLogin {
+ width: 380px;
+ font-size: 14px;
+ text-decoration: none;
+ margin-bottom: 19px;
+}
+
 .otherForm {
-  border-top: 1px solid gray;
+  border-top: 1px solid #CCCCCC;
   padding-top: 20px;
 }
 

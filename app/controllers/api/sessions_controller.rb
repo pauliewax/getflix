@@ -6,7 +6,7 @@ class Api::SessionsController < ApplicationController
       log_in(@user)
       render :show
     else
-      render json: ["Invalid crendentials"], status: 422
+      render json: ["Sorry, we can't find an account with this email address/password combination."], status: 422
     end
   end
 
@@ -15,7 +15,7 @@ class Api::SessionsController < ApplicationController
       log_out!
       render json: {}
     else
-      render json: ["User not signed in"], status: 404
+      render json: ["Unable to sign out, not currently logged in"], status: 404
     end
   end
 end

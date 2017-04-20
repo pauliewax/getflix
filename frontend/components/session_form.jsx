@@ -44,12 +44,16 @@ class SessionForm extends React.Component {
     const otherFormText = this.props.formType === "/login" ? "Sign up now." : "Sign in now.";
     const errors = this.props.errors.responseJSON !== undefined ? this.props.errors.responseJSON.join(", ") : undefined;
 
-    let errorBox;
+    let errorBox = <detail></detail>;
 
     if (errors) {
       errorBox = <detail className="errorBox" >{errors}</detail>;
-    } else {
-      errorBox = <detail></detail>;
+    }
+
+    let guestLogin = <div></div>;
+
+    if (formType === "/login") {
+      guestLogin = <Link className="guestLogin" to="/" >Sign in as a guest?</Link>;
     }
 
     return (
@@ -59,17 +63,27 @@ class SessionForm extends React.Component {
             <h1>{header}</h1>
             {errorBox}
             <label> Email
-              <input type="text" onChange={this.update('email')} value={this.state.email} />
+              <input type="text"
+                onChange={this.update('email')}
+                value={this.state.email}
+              />
             </label>
             <label> Password
-              <input type="password" onChange={this.update('password')} value={this.state.password} />
+              <input type="password"
+                onChange={this.update('password')}
+                value={this.state.password}
+              />
             </label>
 
+            { guestLogin }
             <button className="submitBtn" >{ buttonText }</button>
 
             <label className="otherForm">
               { otherLinkText }
-              <Link to={otherForm} onClick={this.resetInput} className="otherLink">{otherFormText}</Link>
+              <Link to={otherForm}
+                onClick={this.resetInput}
+                className="otherLink">{otherFormText}
+              </Link>
             </label>
           </form>
 
