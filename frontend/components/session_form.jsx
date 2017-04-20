@@ -22,13 +22,13 @@ class SessionForm extends React.Component {
   handleGuest(e) {
     e.preventDefault();
     this.props.processForm({email: "guest", password: "password"})
-      .then(() => this.props.router.push("/"));
+      .then(() => this.props.router.push("/browse"));
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm({email: this.state.email, password: this.state.password})
-      .then(() => this.props.router.push("/"));
+      .then(() => this.props.router.push("/browse"));
   }
 
   componentWillReceiveProps(newProps) {

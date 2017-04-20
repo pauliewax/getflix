@@ -1,0 +1,31 @@
+.browse-splash {
+  overflow: hidden;
+  height: 762px;
+  font-family: sans-serif;
+  color: white;
+}
+.splash-bg {
+  width: 100%;
+}
+
+.browse-splash aside {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  top: 26%;
+  left: 4%;
+  width: 37%;
+}
+
+.browse-splash aside text {
+  width: 90%;
+  font-weight: 400;
+  line-height: 1.35;
+  font-size: 1.4vw;
+}
+
+.splash-logo {
+  width: 90%;
+  margin-bottom: 1.2vw;
+}
