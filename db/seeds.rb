@@ -68,3 +68,9 @@ genres = Genre.create([
   {name:'Sports'},
   {name:'Thrillers'}
 ])
+
+cat1 = Categorization.create(
+  genre_id: genres.first.id,
+  media_id: vid2.id,
+  media_type: 'Video'
+)
