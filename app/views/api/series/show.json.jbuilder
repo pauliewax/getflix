@@ -1,5 +1,6 @@
 json.id @series.id
-json.name @series.title
+json.title @series.title
+json.url @series.thumbnail_url
 
 json.episodes @series.videos do |episode|
   json.id episode.id

@@ -13,9 +13,8 @@ class Series extends React.Component {
 
   render() {
       return(
-        <div>
-          { this.props.series.id }
-          { this.props.series.name }
+        <div className="series" >
+          <img src={ this.props.series.url } />
         </div>
       );
     }

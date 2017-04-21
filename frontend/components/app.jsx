@@ -3,7 +3,7 @@ import NavBar from './nav_bar';
 
 const App = ({children, location}) => {
   return(
-    <div>
+    <div className="app" >
       <NavBar location={location} />
       {children}
     </div>
