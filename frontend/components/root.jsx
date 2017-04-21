@@ -15,8 +15,8 @@ const Root = ({ store }) => (
         <Route path="/login" component={ SessionForm } />
         <Route path="/signup" component={ SessionForm } />
         <Route path="/browse" component={ Browse } />
+        <Route path="/browse/genre/:id" component={ Genre } />
       </Route>
-      <Route path="/browse/genre/:id" component={ Genre } />
     </Router>
   </Provider>
 );
