@@ -5,6 +5,7 @@ import App from './app';
 import SessionForm from './session_form';
 import Landing from './landing';
 import Browse from './browse';
+import Genre from './genre';
 
 const Root = ({ store }) => (
   <Provider store={ store }>
@@ -15,6 +16,8 @@ const Root = ({ store }) => (
         <Route path="/signup" component={ SessionForm } />
         <Route path="/browse" component={ Browse } />
       </Route>
+      // TEST WHETHER YOU CAN MOVE THIS INTO NESTED UNDER '/'
+      <Route path="/browse/genre/:id" component={ Genre } />
     </Router>
   </Provider>
 );

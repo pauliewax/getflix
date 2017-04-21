@@ -1,5 +1,3 @@
-import { login, logout, signup, receiveCurrentUser, receiveErrors } from
-'../actions/session_actions';
 import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS } from
 '../actions/session_actions';
 
