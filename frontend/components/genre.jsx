@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchGenre } from '../actions/genre_actions';
+import Series from './series';
 
 class Genre extends React.Component {
   constructor(props) {
       super(props);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchGenre(this.props.params.id);
   }
 
@@ -15,15 +16,18 @@ class Genre extends React.Component {
     let seriesIds;
     if (this.props.genre.series) {
       seriesIds = this.props.genre.series.map(series=>series.id);
+      return(
+        <div>
+          <ul>
+            { seriesIds.map(id=><Series key={id} seriesId={id} />) }
+          </ul>
+        </div>
+      );
+    } else {
+      return(
+        <div></div>
+      );
     }
-
-    return(
-      <div>
-        <ul>
-          { seriesIds.map(id=><Series id={id} />) }
-        </ul>
-      </div>
-    );
   }
 }
 
