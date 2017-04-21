@@ -21,6 +21,22 @@ series1 = Series.create(
   thumbnail_url: 'http://4.bp.blogspot.com/-2783XaHJsv8/VimVvHzcklI/AAAAAAAAC24/dgTum7-w-H4/s1600/nba-basketball-houston-houston-rockets-rockets-los-angeles-los-angeles-lakers-hakeem-olajuwon-kareem-abdul-jabbar.jpg'
 )
 
+series2 = Series.create(
+title: 'TV Party',
+year: '1978',
+mpaa_rating: 'TV-PG',
+description: "Glenn O' Brien hosts a public-access television variety show.",
+thumbnail_url: 'http://nightflight.com/wp-content/uploads/TV-PARTY-7.png.jpg'
+)
+
+series3 = Series.create(
+title: 'Curb Your Enthusiasm',
+year: '2000',
+mpaa_rating: 'TV-MA',
+description: '"Seinfeld" co-creator Larry David plays a version of himself on the improvised series.',
+thumbnail_url: 'http://s3.amazonaws.com/digitaltrends-uploads-prod/2016/03/Larry-David-Curb-Your-Enthusiasm-season-eight.jpg'
+)
+
 vid1 = Video.create(
   title: '2016 Dunk Contest Highlights',
   description: 'Aaron Gordon and Zach LaVine face off in one of the most ridiculous dunk competitions in recent memory.',
@@ -32,6 +48,17 @@ vid1 = Video.create(
   thumbnail_url: 'http://cbssports.com/images/visual/whatshot/USATSI_9114927.jpg'
 )
 
+vid2 = Video.create(
+title: 'Jean-Michel Basquiat',
+description: "A young Basquiat talks life and art in downtown New York",
+length: '9m 43s',
+year: 1978,
+series_id: series2.id,
+episode_num: 1,
+video_url: 'https://www.youtube.com/embed/EHrZbS1yjmc',
+thumbnail_url: 'http://nightflight.com/wp-content/uploads/TV-PARTY-4.jpg'
+)
+
 vid3 = Video.create(
   title: 'Allen Iverson vs. Michael Jordan',
   description: 'In his rookie season, Iverson puts his signature move to the test.',
@@ -40,26 +67,18 @@ vid3 = Video.create(
   series_id: series1.id,
   episode_num: 1,
   video_url: 'https://www.youtube.com/embed/zJMi5lvQqq8',
-  thumbnail_url: 'http://cdn.ambrosiaforheads.com/wp-content/uploads/2017/03/Iverson-Jordan.jpgg'
+  thumbnail_url: 'http://cdn.ambrosiaforheads.com/wp-content/uploads/2017/03/Iverson-Jordan.jpg'
 )
 
-series2 = Series.create(
-  title: 'TV Party',
-  year: '1978',
-  mpaa_rating: 'TV-PG',
-  description: "Glenn O' Brien hosts a public-access television variety show.",
-  thumbnail_url: 'http://nightflight.com/wp-content/uploads/TV-PARTY-7.png.jpg'
-)
-
-vid2 = Video.create(
-  title: 'Jean-Michel Basquiat',
-  description: "A young Basquiat talks life and art in downtown New York",
-  length: '9m 43s',
-  year: 1978,
-  series_id: series2.id,
+vid4 = Video.create(
+  title: 'The Pants Tent',
+  description: "Larry's baggy new pants create awkward misunderstandings among Larry, Cheryl, and her friend.",
+  length: '30m',
+  year: 2000,
+  series_id: series3.id,
   episode_num: 1,
-  video_url: 'https://www.youtube.com/embed/EHrZbS1yjmc',
-  thumbnail_url: 'http://nightflight.com/wp-content/uploads/TV-PARTY-4.jpg'
+  video_url: 'https://www.youtube.com/watch?v=XYV4btxlfBc',
+  thumbnail_url: 'http://i.lv3.hbo.com/assets/images/series/curb-your-enthusiasm/episodes/8/73/palestinian-chicken-05-1920.jpg'
 )
 
 genres = Genre.create([
@@ -109,4 +128,16 @@ cat5 = Categorization.create(
   genre_id: genres.first.id,
   media_id: series2.id,
   media_type: 'Series'
+)
+
+cat6 = Categorization.create(
+  genre_id: genres.first.id,
+  media_id: series3.id,
+  media_type: 'Series'
+)
+
+cat7 = Categorization.create(
+  genre_id: genres.first.id,
+  media_id: vid4.id,
+  media_type: 'Video'
 )

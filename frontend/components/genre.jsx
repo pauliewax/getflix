@@ -13,7 +13,9 @@ class Genre extends React.Component {
   }
 
   render() {
+
     let seriesIds;
+
     if (this.props.genre.series) {
       seriesIds = this.props.genre.series.map(series=>series.id);
       return(
