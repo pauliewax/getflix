@@ -9,6 +9,7 @@ User.destroy_all
 Video.destroy_all
 Genre.destroy_all
 Series.destroy_all
+Categorization.destroy_all
 
 guest = User.create(email: 'guest', password: 'password')
 
@@ -21,7 +22,7 @@ series1 = Series.create(
 )
 
 vid1 = Video.create(
-  title: 'NBA 2016 Dunk Contest Highlights',
+  title: '2016 Dunk Contest Highlights',
   description: 'Aaron Gordon and Zach LaVine face off in one of the most ridiculous dunk competitions in recent memory.',
   length: '5m 43s',
   year: 2016,
@@ -29,6 +30,17 @@ vid1 = Video.create(
   episode_num: 1,
   video_url: 'https://www.youtube.com/embed/K0p7lQVkI1U',
   thumbnail_url: 'http://cbssports.com/images/visual/whatshot/USATSI_9114927.jpg'
+)
+
+vid3 = Video.create(
+  title: 'Allen Iverson vs. Michael Jordan',
+  description: 'In his rookie season, Iverson puts his signature move to the test.',
+  length: '59s',
+  year: 1996,
+  series_id: series1.id,
+  episode_num: 1,
+  video_url: 'https://www.youtube.com/embed/zJMi5lvQqq8',
+  thumbnail_url: 'http://cdn.ambrosiaforheads.com/wp-content/uploads/2017/03/Iverson-Jordan.jpgg'
 )
 
 series2 = Series.create(
@@ -73,4 +85,28 @@ cat1 = Categorization.create(
   genre_id: genres.first.id,
   media_id: vid2.id,
   media_type: 'Video'
+)
+
+cat2 = Categorization.create(
+  genre_id: genres[14].id,
+  media_id: vid1.id,
+  media_type: 'Video'
+)
+
+cat3 = Categorization.create(
+  genre_id: genres[14].id,
+  media_id: vid3.id,
+  media_type: 'Video'
+)
+
+cat4 = Categorization.create(
+  genre_id: genres[14].id,
+  media_id: series1.id,
+  media_type: 'Series'
+)
+
+cat5 = Categorization.create(
+  genre_id: genres.first.id,
+  media_id: series2.id,
+  media_type: 'Series'
 )
