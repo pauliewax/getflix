@@ -12,9 +12,9 @@ class Genre extends React.Component {
   }
 
   render() {
-    // { this.props.genre.name }
     return(
       <div>
+        { this.props.genre.name }
       </div>
     );
   }
