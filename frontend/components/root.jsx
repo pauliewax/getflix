@@ -16,7 +16,6 @@ const Root = ({ store }) => (
         <Route path="/signup" component={ SessionForm } />
         <Route path="/browse" component={ Browse } />
       </Route>
-      // TEST WHETHER YOU CAN MOVE THIS INTO NESTED UNDER '/'
       <Route path="/browse/genre/:id" component={ Genre } />
     </Router>
   </Provider>

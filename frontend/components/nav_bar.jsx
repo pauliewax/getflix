@@ -6,11 +6,6 @@ import { logout } from '../actions/session_actions';
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
-    this.logout = this.logout.bind(this);
-  }
-
-  logout() {
-    this.props.logout();
   }
 
   render() {
@@ -19,7 +14,7 @@ class NavBar extends React.Component {
     if (!(this.props.formType === "/")) {
       navButton = <div></div>;
     } else if (this.props.loggedIn) {
-      navButton = <button onClick={this.logout}>Log Out</button>;
+      navButton = <button onClick={this.props.logout}>Log Out</button>;
     } else {
       navButton = <button onClick={()=>hashHistory.push("/login")}>Sign In</button>;
     }
@@ -56,7 +51,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     logout: () => (dispatch(logout()))
   };
-
 };
 
 export default connect(mapStateToProps,mapDispatchToProps)(NavBar);
