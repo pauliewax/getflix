@@ -9,32 +9,33 @@ class NavBar extends React.Component {
   }
 
   render() {
-    let navButton;
+    let absoluteNavPaths = ["/", "/signup", "/login"];
 
-    if (!(this.props.formType === "/")) {
-      navButton = <div></div>;
-    } else if (this.props.loggedIn) {
-      navButton = <button onClick={this.props.logout}>Log Out</button>;
+    if (absoluteNavPaths.includes(this.props.formType)) {
+      let navButton;
+
+      if (this.props.loggedIn) {
+        navButton = <button onClick={this.props.logout}>Log Out</button>;
+      } else {
+        navButton = <button onClick={()=>hashHistory.push("/login")}>Sign In</button>;
+      }
+      return(
+        <div>
+          <nav className="navBar absolute">
+            <img onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
+            { navButton }
+          </nav>
+        </div>
+      );
     } else {
-      navButton = <button onClick={()=>hashHistory.push("/login")}>Sign In</button>;
+      return(
+        <div>
+          <nav className="navBar fixed">
+            <img onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
+          </nav>
+        </div>
+      );
     }
-
-    let navPosition;
-
-    if (this.props.formType === "/browse") {
-      navPosition = "navBar fixed";
-    } else {
-      navPosition = "navBar absolute";
-    }
-
-    return(
-      <div>
-        <nav className={ navPosition }>
-          <img onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
-          { navButton }
-        </nav>
-      </div>
-    );
   }
 
 }

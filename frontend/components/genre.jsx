@@ -15,13 +15,13 @@ class Genre extends React.Component {
     let seriesIds;
     if (this.props.genre.series) {
       seriesIds = this.props.genre.series.map(series=>series.id);
-    } else {
-      seriesIds = "";
     }
 
     return(
       <div>
-        {seriesIds}
+        <ul>
+          { seriesIds.map(id=><Series id={id} />) }
+        </ul>
       </div>
     );
   }
