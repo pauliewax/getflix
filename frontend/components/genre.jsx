@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchGenre } from '../actions/genre_actions';
-import Series from './series';
+import { fetchSeries } from '../actions/series_actions';
 
 class Genre extends React.Component {
   constructor(props) {
@@ -9,42 +8,37 @@ class Genre extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchGenre(this.props.params.id);
+    this.props.fetchSeries(this.props.params.id);
   }
 
   render() {
+    let seriesInfo;
 
-    let seriesIds;
-
-    if (this.props.genre.series) {
-      seriesIds = this.props.genre.series.map(series=>series.id);
-      return(
-        <div className="genre">
-          <aside>
-            <p>{ this.props.genre.name }</p>
-          </aside>
-          <ul>
-            { seriesIds.map(id=><Series key={id} seriesId={id} />) }
-          </ul>
-        </div>
-      );
+    if (this.props.seriesList) {
+      seriesInfo = this.props.seriesList.map(serie=><img src={serie.thumbnail_url} />);
     } else {
-      return(
-        <div></div>
-      );
+      seriesInfo = "";
     }
+
+    return(
+      <div className="genre" >
+        <aside>
+          <p>{seriesInfo}</p>
+        </aside>
+      </div>
+    );
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    genre: state.genre
+    seriesList: state.series.seriesList
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    fetchGenre: (id) => (dispatch(fetchGenre(id)))
+    fetchSeries: (genreId) => (dispatch(fetchSeries(genreId)))
   };
 };
 

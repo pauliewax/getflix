@@ -1,4 +1,4 @@
-export const fetchSeries = (id) => {
+export const fetchSerie = (id) => {
   return $.ajax(
     {
       method: "get",
@@ -7,7 +7,7 @@ export const fetchSeries = (id) => {
   );
 };
 
-export const fetchSeriesByGenre = (genreId) => {
+export const fetchSeries = (genreId) => {
   return $.ajax(
     {
       method: "get",

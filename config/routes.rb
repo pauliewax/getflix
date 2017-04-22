@@ -60,7 +60,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
     resources :videos, only: [:index, :show]
-    resources :genres, only: [:show]
+    resources :genres, only: [:index]
     resources :series, only: [:show] do
       get 'genre', on: :collection
     end

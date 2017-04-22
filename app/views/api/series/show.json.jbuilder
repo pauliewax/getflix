@@ -1,7 +1,7 @@
-json.id @series.id
-json.title @series.title
-json.url @series.thumbnail_url
+json.id @serie.id
+json.title @serie.title
+json.url @serie.thumbnail_url
 
-json.episodes @series.videos do |episode|
+json.episodes @serie.videos do |episode|
   json.id episode.id
 end
