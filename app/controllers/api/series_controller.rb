@@ -4,4 +4,9 @@ class Api::SeriesController < ApplicationController
 
     render :show
   end
+
+  def genre
+    @series = Series.joins(:genres).where('genres.id = ?', params[:genreId])
+    render :genre
+  end
 end

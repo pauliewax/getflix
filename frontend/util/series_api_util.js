@@ -6,3 +6,13 @@ export const fetchSeries = (id) => {
     }
   );
 };
+
+export const fetchSeriesByGenre = (genreId) => {
+  return $.ajax(
+    {
+      method: "get",
+      url: `/api/series/genre`,
+      data: { genreId }
+    }
+  );
+};
