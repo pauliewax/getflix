@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchSeries } from '../actions/series_actions';
+import Series from './series';
 
 class Genre extends React.Component {
   constructor(props) {
@@ -12,19 +13,19 @@ class Genre extends React.Component {
   }
 
   render() {
-    let seriesInfo;
+    let seriesButtons;
 
     if (this.props.seriesList) {
-      seriesInfo = this.props.seriesList.map(serie=><img src={serie.thumbnail_url} />);
+      seriesButtons = this.props.seriesList.map(serie=><Series key={serie.id} serie={serie} />);
     } else {
-      seriesInfo = "";
+      seriesButtons = "";
     }
-
     return(
       <div className="genre" >
         <aside>
-          <p>{seriesInfo}</p>
+          <p>Pass Down Genre.name in Props</p>
         </aside>
+        <main>{seriesButtons}</main>
       </div>
     );
   }

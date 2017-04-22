@@ -1,0 +1,52 @@
+.series {
+  width: 16.66%;
+  overflow: hidden;
+  margin-bottom: 9vh;
+  padding: 0 2px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.aspectratio {
+  margin-top: 56%;
+}
+
+.thumbnail {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 0 2px;
+}
+
+// NO CLUE WHY THIS WORKS AS A WAY TO SET
+// RELATIVE HEIGHT AS RATIO OF RELATVE WIDTH
+// HTML:
+//
+// <div id="container">
+//     <div id="dummy"></div>
+//     <div id="element">
+//         some text
+//     </div>
+// </div>
+// CSS:
+//
+// #container {
+//     display: inline-block;
+//     position: relative;
+//     width: 50%;
+// }
+// #dummy {
+//     margin-top: 75%; /* 4:3 aspect ratio */
+// }
+// #element {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     background-color: silver /* show me! */
+// }

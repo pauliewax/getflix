@@ -37,6 +37,38 @@ description: '"Seinfeld" co-creator Larry David plays a version of himself on th
 thumbnail_url: 'http://s3.amazonaws.com/digitaltrends-uploads-prod/2016/03/Larry-David-Curb-Your-Enthusiasm-season-eight.jpg'
 )
 
+series4 = Series.create(
+title: 'The Twilight Zone',
+year: '1959',
+mpaa_rating: 'TV-PG',
+description: 'Ordinary people find themselves in extraordinarily astounding situations, which they each try to solve in a remarkable manner.',
+thumbnail_url: 'http://i.onionstatic.com/avclub/4242/02/16x9/960.jpg'
+)
+
+series5 = Series.create(
+title: 'Trigun',
+year: '1998',
+mpaa_rating: 'TV-14',
+description: 'Vash the Stampede is the most infamous outlaw on the planet Gunsmoke, and with a 60 billion double dollar price on his, head the most sought after!',
+thumbnail_url: 'http://www.thegeekgirlproject.com/wp-content/uploads/2013/04/Trigun-anime-Vash.jpg'
+)
+
+series6 = Series.create(
+title: 'Ash vs Evil  Dead',
+year: '2015',
+mpaa_rating: 'TV-MA',
+description: "Ash has spent the last 30 years avoiding responsibility, maturity and the terrors of the Evil Dead until a Deadite plague threatens to destroy all of mankind and Ash becomes mankind's only hope.",
+thumbnail_url: 'https://i.kinja-img.com/gawker-media/image/upload/s--KKYangpI--/c_scale,f_auto,fl_progressive,q_80,w_800/1470758880757767973.png'
+)
+
+series7 = Series.create(
+title: 'The Simpsons',
+year: '1989',
+mpaa_rating: 'TV-14',
+description: 'The satiric adventures of a working-class family in the misfit city of Springfield.',
+thumbnail_url: 'http://i1.kym-cdn.com/entries/icons/facebook/000/019/304/old.jpg'
+)
+
 vid1 = Video.create(
   title: '2016 Dunk Contest Highlights',
   description: 'Aaron Gordon and Zach LaVine face off in one of the most ridiculous dunk competitions in recent memory.',
@@ -140,4 +172,28 @@ cat7 = Categorization.create(
   genre_id: genres.first.id,
   media_id: vid4.id,
   media_type: 'Video'
+)
+
+cat8 = Categorization.create(
+  genre_id: genres.first.id,
+  media_id: series4.id,
+  media_type: 'Series'
+)
+
+cat9 = Categorization.create(
+  genre_id: genres.first.id,
+  media_id: series5.id,
+  media_type: 'Series'
+)
+
+cat10 = Categorization.create(
+  genre_id: genres.first.id,
+  media_id: series6.id,
+  media_type: 'Series'
+)
+
+cat11 = Categorization.create(
+  genre_id: genres.first.id,
+  media_id: series7.id,
+  media_type: 'Series'
 )
