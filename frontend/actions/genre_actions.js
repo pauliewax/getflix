@@ -1,14 +1,14 @@
 import * as APIUtil from '../util/genre_api_util';
 
-export const RECEIVE_GENRE = 'RECEIVE_GENRE';
+export const RECEIVE_GENRES = 'RECEIVE_GENRES';
 
-export const receiveGenre = (genre) => {
+export const receiveGenres = (genres) => {
   return  {
-    type: RECEIVE_GENRE,
-    genre
+    type: RECEIVE_GENRES,
+    genres
   };
 };
 
-export const fetchGenre = (id) => (dispatch) => {
-  return APIUtil.fetchGenre(id).then((genre)=>dispatch(receiveGenre(genre)));
+export const fetchGenres = () => (dispatch) => {
+  return APIUtil.fetchGenre().then((genres)=>dispatch(receiveGenres(genres)));
 };

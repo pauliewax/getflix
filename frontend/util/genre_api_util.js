@@ -1,8 +1,8 @@
-export const fetchGenre = (id) => {
+export const fetchGenres = () => {
   return $.ajax(
     {
       method: "get",
-      url: `/api/genres/${id}`,
+      url: `/api/genres/`,
     }
   );
 };

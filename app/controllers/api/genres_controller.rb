@@ -1,8 +1,8 @@
 class Api::GenresController < ApplicationController
 
-  def show
-    @genre = Genre.find_by_id(params[:id])
+  def index
+    @genres = Genre.all
 
-    render :show
+    render :index
   end
 end
