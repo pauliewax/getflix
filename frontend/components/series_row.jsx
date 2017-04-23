@@ -1,19 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Series from './series';
 
-class Series extends React.Component {
+class SeriesRow extends React.Component {
   constructor(props) {
       super(props);
   }
 
   render()  {
+    let series = this.props.row.map(serie=><Series key={serie.id} serie={serie} />);
     return(
-      <div className="series">
-
-        <div className="seriesMedia">
-          <img className="seriesImg" src={this.props.serie.thumbnail_url}/>
-        </div>
-
+      <div className="seriesRow">
+        { series }
       </div>
     );
   }
@@ -29,4 +27,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Series);
+export default connect(mapStateToProps, mapDispatchToProps)(SeriesRow);

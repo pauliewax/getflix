@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchSeries } from '../actions/series_actions';
-import Series from './series';
+import SeriesRow from './series_row';
 
 class Genre extends React.Component {
   constructor(props) {
@@ -18,25 +18,24 @@ class Genre extends React.Component {
     }
   }
 
-  generateRows(series) {
-    let allSeries;
-    let seriesRows =[];
-    if (this.props.seriesList.length !== 0) {
-      allSeries = Object.assign([], this.props.seriesList);
-      while (allSeries.length !== 0)  {
-        seriesRows.push(allSeries.slice(0,4));
-        allSeries = allSeries.slice(4);
-      }
+  generateRows() {
+    let allSeries = Object.assign([], this.props.seriesList);
+    let allRows =[];
+    while (allSeries.length !== 0)  {
+      allRows.push(allSeries.slice(0,6));
+      allSeries = allSeries.slice(6);
     }
+    return allRows;
   }
 
   render() {
     let genreName;
-    let seriesButtons;
+    let seriesRows;
 
     if (this.props.seriesList) {
       genreName = (this.props.seriesList.length === 0 ? "No Results" : this.props.seriesList[0].genre);
-      seriesButtons = this.props.seriesList.map(serie=><Series key={serie.id} serie={serie} />);
+      let rows = this.generateRows();
+      seriesRows = rows.map(row=><SeriesRow key={row[0].id} row={row} />);
     }
 
     return(
@@ -44,7 +43,7 @@ class Genre extends React.Component {
         <aside>
           <p>{genreName}</p>
         </aside>
-        <main>{seriesButtons}</main>
+        <main>{seriesRows}</main>
       </div>
     );
   }
