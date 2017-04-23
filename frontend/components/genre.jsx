@@ -18,6 +18,18 @@ class Genre extends React.Component {
     }
   }
 
+  generateRows(series) {
+    let allSeries;
+    let seriesRows =[];
+    if (this.props.seriesList.length !== 0) {
+      allSeries = Object.assign([], this.props.seriesList);
+      while (allSeries.length !== 0)  {
+        seriesRows.push(allSeries.slice(0,4));
+        allSeries = allSeries.slice(4);
+      }
+    }
+  }
+
   render() {
     let genreName;
     let seriesButtons;

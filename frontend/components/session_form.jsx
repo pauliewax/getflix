@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
 
   handleGuest(e) {
     e.preventDefault();
-    this.props.processForm({email: "guest", password: "password"})
+    this.props.processForm({email: "Guest", password: "password"})
       .then(() => this.props.router.push("/browse"));
   }
 

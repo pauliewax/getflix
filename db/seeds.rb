@@ -11,7 +11,7 @@ Genre.destroy_all
 Series.destroy_all
 Categorization.destroy_all
 
-guest = User.create(email: 'guest', password: 'password')
+guest = User.create(email: 'Guest', password: 'password')
 
 series1 = Series.create(
   title: 'NBA Basketball',
