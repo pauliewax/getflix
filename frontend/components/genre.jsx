@@ -8,22 +8,29 @@ class Genre extends React.Component {
       super(props);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchSeries(this.props.params.id);
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.params.id !== this.props.params.id) {
+      this.props.fetchSeries(newProps.params.id);
+    }
+  }
+
   render() {
+    let genreName;
     let seriesButtons;
 
     if (this.props.seriesList) {
+      genreName = this.props.seriesList[0].genre;
       seriesButtons = this.props.seriesList.map(serie=><Series key={serie.id} serie={serie} />);
-    } else {
-      seriesButtons = "";
     }
+
     return(
       <div className="genre" >
         <aside>
-          <p>Pass Down Genre.name in Props</p>
+          <p>{genreName}</p>
         </aside>
         <main>{seriesButtons}</main>
       </div>

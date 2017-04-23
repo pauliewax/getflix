@@ -2,7 +2,6 @@
   width: 16.66%;
   overflow: hidden;
   margin-bottom: 9vh;
-  padding: 0 2px;
   box-sizing: border-box;
   position: relative;
 }
@@ -20,6 +19,7 @@
   right: 0;
   box-sizing: border-box;
   padding: 0 2px;
+  cursor: pointer;
 }
 
 // NO CLUE WHY THIS WORKS AS A WAY TO SET

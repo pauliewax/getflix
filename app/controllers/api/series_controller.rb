@@ -7,6 +7,7 @@ class Api::SeriesController < ApplicationController
 
   def genre
     @series = Series.joins(:genres).where('genres.id = ?', params[:genreId])
+    @genre = Genre.find(params[:genreId])
     render :genre
   end
 end
