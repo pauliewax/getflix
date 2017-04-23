@@ -32,8 +32,12 @@ class NavBar extends React.Component {
       return(
         <div>
           <nav className="navBar fixed">
-            <img onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
-            <GenreBrowser />
+            <section>
+              <div>
+                <img onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
+              </div>
+              <GenreBrowser />
+            </section>
           </nav>
         </div>
       );

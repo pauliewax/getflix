@@ -36,6 +36,7 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity 2200ms, visibility 200ms;
+  position: relative;
 }
 
 .genreBrowser li {
@@ -54,4 +55,13 @@
   opacity: 1;
   visibility: visible;
   transition: opacity 250ms, visibility 250ms;
+}
+
+.fa-caret-up {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 13px;
+  margin-top: -13px;
 }

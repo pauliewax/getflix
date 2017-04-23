@@ -48,6 +48,7 @@ class GenreBrowser extends React.Component {
         </figure>
 
         <ul className="dropdown" >
+          <i className="fa fa-caret-up"></i>
           {genreLinks}
         </ul>
       </div>

@@ -13,26 +13,13 @@
   position: absolute;
 }
 
-.fixed {
-  position: fixed;
-  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,0) );
-  margin-top: 0px;
-  padding-top: 18px;
-  height: 71px;
-  justify-content: flex-start;
-}
-
 .navBar img {
   margin-left: 57px;
   cursor: pointer;
   width: 166px;
 }
 
-.fixed img {
-  width: 118px;
-}
-
-.navBar button {
+.absolute button {
   font-size: 16px;
   background-color: #e50914;
   color: white;
@@ -43,6 +30,24 @@
   border-radius: 2px;
 }
 
-.navBar button:hover {
+.absolute button:hover {
   background-color: #f40612;
+}
+
+.fixed {
+  position: fixed;
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,0) );
+  margin-top: 0px;
+  padding-top: 18px;
+  height: 71px;
+  justify-content: flex-start;
+}
+
+.fixed section {
+  display: flex;
+}
+
+.fixed section div img {
+  width: 118px;
+  display: inline-block;
 }
