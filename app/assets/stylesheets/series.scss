@@ -1,44 +1,97 @@
-.seriesRow {
-  margin: 125px;
-  padding-bottom: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-    white-space: nowrap;
-}
-
 .series {
-  position: relative;
-  display: inline-block;
-  width: 250px;
-  height: 140px;
-  margin-right: 10px;
-  font-size: 20px;
+  width: 16.66%;
   cursor: pointer;
   transform-origin: center left;
+  transition: transform 500ms ease;
+  position: relative;
 }
 
 .seriesImg {
-  width: 250px;
-  height: 140px;
-  object-fit: cover;
-}
-
-.seriesRow:hover {
-  transform: translate3d(-62.5px, 0, 0);
-}
-
-.seriesRow:hover .series {
-  opacity: 0.3;
-
-  &:hover {
-    transform: scale(1.5);
-    opacity: 1;
-    z-index: 10;
-  }
+  width: 100%;
 }
 
 .series:hover ~ .series  {
-  transform: translate3d(125px, 0, 0);
+  transform: translate3d(100px, 0, 0);
+}
+
+.series:first-of-type:hover {
+  margin-left: 49px;
+}
+
+.series:last-of-type:hover {
+  margin-right: 9.2vw;
+}
+
+.seriesInfo {
+  position: absolute;
+  top: 0;
+  margin-top: 50px;
+  margin-left: 10px;
+  white-space: nowrap;
+  max-width: 70%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  z-index: 1;
+  color: white;
+}
+
+.series p {
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  font-weight: bold;
+  user-select: none;
+  padding: 1px;
+}
+
+.seriesInfo text {
+  display: block;
+  height: 30px;
+  overflow: hidden;
+  font-size: 10px;
+  white-space: normal;
+}
+
+.series:hover .seriesInfo {
+  opacity: 1;
+}
+
+.fa-angle-down {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin-left: calc(50% - 5px);
+  margin-bottom: 8px;
+  transform: scale(4, 2);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  z-index: 1;
+}
+
+.fa-angle-down:hover {
+  color: #e50914;
+}
+
+.series:hover .fa-angle-down {
+  opacity: 1;
+}
+
+.series:hover{
+}
+
+.seriesBgFade {
+  box-sizing: border-box;
+  position:absolute;
+  background: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,0) );
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.series:hover .seriesBgFade {
+  opacity: 1;
 }

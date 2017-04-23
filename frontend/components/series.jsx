@@ -14,6 +14,14 @@ class Series extends React.Component {
           <img className="seriesImg" src={this.props.serie.thumbnail_url}/>
         </div>
 
+        <div className="seriesInfo">
+          <p>{ this.props.serie.title }</p>
+          <text>{this.props.serie.description}</text>
+        </div>
+
+        <i className="fa fa-angle-down"></i>
+
+        <div className="seriesBgFade"/>
       </div>
     );
   }
