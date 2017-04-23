@@ -1,0 +1,53 @@
+.genreBrowser {
+  margin: 8px 0 0 60px;
+}
+
+.genreBrowser figure {
+  display: flex;
+}
+
+.genreBrowser div {
+  color: #e50914;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  width: 76px;
+}
+
+#deadspace {
+  // when the dropdown is visible, the deadspace in the genreBrowser container, to the right of the Browse text, should behave like
+  // space outside of the genreBrowser and trigger the handleLeave event 
+  color: white;
+  width: calc(100% - 76px);
+  cursor: default;
+}
+
+.dropdown {
+  background-color: rgba(0,0,0,.9);
+  border: solid 2px 1 rgba(255,255,255,.15);
+  border-top: 2px solid white;
+  font-size: 15px;
+  width: 40vw;
+  min-width: 570px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 10px;
+  display: none;
+}
+
+.genreBrowser li {
+  width: 25%;
+  min-width: 137px;
+  padding: 3px;
+  box-sizing: border-box;
+  display: flex;
+}
+.genreLink {
+  color: white;
+  text-decoration: none;
+}
+
+.show {
+  display: flex;
+}
