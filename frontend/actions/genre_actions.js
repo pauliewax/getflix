@@ -10,5 +10,5 @@ export const receiveGenres = (genres) => {
 };
 
 export const fetchGenres = () => (dispatch) => {
-  return APIUtil.fetchGenre().then((genres)=>dispatch(receiveGenres(genres)));
+  return APIUtil.fetchGenres().then((genres)=>dispatch(receiveGenres(genres)));
 };
