@@ -23,7 +23,7 @@ class Genre extends React.Component {
     let seriesButtons;
 
     if (this.props.seriesList) {
-      genreName = this.props.seriesList[0].genre;
+      genreName = (this.props.seriesList.length === 0 ? "No Results" : this.props.seriesList[0].genre);
       seriesButtons = this.props.seriesList.map(serie=><Series key={serie.id} serie={serie} />);
     }
 

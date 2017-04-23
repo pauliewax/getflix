@@ -15,8 +15,8 @@
 }
 
 #deadspace {
-  // when the dropdown is visible, the deadspace in the genreBrowser container, to the right of the Browse text, should behave like
-  // space outside of the genreBrowser and trigger the handleLeave event 
+  // when the dropdown is visible, the deadspace in the container to the right of the Browse text, should behave like
+  // space outside of the genreBrowser and trigger the onMouseLeave event
   color: white;
   width: calc(100% - 76px);
   cursor: default;
@@ -33,7 +33,9 @@
   flex-wrap: wrap;
   margin-top: 20px;
   padding: 10px;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 2200ms, visibility 200ms;
 }
 
 .genreBrowser li {
@@ -49,5 +51,7 @@
 }
 
 .show {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms, visibility 250ms;
 }

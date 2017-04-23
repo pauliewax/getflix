@@ -34,7 +34,7 @@ class GenreBrowser extends React.Component {
     let genreLinks;
 
     if (this.props.genreList) {
-      genreLinks = this.props.genreList.map(genre=><li><Link className="genreLink" key={genre.id} to={`/browse/genre/${genre.id}`}>{genre.name}</Link></li>);
+      genreLinks = this.props.genreList.map(genre=><li key={genre.id} ><Link className="genreLink" to={`/browse/genre/${genre.id}`}>{genre.name}</Link></li>);
     }
 
     return(
@@ -47,9 +47,9 @@ class GenreBrowser extends React.Component {
           <div onMouseOver={this.handleLeave} id="deadspace" />
         </figure>
 
-        <section className="dropdown" >
+        <ul className="dropdown" >
           {genreLinks}
-        </section>
+        </ul>
       </div>
     );
   }
