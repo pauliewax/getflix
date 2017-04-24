@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchSearch } from '../actions/series_actions';
+import { hashHistory } from 'react-router';
 
 class Search extends React.Component {
   constructor(props) {
@@ -16,11 +17,22 @@ class Search extends React.Component {
     if (newProps.location.query.q !== lastQuery) {
       this.props.fetchSearch(newProps.location.query.q);
     }
+
+    if (newProps.location.query.q === '') {
+      hashHistory.push('/browse');
+    }
   }
 
   render() {
+    let seriesNames = "";
+    if (this.props.seriesList) {
+      seriesNames = this.props.seriesList.map(serie=>serie.title).join(" | ");
+    }
     return(
       <div className="searchPage">
+        <text>
+          {seriesNames}
+        </text>
       </div>
     );
   }
@@ -28,7 +40,7 @@ class Search extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    seriesList: state.series.seriesList
+    seriesList: state.series.seriesList,
   };
 };
 

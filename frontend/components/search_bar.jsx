@@ -10,8 +10,12 @@ class SearchBar extends React.Component {
   }
 
   handleInput(event) {
+   this.setState({inputVal: event.currentTarget.value}, this.updateQueryString);
+
+  }
+
+  updateQueryString() {
    hashHistory.push(`/search?q=${this.state.inputVal}`);
-   this.setState({inputVal: event.currentTarget.value});
   }
 
   render() {
