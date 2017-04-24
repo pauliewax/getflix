@@ -1,9 +1,13 @@
+// ADDED WEIRD CLEARFLEX THING TO FILL DEADSPACE,
+// HOWEVER IT BREAKS THE LAST OF TYPE RECENTERING FOR THE LAST SERIES HOVER
+
 .series {
   width: 16.66%;
   cursor: pointer;
   transform-origin: center left;
   transition: transform 500ms ease;
   position: relative;
+  float: left;
 }
 
 .seriesImg {
@@ -14,12 +18,8 @@
   transform: translate3d(100px, 0, 0);
 }
 
-.series:first-of-type:hover {
-  margin-left: 49px;
-}
-
 .series:last-of-type:hover {
-  margin-right: 9.2vw;
+  transform-origin: center;
 }
 
 .seriesInfo {
@@ -36,7 +36,7 @@
   text-shadow: 0px 1px black;
 }
 
-.series p {
+.seriesInfo p {
   margin: 0 0 10px 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -87,11 +87,17 @@
   height: 100%;
   width: 100%;
   top: 0;
-  left: 0;
   opacity: 0;
   transition: opacity 500ms ease;
 }
 
 .series:hover .seriesBgFade {
   opacity: 1;
+}
+
+.clearFlex{
+  border: 1px solid red;
+  flex-grow: 1;
+  height: 100%;
+  z-index: 100;
 }

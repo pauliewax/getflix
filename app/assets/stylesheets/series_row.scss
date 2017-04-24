@@ -1,12 +1,12 @@
 .seriesRow {
-  display:block;
+  border: 1px solid blue;
+  display: block;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   transition: transform 500ms ease;
   margin-bottom: 4%;
-  min-width: 1500px;
 }
 
 .seriesRow:hover {
@@ -22,6 +22,5 @@
     z-index: 1;
   }
 }
-
 // Hovering over the right side of a row with only 1 thing in it will still
 // trigger the hover effects.
