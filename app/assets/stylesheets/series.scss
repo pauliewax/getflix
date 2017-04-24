@@ -33,6 +33,7 @@
   transition: opacity 500ms ease;
   z-index: 1;
   color: white;
+  text-shadow: 0px 1px black;
 }
 
 .series p {
@@ -50,7 +51,9 @@
   height: 4vmin;
   overflow: hidden;
   font-size: 1vmin;
+  user-select: none;
   white-space: normal;
+  padding: 1px;
 }
 
 .series:hover .seriesInfo {
