@@ -3,6 +3,7 @@ import { hashHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { logout } from '../actions/session_actions';
 import GenreBrowser from './genre_browser';
+import SearchBar from './search_bar';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class NavBar extends React.Component {
                 <img onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
               </div>
               <GenreBrowser />
+              <SearchBar />
             </section>
           </nav>
         </div>
