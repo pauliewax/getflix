@@ -25,10 +25,10 @@
 .seriesInfo {
   position: absolute;
   top: 0;
-  margin-top: 50px;
-  margin-left: 10px;
+  margin-top: 28%;
+  margin-left: 5%;
   white-space: nowrap;
-  max-width: 70%;
+  max-width: 80%;
   opacity: 0;
   transition: opacity 500ms ease;
   z-index: 1;
@@ -39,7 +39,7 @@
   margin: 0 0 10px 0;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 13px;
+  font-size: 1.4vmin;
   font-weight: bold;
   user-select: none;
   padding: 1px;
@@ -47,9 +47,9 @@
 
 .seriesInfo text {
   display: block;
-  height: 30px;
+  height: 4vmin;
   overflow: hidden;
-  font-size: 10px;
+  font-size: 1vmin;
   white-space: normal;
 }
 
@@ -75,9 +75,6 @@
 
 .series:hover .fa-angle-down {
   opacity: 1;
-}
-
-.series:hover{
 }
 
 .seriesBgFade {
