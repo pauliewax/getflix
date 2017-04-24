@@ -16,3 +16,13 @@ export const fetchSeries = (genreId) => {
     }
   );
 };
+
+export const fetchSearch = ( searchQuery ) => {
+  return $.ajax(
+    {
+      method: "get",
+      url: `/api/series/search`,
+      data: { searchQuery }
+    }
+  );
+};

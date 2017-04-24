@@ -10,13 +10,20 @@ class SearchBar extends React.Component {
   }
 
   handleInput(event) {
+   hashHistory.push(`/search?q=${this.state.inputVal}`);
    this.setState({inputVal: event.currentTarget.value});
   }
 
   render() {
     return(
       <div className="searchBar">
-        <input value={this.state.inputVal} onChange={this.handleInput} placeholder="Search by Title" />
+        <i className="fa fa-search"></i>
+        <section className="inputBox">
+          <input className="inputField" value={this.state.inputVal} onChange={this.handleInput} placeholder="Search by Title" />
+        </section>
+        <div className="closeTimes" >
+          <i className="fa fa-times-thin"></i>
+        </div>
       </div>
     );
   }
@@ -24,6 +31,7 @@ class SearchBar extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    // MAYBE DONT NEED THIS HERE, USEFUL TO SEE IF SEARCH WORKED FOR A WILLRECEIVEPROPS
     seriesList: state.series.seriesList
   };
 };

@@ -10,4 +10,10 @@ class Api::SeriesController < ApplicationController
     @genre = Genre.find(params[:genreId])
     render :genre
   end
+
+  def search
+    @series = Series.where("lower(title) like ?", "%#{params[:searchQuery].downcase}%")
+    render :search
+  end
+
 end

@@ -63,6 +63,7 @@ Rails.application.routes.draw do
     resources :genres, only: [:index]
     resources :series, only: [:show] do
       get 'genre', on: :collection
+      get 'search', on: :collection
     end
   end
 

@@ -17,6 +17,10 @@ export const receiveSeries = (series) => {
   };
 };
 
+export const fetchSearch = (searchQuery) => (dispatch) => {
+  return APIUtil.fetchSearch(searchQuery).then((series)=>dispatch(receiveSeries(series)));
+};
+
 export const fetchSerie = (id) => (dispatch) => {
   return APIUtil.fetchSerie(id).then((serie)=>dispatch(receiveSerie(serie)));
 };

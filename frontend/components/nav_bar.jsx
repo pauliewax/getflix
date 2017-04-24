@@ -40,8 +40,8 @@ class NavBar extends React.Component {
                 <img onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
               </div>
               <GenreBrowser />
-              <SearchBar />
             </section>
+            <SearchBar />
           </nav>
         </div>
       );

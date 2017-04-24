@@ -1,5 +1,44 @@
 .searchBar {
-  background-color: red;
-  width: 150px;
-  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,0,.75);
+  height: 32px;
+  width: 266px;
+  border: 1px solid white;
+  margin-right: 57px;
+}
+
+.inputBox {
+  width: calc(100% - 35px);
+}
+
+.inputField {
+  color: white;
+  background-color: rgba(0,0,0,0);
+  padding: 7px;
+  border: none;
+}
+
+.inputField:focus {
+  outline: none;
+}
+
+.searchBar i {
+  color: white;
+  padding: 7px;
+  padding-right: 8px;
+}
+
+.fa-times-thin {
+  transform: scale(1.8);
+}
+
+.fa-times-thin:before {
+	content: '\00d7';
+}
+
+.closeTimes {
+  cursor: pointer;
+  overflow: hidden;
 }

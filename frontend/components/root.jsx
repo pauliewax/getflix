@@ -6,6 +6,7 @@ import SessionForm from './session_form';
 import Landing from './landing';
 import Browse from './browse';
 import Genre from './genre';
+import Search from './search';
 
 const Root = ({ store }) => (
   <Provider store={ store }>
@@ -16,6 +17,7 @@ const Root = ({ store }) => (
         <Route path="/signup" component={ SessionForm } />
         <Route path="/browse" component={ Browse } />
         <Route path="/browse/genre/:id" component={ Genre } />
+        <Route path="/search" component={Search} />
       </Route>
     </Router>
   </Provider>
