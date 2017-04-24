@@ -15,10 +15,12 @@ class NavBar extends React.Component {
     if (absoluteNavPaths.includes(this.props.formType)) {
       let navButton;
 
-      if (this.props.loggedIn) {
+      if (this.props.loggedIn && this.props.formType === "/") {
         navButton = <button onClick={this.props.logout}>Log Out</button>;
-      } else {
+      } else if (this.props.formType === "/" ){
         navButton = <button onClick={()=>hashHistory.push("/login")}>Sign In</button>;
+      } else {
+        navButton = <div />;
       }
       return(
         <div>
