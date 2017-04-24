@@ -38,6 +38,10 @@
   transform-origin: center;
 }
 
+.series:first-of-type:hover {
+  transform-origin: left;
+}
+
 .seriesInfo {
   position: absolute;
   top: 0;
