@@ -7,15 +7,19 @@ class SearchBar extends React.Component {
       super(props);
       this.state = {inputVal: ''};
       this.handleInput = this.handleInput.bind(this);
+      this.handleClick = this.handleClick.bind(this);
   }
 
   handleInput(event) {
-   this.setState({inputVal: event.currentTarget.value}, this.updateQueryString);
-
+    this.setState({inputVal: event.currentTarget.value}, this.updateQueryString);
   }
 
   updateQueryString() {
-   hashHistory.push(`/search?q=${this.state.inputVal}`);
+    hashHistory.push(`/search?q=${this.state.inputVal}`);
+  }
+
+  handleClick() {
+    this.setState({inputVal: ""}, this.updateQueryString);
   }
 
   render() {
@@ -25,7 +29,7 @@ class SearchBar extends React.Component {
         <section className="inputBox">
           <input className="inputField" value={this.state.inputVal} onChange={this.handleInput} placeholder="Search by Title" />
         </section>
-        <div className="closeTimes" >
+        <div onClick={this.handleClick} className="closeTimes" >
           <i className="fa fa-times-thin"></i>
         </div>
       </div>

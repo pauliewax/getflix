@@ -1,13 +1,20 @@
 .searchPage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 30px;
+  height: 100%;
 }
 
-.searchPage text {
-  margin-top: 150px;
-  display: block;
-  width: 500px;
+.searchPage aside {
+  padding: 1px;
+}
+
+.searchPage p {
+  color: white;
+  font-size: 26px;
+  margin: 107px 0 72px 56px;
+}
+
+.searchPage main {
+  margin-left: 54px;
+  width: 93%;
+  display: flex;
+  flex-wrap: wrap;
 }

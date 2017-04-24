@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchSearch } from '../actions/series_actions';
 import { hashHistory } from 'react-router';
+import SeriesRow from './series_row';
 
 class Search extends React.Component {
   constructor(props) {
@@ -23,16 +24,32 @@ class Search extends React.Component {
     }
   }
 
-  render() {
-    let seriesNames = "";
-    if (this.props.seriesList) {
-      seriesNames = this.props.seriesList.map(serie=>serie.title).join(" | ");
+  generateRows() {
+    let allSeries = Object.assign([], this.props.seriesList);
+    let allRows =[];
+    while (allSeries.length !== 0)  {
+      allRows.push(allSeries.slice(0,6));
+      allSeries = allSeries.slice(6);
     }
+    return allRows;
+  }
+
+  render() {
+    let seriesRows;
+    if (this.props.seriesList) {
+      let rows = this.generateRows();
+      seriesRows = rows.map(row=><SeriesRow key={row[0].id} row={row} />);
+    }
+
     return(
       <div className="searchPage">
-        <text>
-          {seriesNames}
-        </text>
+        <div className="cheapSolution" />
+        <aside>
+          <p>Twizlers</p>
+        </aside>
+        <main>
+          {seriesRows}
+        </main>
       </div>
     );
   }
