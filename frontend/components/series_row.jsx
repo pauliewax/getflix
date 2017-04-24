@@ -7,6 +7,7 @@ class SeriesRow extends React.Component {
       super(props);
   }
 
+
   render()  {
 
     let series = this.props.row.map(serie=><Series key={serie.id} serie={serie} />);

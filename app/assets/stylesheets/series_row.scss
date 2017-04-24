@@ -1,5 +1,4 @@
 .seriesRow {
-  border: 1px solid blue;
   display: block;
   display: flex;
   flex-direction: row;
@@ -21,6 +20,7 @@
     opacity: 1;
     z-index: 1;
   }
+
 }
 // Hovering over the right side of a row with only 1 thing in it will still
 // trigger the hover effects.

@@ -1,5 +1,5 @@
 // ADDED WEIRD CLEARFLEX THING TO FILL DEADSPACE,
-// HOWEVER IT BREAKS THE LAST OF TYPE RECENTERING FOR THE LAST SERIES HOVER
+// ONE DAY FIGURE OUT HOW TO USE FOR A MOUSEOVER/MOUSELEAVE TO FIX TRIGGERING
 
 .series {
   width: 16.66%;
@@ -96,7 +96,7 @@
 }
 
 .clearFlex{
-  border: 1px solid red;
+  // border: 1px solid red;
   flex-grow: 1;
   height: 100%;
   z-index: 100;
