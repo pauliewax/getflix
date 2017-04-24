@@ -10,7 +10,22 @@
   float: left;
 }
 
+.seriesMedia {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.imageScaler {
+  margin-bottom: 167px;
+}
+
 .seriesImg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
 }
 
@@ -34,6 +49,7 @@
   z-index: 1;
   color: white;
   text-shadow: 0px 1px black;
+
 }
 
 .seriesInfo p {
@@ -81,7 +97,6 @@
 }
 
 .seriesBgFade {
-  box-sizing: border-box;
   position:absolute;
   background: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,0) );
   height: 100%;
