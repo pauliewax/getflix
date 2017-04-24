@@ -7,6 +7,7 @@
   transform-origin: center left;
   transition: transform 500ms ease;
   position: relative;
+  // need this floatLeft for clearFLex
   float: left;
 }
 
@@ -17,7 +18,7 @@
 }
 
 .imageScaler {
-  margin-bottom: 167px;
+  margin-bottom: 56%;
 }
 
 .seriesImg {
@@ -66,7 +67,7 @@
   display: block;
   height: 4vmin;
   overflow: hidden;
-  font-size: 1vmin;
+  font-size: .9vmin;
   user-select: none;
   white-space: normal;
   padding: 1px;
@@ -99,7 +100,7 @@
 .seriesBgFade {
   position:absolute;
   background: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,0) );
-  height: 100%;
+  height: 101%;
   width: 100%;
   top: 0;
   opacity: 0;
@@ -111,7 +112,6 @@
 }
 
 .clearFlex{
-  // border: 1px solid red;
   flex-grow: 1;
   height: 100%;
   z-index: 100;

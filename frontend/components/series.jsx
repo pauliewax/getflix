@@ -13,6 +13,7 @@ class Series extends React.Component {
         <div className="seriesMedia">
           <div className="imageScaler"></div>
           <img className="seriesImg" src={this.props.serie.thumbnail_url}/>
+          <div className="seriesBgFade"/>
         </div>
 
         <div className="seriesInfo">
@@ -20,7 +21,6 @@ class Series extends React.Component {
           <text>{this.props.serie.description}</text>
         </div>
 
-        <div className="seriesBgFade"/>
         <i className="fa fa-angle-down"></i>
 
 
