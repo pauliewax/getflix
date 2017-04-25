@@ -3,6 +3,7 @@
   cursor: pointer;
   position: relative;
   transform-origin: center left;
+  transition: transform 500ms ease;
 }
 
 .seriesMedia {

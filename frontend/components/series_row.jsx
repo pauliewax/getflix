@@ -27,7 +27,9 @@ class SeriesRow extends React.Component {
 
     return(
       <div className="seriesRow">
-        { series }
+            <div className="seriesStrip">
+              { series }
+            </div>
 
         <div className={`viewer viewer-${this.props.rowId}`}><SeriesViewer thisViewerId={`viewer-${this.props.rowId}`} serieId={serieId}/></div>
       </div>
