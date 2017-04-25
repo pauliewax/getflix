@@ -38,12 +38,12 @@ class Search extends React.Component {
     let seriesRows;
     if (this.props.seriesList) {
       let rows = this.generateRows();
-      seriesRows = rows.map(row=><SeriesRow key={row[0].id} row={row} />);
+      seriesRows = rows.map(row=><SeriesRow key={row[0].id} row={row} rowId={row[0].id}/>);
+
     }
 
     return(
       <div className="searchPage">
-        <div className="cheapSolution" />
         <aside>
           <p>Search Results:</p>
         </aside>

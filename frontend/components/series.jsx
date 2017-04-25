@@ -1,9 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { fetchSerie } from '../actions/series_actions';
 
 class Series extends React.Component {
   constructor(props) {
       super(props);
+      this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.props.fetchSerie(this.props.serie.id);
   }
 
   render()  {
@@ -21,7 +27,7 @@ class Series extends React.Component {
           <text>{this.props.serie.description}</text>
         </div>
 
-        <i className="fa fa-angle-down"></i>
+        <i onClick={this.handleClick} className="fa fa-angle-down"></i>
 
 
       </div>
@@ -36,6 +42,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
+    fetchSerie: (id) => (dispatch(fetchSerie(id)))
   };
 };
 

@@ -8,22 +8,22 @@ class SeriesRow extends React.Component {
       super(props);
 
       this.state = {selectedSerie: ''};
-      this.handleClick = this.handleClick.bind(this);
   }
 
-
-  handleClick(event) {
-    this.setState({selectedSerie: event.currentTarget.className});
+  componentWillReceiveProps(newProps) {
+    let seriesIds = this.props.row.map(serie=>serie.id);
+    if (
+        (newProps.seriesDetail !== this.props.seriesDetail) &&
+        (seriesIds.includes(newProps.seriesDetail.id))
+      ) {
+      let thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
+      thisViewer.classList.add('test');
+    }
   }
 
   render()  {
 
-    let series = this.props.row.map(serie=><li onClick={this.handleClick} className={`${serie.id} serieWrapper`} key={serie.id} ><Series  serie={serie} /></li>);
-
-    let serieId = series[0].key;
-    if (this.state.selectedSerie !== '') {
-      serieId = this.state.selectedSerie;
-    }
+    let series = this.props.row.map(serie=><li className={`serieWrapper`} key={serie.id} ><Series  serie={serie} /></li>);
 
     return(
       <div className="seriesRow">
@@ -31,7 +31,7 @@ class SeriesRow extends React.Component {
               { series }
             </div>
 
-        <div className={`viewer viewer-${this.props.rowId}`}><SeriesViewer thisViewerId={`viewer-${this.props.rowId}`} serieId={serieId}/></div>
+        <div className={`viewer viewer-${this.props.rowId}`}><SeriesViewer /></div>
       </div>
     );
   }

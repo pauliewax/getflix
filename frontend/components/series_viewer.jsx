@@ -1,18 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchSerie } from '../actions/series_actions';
 
 class SeriesViewer extends React.Component {
   constructor(props) {
       super(props);
   }
-
-  componentWillReceiveProps(newProps) {
-    if (newProps.serieId !== this.props.serieId) {
-      this.props.fetchSerie(newProps.serieId);
-    }
-  }
-
 
   render() {
 
@@ -29,7 +21,6 @@ class SeriesViewer extends React.Component {
       year = this.props.seriesDetail.year;
       img = this.props.seriesDetail.url;
     }
-    // debugger
 
     return(
       <div className="seriesViewer">
@@ -60,7 +51,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    fetchSerie: (id) => (dispatch(fetchSerie(id)))
   };
 };
 
