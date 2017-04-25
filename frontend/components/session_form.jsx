@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
 
   handleGuest(e) {
     e.preventDefault();
-    this.props.processForm({email: "Guest", password: "password"})
+    this.props.login({email: "Guest", password: "password"})
       .then(() => this.props.router.push("/browse"));
   }
 
@@ -85,11 +85,17 @@ class SessionForm extends React.Component {
             <button className="submitBtn" >{ buttonText }</button>
 
             <label className="otherForm">
-              { otherLinkText }
-              <Link to={otherForm}
-                onClick={this.resetInput}
-                className="otherLink">{otherFormText}
-              </Link>
+              <detail>
+                { otherLinkText }
+                <Link to={otherForm}
+                  onClick={this.resetInput}
+                  className="otherLink">{otherFormText}
+                </Link>
+              </detail>
+              <button onClick={this.handleGuest}>
+                <i className="fa fa-key" aria-hidden="true"></i>
+                DEMO LOGIN
+              </button>
             </label>
           </form>
 
@@ -114,12 +120,15 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   if (formAction === '/login') {
       return {
         processForm: (user) => (dispatch(login(user))),
-        receiveErrors: (errors) => (dispatch(receiveErrors(errors)))
+        receiveErrors: (errors) => (dispatch(receiveErrors(errors))),
+        login: (user) => (dispatch(login(user)))
+
       };
     } else {
       return {
         processForm: (user) => (dispatch(signup(user))),
-        receiveErrors: (errors) => (dispatch(receiveErrors(errors)))
+        receiveErrors: (errors) => (dispatch(receiveErrors(errors))),
+        login: (user) => (dispatch(login(user)))
       };
     }
 };
