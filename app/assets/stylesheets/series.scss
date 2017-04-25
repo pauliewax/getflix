@@ -4,11 +4,9 @@
 .series {
   width: 100%;
   cursor: pointer;
-  transform-origin: center left;
-  transition: transform 500ms ease;
+  // transform-origin: center left;
+  // transition: transform 500ms ease;
   position: relative;
-  // need this floatLeft for clearFLex
-  float: left;
 }
 
 .seriesMedia {
@@ -30,17 +28,11 @@
   width: 100%;
 }
 
-.series:hover ~ .series  {
-  transform: translate3d(100px, 0, 0);
-}
+// .series:hover ~ .series {
+//   transform: translate3d(100px, 0, 0);
+// }
 
-.series:last-of-type:hover {
-  transform-origin: center;
-}
 
-.series:first-of-type:hover {
-  transform-origin: left;
-}
 
 .seriesInfo {
   position: absolute;
@@ -113,10 +105,4 @@
 
 .series:hover .seriesBgFade {
   opacity: 1;
-}
-
-.clearFlex{
-  flex-grow: 1;
-  height: 100%;
-  z-index: 100;
 }
