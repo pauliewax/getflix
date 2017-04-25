@@ -5,8 +5,6 @@ import { fetchSerie } from '../actions/series_actions';
 class SeriesViewer extends React.Component {
   constructor(props) {
       super(props);
-
-      this.handleClick = this.handleClick.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -15,10 +13,6 @@ class SeriesViewer extends React.Component {
     }
   }
 
-  handleClick() {
-    let thisViewer = document.getElementsByClassName(this.props.thisViewer)[0];
-    thisViewer.classList.remove('viewerSlideOut');
-  }
 
   render() {
 
@@ -30,7 +24,7 @@ class SeriesViewer extends React.Component {
 
     return(
       <div className="seriesViewer">
-        <p onClick={this.handleClick}>{ name }</p>
+        <p>{ name }</p>
       </div>
     );
   }
