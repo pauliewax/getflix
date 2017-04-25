@@ -1,12 +1,8 @@
-// ADDED WEIRD CLEARFLEX THING TO FILL DEADSPACE,
-// ONE DAY FIGURE OUT HOW TO USE FOR A MOUSEOVER/MOUSELEAVE TO FIX TRIGGERING
-
 .series {
   width: 100%;
   cursor: pointer;
-  // transform-origin: center left;
-  // transition: transform 500ms ease;
   position: relative;
+  transform-origin: center left;
 }
 
 .seriesMedia {
@@ -27,12 +23,6 @@
   right: 0;
   width: 100%;
 }
-
-// .series:hover ~ .series {
-//   transform: translate3d(100px, 0, 0);
-// }
-
-
 
 .seriesInfo {
   position: absolute;
