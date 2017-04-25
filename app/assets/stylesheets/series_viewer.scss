@@ -1,9 +1,50 @@
-.seriesViewer p {
-  font-size: 50px;
-  margin: 0px;
+.seriesViewer {
+  padding: 1px;
+  width: 100vw;
+  background-color: black;
+  height: 31vw;
+  display: flex;
+  justify-content: space-between;
 }
 
-.seriesViewer {
-  width: 100vw;
-  background-color: blue;
+.seriesViewer summary {
+  width: 30%;
+  margin: 20px 0 0 53px;
+}
+
+.seriesViewer section {
+  display: flex;
+  font-size: 1.1vw;
+  font-weight: 700;
+  color: #666;
+}
+
+.seriesViewer aside {
+  margin-right: .5em;
+}
+
+.viewTitle {
+  color: white;
+  font-size: 2.4vw;
+  font-weight: 700;
+  margin: 0 0 .2em 0;
+}
+
+.seriesViewer main {
+  margin: .6em 0 0 0;
+  font-size: 1.125vw;
+  color: #999;
+}
+
+.viewerBg {
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,0) );
+}
+
+.viewerBg img {
+  height: 100%;
+}
+
+.viewerBgFade {
+
 }
