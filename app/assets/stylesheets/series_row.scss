@@ -47,4 +47,10 @@
 .viewer {
   width: 100%;
   margin-left: -54px;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.test {
+  opacity: 1;
 }
