@@ -41,7 +41,7 @@ class GenreBrowser extends React.Component {
       <div onMouseLeave={this.handleLeave} className="genreBrowser">
 
         <figure>
-          <div onClick={this.handleClick} ><text onMouseOver={this.handleHover} >Browse </text>
+          <div onClick={this.handleClick} onMouseEnter={this.handleHover}><text>Browse </text>
           <i className="fa fa-caret-down"></i>
           </div>
           <div onMouseOver={this.handleLeave} id="deadspace" />

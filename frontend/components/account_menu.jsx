@@ -17,7 +17,7 @@ class AccountMenu extends React.Component {
     dropmenu.classList.toggle('show');
   }
 
-  handleHover() {
+  handleHover(e) {
     let dropmenu = document.getElementsByClassName('accountDropdown')[0];
     dropmenu.classList.add('show');
   }
@@ -39,14 +39,15 @@ class AccountMenu extends React.Component {
     }
 
     return(
-      <div className="accountMenu">
+      <div onMouseLeave={this.handleLeave} className="accountMenu">
 
-          <detail onClick={this.handleClick}>
-            <img src="http://www.pauliewax.com/wp-content/uploads/2017/04/PICON_027.png"/>
-            <p className="userName">
-              { username }
-            </p>
-            <i className="fa fa-caret-down"></i>
+
+          <detail onClick={this.handleClick}  onMouseEnter={this.handleHover} >
+                <img src="http://www.pauliewax.com/wp-content/uploads/2017/04/PICON_027.png"/>
+                <p className="userName">
+                  { username }
+                </p>
+                <i className="fa fa-caret-down"></i>
           </detail>
           <ul className="accountDropdown">
             <i className="fa fa-caret-up"></i>
