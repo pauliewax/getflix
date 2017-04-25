@@ -13,7 +13,12 @@ class SeriesRow extends React.Component {
     let series = this.props.row.map(serie=><Series key={serie.id} serie={serie} />);
     return(
       <div className="seriesRow">
-        { series }
+        { series[0] }
+        { series[1] }
+        { series[2] }
+        { series[3] }
+        { series[4] }
+        { series[5] }
         <aside className="clearFlex"/>
       </div>
     );
