@@ -17,11 +17,6 @@ class Browse extends React.Component {
            <text>In the final chapter of the Man With No Bugs trilogy, our hero finally hits the stack limit. See how it all unfolds when running is undefined.</text>
          </aside>
        </section>
-
-       <section>
-         <h1>I'M GONNA BE A VIDEO WHEN I GROW UP</h1>
-       </section>
-
      </div>
    );
  }
