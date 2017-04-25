@@ -34,7 +34,6 @@
   max-width: 80%;
   opacity: 0;
   transition: opacity 500ms ease;
-  z-index: 1;
   color: white;
   text-shadow: 0px 1px black;
 
@@ -57,7 +56,6 @@
   font-size: .45vw;
   user-select: none;
   white-space: normal;
-  padding: 1px;
 }
 
 .series:hover .seriesInfo {
@@ -73,7 +71,6 @@
   transform: scale(4, 2);
   opacity: 0;
   transition: opacity 500ms ease;
-  z-index: 1;
 }
 
 .fa-angle-down:hover {

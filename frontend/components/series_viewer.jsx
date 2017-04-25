@@ -4,6 +4,13 @@ import { connect } from 'react-redux';
 class SeriesViewer extends React.Component {
   constructor(props) {
       super(props);
+      this.handleClose = this.handleClose.bind(this);
+  }
+
+  handleClose() {
+    // debugger
+    let thisViewer = document.getElementsByClassName(this.props.thisViewerClass)[0];
+    thisViewer.classList.remove('test');
   }
 
   render() {
@@ -25,6 +32,7 @@ class SeriesViewer extends React.Component {
     return(
       <div className="seriesViewer">
         <summary>
+          <i onClick={this.handleClose} className="fa fa-times-thin viewerClose"></i>
           <div className="viewTitle">{ name }</div>
           <section>
             <aside className="viewDetails">{year}</aside>
@@ -35,8 +43,8 @@ class SeriesViewer extends React.Component {
           </main>
         </summary>
         <div className="viewerBg">
-          <div className="viewerBgFade"/>
-          <img src={img}></img>
+            <img src={img}></img>
+            <div className="viewerBgFade"/>
         </div>
       </div>
     );

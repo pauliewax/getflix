@@ -1,10 +1,14 @@
 .seriesViewer {
+  min-width: 1200px;
+  // ONLY MIN WIDTH CUZ IT BREAKS IMAGES
+  // MAYBE CHANGE LATER
   padding: 1px;
   width: 100vw;
   background-color: black;
   height: 31vw;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .seriesViewer summary {
@@ -38,19 +42,37 @@
 
 .viewerBg {
   position: relative;
+  display: flex;
+  justify-content: flex-end;
   height: 100%;
+  width: 70%;
+  overflow: hidden;
 }
 
 .viewerBg img {
   height: 100%;
-  z-index: -1;
 }
 
 .viewerBgFade {
+  position: absolute;
   display: block;
+  top: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,0) );
+  width: 83%;
+  height: 100%;
+  z-index: 10;
+}
+
+.viewerClose {
+  color: white;
+  transform: scale(4);
   position: absolute;
   top: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,0) );
-  width: 100%;
-  height: 100%;
+  right: 0;
+  margin-top: 2%;
+  margin-right: 4%;
+  cursor: pointer;
+
+  z-index: 12;
 }

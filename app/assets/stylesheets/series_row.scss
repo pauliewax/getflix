@@ -1,11 +1,13 @@
 .seriesRow {
   display: block;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   width: 100%;
   margin-bottom: 4%;
+  position: relative;
 }
 
 .seriesRow .seriesStrip:hover {
@@ -13,9 +15,10 @@
 }
 
 .seriesStrip {
-  z-index: 1;
+  z-index: 50;
   width: 100%; display: flex;
   transition: transform 500ms ease;
+  flex: 1;
 }
 
 .serieWrapper:hover ~ .serieWrapper {
@@ -28,8 +31,9 @@
   &:hover {
     transform: scale(1.85);
     opacity: 1;
-    z-index: 2;
+    z-index:51;
   }
+
 }
 
 .serieWrapper {
@@ -45,12 +49,19 @@
 }
 
 .viewer {
+  position: absolute;
+  bottom: 0;
+  flex: 0;
   width: 100%;
   margin-left: -54px;
   opacity: 0;
-  transition: opacity 500ms ease;
+  transition: all 0ms ease;
 }
 
 .test {
   opacity: 1;
+  top: 0;
+  margin-top: 10%;
+  z-index: 200;
+  transition: all 500ms ease-out;
 }

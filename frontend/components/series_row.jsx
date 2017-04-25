@@ -31,7 +31,7 @@ class SeriesRow extends React.Component {
               { series }
             </div>
 
-        <div className={`viewer viewer-${this.props.rowId}`}><SeriesViewer /></div>
+        <div className={`viewer viewer-${this.props.rowId}`}><SeriesViewer thisViewerClass={`viewer-${this.props.rowId}`} /></div>
       </div>
     );
   }
