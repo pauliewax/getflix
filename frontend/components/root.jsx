@@ -8,19 +8,36 @@ import Browse from './browse';
 import Genre from './genre';
 import Search from './search';
 
-const Root = ({ store }) => (
-  <Provider store={ store }>
-    <Router history={ hashHistory } >
-      <Route path="/" component={ App }>
-        <IndexRoute component={ Landing } />
-        <Route path="/login" component={ SessionForm } />
-        <Route path="/signup" component={ SessionForm } />
-        <Route path="/browse" component={ Browse } />
-        <Route path="/browse/genre/:id" component={ Genre } />
-        <Route path="/search" component={Search} />
-      </Route>
-    </Router>
-  </Provider>
-);
+const Root = ({ store }) => {
 
+  const _redirectIfLoggedIn = (nextState, replace) => {
+    const currentUser = store.getState().session.currentUser;
+    if (currentUser) {
+      replace('/browse');
+    }
+  };
+
+  const _ensureLoggedIn = (nextState, replace) => {
+    const currentUser = store.getState().session.currentUser;
+    if (!currentUser) {
+      replace('/login');
+    }
+  };
+
+  return(
+    <Provider store={ store }>
+      <Router history={ hashHistory } >
+        <Route path="/" component={ App } >
+          <IndexRoute component={ Landing } onEnter={_redirectIfLoggedIn}/>
+          <Route path="/login" component={ SessionForm } onEnter={_redirectIfLoggedIn}/>
+          <Route path="/signup" component={ SessionForm } onEnter={_redirectIfLoggedIn}/>
+          <Route path="/browse" component={ Browse } onEnter={_ensureLoggedIn}/>
+          <Route path="/browse/genre/:id" component={ Genre } onEnter={_ensureLoggedIn}/>
+          <Route path="/search" component={Search} onEnter={_ensureLoggedIn}/>
+        </Route>
+      </Router>
+    </Provider>
+  );
+
+};
 export default Root;
