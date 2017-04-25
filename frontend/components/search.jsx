@@ -45,7 +45,7 @@ class Search extends React.Component {
       <div className="searchPage">
         <div className="cheapSolution" />
         <aside>
-          <p>Twizlers</p>
+          <p>Search Results:</p>
         </aside>
         <main>
           {seriesRows}

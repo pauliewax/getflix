@@ -13,7 +13,7 @@
   position: absolute;
 }
 
-.navBar img {
+.logo {
   margin-left: 57px;
   cursor: pointer;
   width: 166px;
@@ -50,4 +50,9 @@
 .fixed section div img {
   width: 118px;
   display: inline-block;
+}
+
+.navBar aside {
+  margin-right: 57px;
+  display: flex;
 }

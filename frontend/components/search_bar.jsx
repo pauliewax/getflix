@@ -29,7 +29,7 @@ class SearchBar extends React.Component {
         <section className="inputBox">
           <input className="inputField" value={this.state.inputVal} onChange={this.handleInput} placeholder="Search by Title" />
         </section>
-        <div onClick={this.handleClick} className="closeTimes" >
+        <div onClick={this.handleClick} className="closeBtn" >
           <i className="fa fa-times-thin"></i>
         </div>
       </div>

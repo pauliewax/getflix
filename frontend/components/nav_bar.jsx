@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { logout } from '../actions/session_actions';
 import GenreBrowser from './genre_browser';
 import SearchBar from './search_bar';
+import AccountMenu from './account_menu';
+
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -26,7 +28,7 @@ class NavBar extends React.Component {
       return(
         <div>
           <nav className="navBar absolute">
-            <img onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
+            <img className="logo" onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
             { navButton }
           </nav>
         </div>
@@ -37,11 +39,15 @@ class NavBar extends React.Component {
           <nav className="navBar fixed">
             <section>
               <div>
-                <img onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
+                <img className="logo" onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
               </div>
               <GenreBrowser />
             </section>
-            <SearchBar />
+
+            <aside>
+              <SearchBar />
+              <AccountMenu />
+            </aside>
           </nav>
         </div>
       );

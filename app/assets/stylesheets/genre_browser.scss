@@ -24,11 +24,13 @@
 
 .dropdown {
   background-color: rgba(0,0,0,.9);
-  border: solid 2px 1 rgba(255,255,255,.15);
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.14902);
   border-top: 2px solid white;
   font-size: 15px;
   width: 40vw;
-  min-width: 570px;
+  // min-width: 570px;
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
