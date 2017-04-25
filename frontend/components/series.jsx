@@ -8,6 +8,16 @@ class Series extends React.Component {
       this.handleClick = this.handleClick.bind(this);
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.seriesDetail.id === this.props.serie.id) {
+      let thisSerie = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
+      thisSerie.classList.add('highlightSerie');
+    } else {
+      let thisSerie = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
+      thisSerie.classList.remove('highlightSerie');
+    }
+  }
+
   handleClick() {
     this.props.fetchSerie(this.props.serie.id);
   }
@@ -37,6 +47,7 @@ class Series extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    seriesDetail: state.series.seriesDetail
   };
 };
 

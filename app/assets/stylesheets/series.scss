@@ -94,3 +94,9 @@
 .series:hover .seriesBgFade {
   opacity: 1;
 }
+
+.highlightSerie .series {
+  border: 4px solid white;
+  box-sizing: border-box;
+  z-index: 50;
+}

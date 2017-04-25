@@ -10,7 +10,10 @@ class SeriesViewer extends React.Component {
   handleClose() {
     // debugger
     let thisViewer = document.getElementsByClassName(this.props.thisViewerClass)[0];
-    thisViewer.classList.remove('test');
+    thisViewer.classList.remove('viewerShow');
+
+    let selectedSerie = document.getElementsByClassName(`serie-${this.props.seriesDetail.id}`)[0];
+    selectedSerie.classList.remove('highlightSerie');
   }
 
   render() {

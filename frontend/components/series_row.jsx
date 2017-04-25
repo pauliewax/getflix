@@ -17,13 +17,13 @@ class SeriesRow extends React.Component {
         (seriesIds.includes(newProps.seriesDetail.id))
       ) {
       let thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
-      thisViewer.classList.add('test');
+      thisViewer.classList.add('viewerShow');
     }
   }
 
   render()  {
 
-    let series = this.props.row.map(serie=><li className={`serieWrapper`} key={serie.id} ><Series  serie={serie} /></li>);
+    let series = this.props.row.map(serie=><li className={`serie-${serie.id} serieWrapper`} key={serie.id} ><Series  serie={serie} /></li>);
 
     return(
       <div className="seriesRow">
