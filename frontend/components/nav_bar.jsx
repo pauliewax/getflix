@@ -71,8 +71,3 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 };
 
 export default connect(mapStateToProps,mapDispatchToProps)(NavBar);
-
-    // this.state = {scroll: "testme"};
-    // componentDidMount -> trackable = document.getElementById('blah')
-    // onClick={()=>this.setState({scroll: trackable.scrollTop})}
-    // <p>{this.state.scroll}</p>

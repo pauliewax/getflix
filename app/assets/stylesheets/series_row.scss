@@ -22,5 +22,18 @@
   }
 
 }
+
+.seriesRow li {
+  width: 16.66%;
+}
+
+
+.viewer {
+  display: none;
+}
+
+.viewerSlideOut {
+  display: block;
+}
 // Hovering over the right side of a row with only 1 thing in it will still
 // trigger the hover effects.

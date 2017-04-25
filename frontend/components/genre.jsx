@@ -35,7 +35,7 @@ class Genre extends React.Component {
     if (this.props.seriesList) {
       genreName = (this.props.seriesList.length === 0 ? "No Results" : this.props.seriesList[0].genre);
       let rows = this.generateRows();
-      seriesRows = rows.map(row=><SeriesRow key={row[0].id} row={row} />);
+      seriesRows = rows.map(row=><SeriesRow key={row[0].id} row={row} rowId={row[0].id} />);
     }
 
     return(
