@@ -10,7 +10,7 @@ const Landing = () => (
       <button className="button" onClick={()=>hashHistory.push("/signup")}>Join Free For a Month</button>
     </section>
 
-    <img src ="http://www.pauliewax.com/wp-content/uploads/2017/04/landing.png" />
+    <img src ="http://www.pauliewax.com/wp-content/uploads/2017/04/landing.jpg" />
   </div>
 );
 

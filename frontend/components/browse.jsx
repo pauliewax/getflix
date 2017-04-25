@@ -10,11 +10,11 @@ class Browse extends React.Component {
    return(
      <div className="browser" >
        <section className="browse-splash">
-         <img className="splash-bg" src="https://art-s.nflximg.net/ce088/9f320e03ceeb25b80f10cc180dc94aafd56ce088.webp" />
+         <img className="splash-bg" src="http://www.pauliewax.com/wp-content/uploads/2017/04/splash-bg.jpg" />
 
          <aside>
-           <img className="splash-logo" src="https://art-s.nflximg.net/95244/b74786b3fe3cdd237400bb81f8579b1720195244.webp" />
-           <text>They look alike, they sound alike and they both hate Richard Nixon. These twins are bringing the high to low-key comedy.</text>
+           <img className="splash-logo" src="http://www.pauliewax.com/wp-content/uploads/2017/04/getflixoriginal.png" />
+           <text>In the final chapter of the Man With No Bugs trilogy, our hero finally hits the stack limit. See how it all unfolds when running is not a function.</text>
          </aside>
        </section>
 
