@@ -18,6 +18,9 @@ class SeriesRow extends React.Component {
       ) {
       let thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
       thisViewer.classList.add('viewerShow');
+    } else {
+      let thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
+      thisViewer.classList.remove('viewerShow');
     }
   }
 
