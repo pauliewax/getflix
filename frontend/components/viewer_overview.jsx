@@ -7,10 +7,22 @@ class SeriesOverview extends React.Component {
   }
 
   render() {
+
+    let name;
+    let body;
+    let rating;
+    let year;
+
+    if (this.props.seriesDetail) {
+      body = this.props.seriesDetail.description;
+      rating = this.props.seriesDetail.rating;
+      year = this.props.seriesDetail.year;
+    }
+
     if (this.props.selected === 'overview') {
       return(
         <div className="overviewTab">
-          YOU'RE RENDERING OVERVIEW
+          {body}
         </div>
       );
     } else {

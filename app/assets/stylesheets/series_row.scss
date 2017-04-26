@@ -73,6 +73,11 @@
 
 .seriesRow li {
   width: 16.66%;
+  margin-right: .2vw;
+}
+
+.seriesRow li:last-of-type {
+  margin-right: 0;
 }
 
 .viewer {

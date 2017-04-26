@@ -5,7 +5,7 @@
   height: 31vw;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .viewTitle {
@@ -26,6 +26,7 @@
   justify-content: center;
   align-items: flex-start;
   z-index: 1;
+  width: 100%;
 }
 
 .viewerNav {
@@ -52,7 +53,7 @@
   opacity: 1;
 }
 
-.episodes {
+.episodesBtn {
   // display: none;
 }
 
@@ -78,6 +79,17 @@
 }
 
 .overviewTab {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px 0 0 53px;
+  color: white;
+  width: 33vw;
+  font-size: 70px;
+}
+
+.episodesTab {
   z-index: 1;
   color: white;
   font-size: 40px;
