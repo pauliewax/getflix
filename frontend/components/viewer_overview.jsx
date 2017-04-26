@@ -22,7 +22,13 @@ class SeriesOverview extends React.Component {
     if (this.props.selected === 'overview') {
       return(
         <div className="overviewTab">
-          {body}
+          <aside className="overviewDetails">
+            <li>{year}</li>
+            <li>{rating}</li>
+          </aside>
+          <div className="overviewBody">
+            {body}
+          </div>
         </div>
       );
     } else {
