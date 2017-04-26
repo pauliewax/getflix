@@ -22,8 +22,6 @@ class SeriesRow extends React.Component {
         let rowObj = document.getElementsByClassName(`serie-${this.props.row[i].id}`)[0];
         rowObj.id = "noHover";
       }
-      // let thisSerie = document.getElementsByClassName(event.currentTarget.classList[0])[0];
-      // thisSerie.id = "noHover";
     } else {
       for (var i = 0; i < this.props.row.length; i++) {
         let rowObj = document.getElementsByClassName(`serie-${this.props.row[i].id}`)[0];

@@ -43,11 +43,12 @@
 
 .seriesRow .seriesStrip #noHover:hover {
   transform: scale(.52);
-  z-index: 51
+  transform: translate3d(25px, 0, 0);
+  z-index: 500
 }
 
-.seriesRow .seriesStrip #noHover .series {
-  transform-origin: center left;
+.seriesRow .seriesStrip #noHover:hover .series {
+  transform: translate3d(25px, 0, 0);
 }
 
 .serieWrapper {
