@@ -16,7 +16,8 @@
 
 .seriesStrip {
   z-index: 50;
-  width: 100%; display: flex;
+  width: 100%;
+  display: flex;
   transition: transform 500ms ease;
   flex: 1;
 }
@@ -31,9 +32,21 @@
   &:hover {
     transform: scale(1.85);
     opacity: 1;
-    z-index:51;
+    z-index:400;
   }
+}
 
+
+.seriesStrip:hover #noHover {
+  transform: translate3d(50px, 0, 0);
+}
+
+.seriesRow .seriesStrip #noHover:hover {
+  transform: scale(.54);
+}
+
+.seriesRow .seriesStrip #noHover .series {
+  transform-origin: left;
 }
 
 .serieWrapper {

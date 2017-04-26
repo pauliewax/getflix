@@ -13,10 +13,17 @@ class SeriesRow extends React.Component {
   }
 
   handleHover(event) {
-    let seriesIds = this.props.row.map(serie=>serie.id);
     let thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
+    // This line checks if the viewerShow class has been added, meaning the viewer is open for this row
     if (thisViewer.classList[2]) {
       this.props.fetchSerie(parseInt(event.currentTarget.classList[0].slice(6)));
+
+      for (var i = 0; i < this.props.row.length; i++) {
+        let rowObj = document.getElementsByClassName(`serie-${this.props.row[i].id}`)[0];
+        rowObj.id = "noHover";
+      }
+      // let thisSerie = document.getElementsByClassName(event.currentTarget.classList[0])[0];
+      // thisSerie.id = "noHover";
     }
   }
 

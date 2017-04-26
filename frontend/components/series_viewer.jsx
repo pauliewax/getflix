@@ -8,7 +8,6 @@ class SeriesViewer extends React.Component {
   }
 
   handleClose() {
-    // debugger
     let thisViewer = document.getElementsByClassName(this.props.thisViewerClass)[0];
     thisViewer.classList.remove('viewerShow');
 

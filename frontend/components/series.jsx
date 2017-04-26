@@ -9,12 +9,14 @@ class Series extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (newProps.seriesDetail.id === this.props.serie.id) {
-      let thisSerie = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
-      thisSerie.classList.add('highlightSerie');
-    } else {
-      let thisSerie = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
-      thisSerie.classList.remove('highlightSerie');
+    if (newProps.seriesDetail) {      
+      if (newProps.seriesDetail.id === this.props.serie.id) {
+        let thisSerie = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
+        thisSerie.classList.add('highlightSerie');
+      } else {
+        let thisSerie = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
+        thisSerie.classList.remove('highlightSerie');
+      }
     }
   }
 
