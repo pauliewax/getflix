@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchBySeries } from '../actions/video_actions';
-import VideoDetail from './video_detail';
+import VideoRow from './video_row';
 
 class SeriesEpisodes extends React.Component {
   constructor(props) {
@@ -22,14 +22,30 @@ class SeriesEpisodes extends React.Component {
     }
   }
 
+  generateRows(episodeDetails) {
+    let allEpisodes = Object.assign([], episodeDetails);
+    let allRows =[];
+    while (allEpisodes.length !== 0)  {
+      allRows.push(allEpisodes.slice(0,5));
+      allEpisodes = allEpisodes.slice(5);
+    }
+    return allRows;
+  }
+
   render() {
     let episodeDetails=[];
+    let episodeRows;
 
     if (this.props.episodes) {
       for (var i = 0; i < this.props.episodes.length; i++) {
         let uniKey = `s${this.props.seriesDetail.id}-e${this.props.episodes[i].id}`;
         episodeDetails.push(<VideoDetail key={uniKey} video={this.props.episodes[i]} />);
+
+        let rows = this.generateRows(episodeDetails);
+        episodeRows = rows.map(row=><VideoRow key={row[0].id} row={row} />);
       }
+
+
     }
 
 
