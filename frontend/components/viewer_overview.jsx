@@ -6,6 +6,17 @@ class SeriesOverview extends React.Component {
       super(props);
   }
 
+  componentWillReceiveProps(newProps) {
+    // debugger
+    if (newProps.selected !== 'overview') {
+      let thisTab = document.getElementsByClassName('overviewTab')[0];
+      thisTab.classList.add('hideTab');
+    } else {
+      let thisTab = document.getElementsByClassName('overviewTab')[0];
+      thisTab.classList.remove('hideTab');
+    }
+  }
+
   render() {
 
     let name;
@@ -19,24 +30,17 @@ class SeriesOverview extends React.Component {
       year = this.props.seriesDetail.year;
     }
 
-    if (this.props.selected === 'overview') {
-      return(
-        <div className="overviewTab">
-          <aside className="overviewDetails">
-            <li>{year}</li>
-            <li>{rating}</li>
-          </aside>
-          <div className="overviewBody">
-            {body}
-          </div>
+    return(
+      <div className="overviewTab">
+        <aside className="overviewDetails">
+          <li>{year}</li>
+          <li>{rating}</li>
+        </aside>
+        <div className="overviewBody">
+          {body}
         </div>
-      );
-    } else {
-      return(
-        <div className="overviewTab">
-        </div>
-      );
-    }
+      </div>
+    );
   }
 }
 

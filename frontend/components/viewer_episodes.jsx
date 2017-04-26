@@ -12,6 +12,14 @@ class SeriesEpisodes extends React.Component {
     if (newProps.seriesDetail !== this.props.seriesDetail) {
       this.props.fetchBySeries(newProps.seriesDetail.id);
     }
+
+    if (newProps.selected !== 'episodes') {
+      let thisTab = document.getElementsByClassName('episodesTab')[0];
+      thisTab.classList.add('hideTab');
+    } else {
+      let thisTab = document.getElementsByClassName('episodesTab')[0];
+      thisTab.classList.remove('hideTab');
+    }
   }
 
   render() {
@@ -19,7 +27,8 @@ class SeriesEpisodes extends React.Component {
 
     if (this.props.episodes) {
       for (var i = 0; i < this.props.episodes.length; i++) {
-        episodeDetails.push(<VideoDetail video={this.props.episodes[i]} />);
+        let uniKey = `s${this.props.seriesDetail.id}-e${this.props.episodes[i].id}`;
+        episodeDetails.push(<VideoDetail key={uniKey} video={this.props.episodes[i]} />);
       }
     }
 
@@ -27,7 +36,9 @@ class SeriesEpisodes extends React.Component {
     if (this.props.selected === 'episodes') {
       return(
         <div className="episodesTab">
-          { episodeDetails }
+          <div className="episodeCarousel">
+            { episodeDetails }
+          </div>
         </div>
       );
     } else {
