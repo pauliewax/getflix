@@ -5,6 +5,8 @@ class SeriesViewer extends React.Component {
   constructor(props) {
       super(props);
       this.handleClose = this.handleClose.bind(this);
+      this.handleSelect = this.handleSelect.bind(this);
+      this.state = {selectedTab: 'overview'};
   }
 
   handleClose() {
@@ -14,6 +16,23 @@ class SeriesViewer extends React.Component {
     let selectedSerie = document.getElementsByClassName(`serie-${this.props.seriesDetail.id}`)[0];
     selectedSerie.classList.remove('highlightSerie');
   }
+
+  handleSelect(e) {
+    let selectedTab = e.currentTarget.innerText.toLowerCase();
+    this.setState({selectedTab}, this.addHighlight(e));
+  }
+
+  addHighlight(e)  {
+    e.currentTarget.classList.add('selectedBtn');
+    let tabs = document.getElementsByClassName('viewTab');
+    for (var i = 0; i < tabs.length; i++) {
+      if (tabs[i].innerText !== e.currentTarget.innerText) {
+        tabs[i].classList.remove('selectedBtn');
+      }
+    }
+  }
+
+
 
   render() {
 
@@ -33,21 +52,18 @@ class SeriesViewer extends React.Component {
 
     return(
       <div className="seriesViewer">
-        <summary>
-          <i onClick={this.handleClose} className="fa fa-times-thin viewerClose"></i>
-          <div className="viewTitle">{ name }</div>
-          <section>
-            <aside className="viewDetails">{year}</aside>
-            <aside>{rating}</aside>
-          </section>
-          <main className="viewBody">
-            { body }
-          </main>
-        </summary>
-        <div className="viewerBg">
-            <img src={img}></img>
-            <div className="viewerBgFade"/>
-        </div>
+<i onClick={this.handleClose} className="fa fa-times-thin viewerClose"></i>
+        <div className="viewTitle">{ name }</div>
+
+        <section className="viewerFooter">
+          <detail className="viewerNav">
+            <div onClick={this.handleSelect} className="viewTab">OVERVIEW</div>
+            <div onClick={this.handleSelect} className="viewTab episodeBtn">EPISODES</div>
+            <div onClick={this.handleSelect} className="viewTab">REVIEWS</div>
+          </detail>
+        </section>
+
+        <img className="viewerBg" src={img}></img>
       </div>
     );
   }

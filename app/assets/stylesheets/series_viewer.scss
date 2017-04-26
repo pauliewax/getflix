@@ -1,67 +1,66 @@
 .seriesViewer {
-  min-width: 1200px;
-  // ONLY MIN WIDTH CUZ IT BREAKS IMAGES
-  // MAYBE CHANGE LATER
   padding: 1px;
   width: 100vw;
   background-color: black;
   height: 31vw;
-  display: flex;
-  justify-content: space-between;
   position: relative;
-}
-
-.seriesViewer summary {
-  width: 30%;
-  margin: 20px 0 0 53px;
-}
-
-.seriesViewer section {
   display: flex;
-  font-size: 1.1vw;
-  font-weight: 700;
-  color: #666;
-}
-
-.seriesViewer aside {
-  margin-right: .5em;
+  justify-content: center;
 }
 
 .viewTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px 0 0 53px;
   color: white;
   font-size: 2.4vw;
   font-weight: 700;
-  margin: 0 0 .2em 0;
 }
 
-.seriesViewer main {
-  margin: .6em 0 0 0;
-  font-size: 1.125vw;
-  color: #999;
+.viewerFooter  {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.viewerNav {
+  display: flex;
+}
+
+.viewerNav div {
+  color: white;
+  font-weight: 700;
+  font-size: 1vw;
+  padding-bottom: 8px;
+  margin: 0 1.5em;
+  opacity: .7;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.viewerNav div:hover {
+  opacity: 1;
+}
+
+.viewerNav .selectedBtn {
+  border-bottom: 5px solid red;
+  opacity: 1;
+}
+
+.episodes {
+  // display: none;
 }
 
 .viewerBg {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  height: 100%;
-  width: 70%;
-  overflow: hidden;
-}
-
-.viewerBg img {
-  height: 100%;
-}
-
-.viewerBgFade {
   position: absolute;
-  display: block;
   top: 0;
   right: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,0) );
-  width: 83%;
   height: 100%;
-  z-index: 10;
+  width: auto;
+  opacity: .4;
 }
 
 .viewerClose {
@@ -73,6 +72,5 @@
   margin-top: 2%;
   margin-right: 4%;
   cursor: pointer;
-
-  z-index: 12;
+  z-index: 1;
 }
