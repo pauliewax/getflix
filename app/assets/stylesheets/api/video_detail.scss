@@ -29,6 +29,20 @@
   transform: scale(3);
   left: calc(50% - 6.3px);
   top: calc(50% - 8px);
+  visibility: hidden;
+  transition: all 250ms ease;
+}
+
+.thumb:hover .fa-play {
+  visibility: visible;
+  opacity: .7;
+  cursor: pointer;
+}
+
+.thumb .fa-play:hover {
+  opacity: 1;
+  transform: scale(3.5);
+  color: red;
 }
 
 .videoHeader {
