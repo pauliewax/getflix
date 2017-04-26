@@ -51,6 +51,18 @@
   transform: translate3d(25px, 0, 0);
 }
 
+#noHover .fa-angle-down {
+  display: none;
+}
+
+#noHover .seriesInfo {
+  display: none;
+}
+
+#noHover .seriesBgFade {
+  display: none;
+}
+
 .serieWrapper {
   transition: transform 500ms ease;
 }

@@ -9,7 +9,7 @@ class Series extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (newProps.seriesDetail) {      
+    if (newProps.seriesDetail) {
       if (newProps.seriesDetail.id === this.props.serie.id) {
         let thisSerie = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
         thisSerie.classList.add('highlightSerie');
@@ -40,7 +40,7 @@ class Series extends React.Component {
         </div>
 
         <i onClick={this.handleClick} className="fa fa-angle-down"></i>
-
+        <i className="fa fa-caret-down"></i>
 
       </div>
     );

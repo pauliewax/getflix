@@ -77,8 +77,18 @@
   color: #e50914;
 }
 
+
 .series:hover .fa-angle-down {
   opacity: 1;
+}
+
+.series .fa-caret-down {
+  color: white;
+  position: absolute;
+  margin-bottom: -14px;
+  margin-left: calc(50% - 5px);
+  bottom: 0;
+  display: none;
 }
 
 .seriesBgFade {
@@ -99,4 +109,8 @@
   border: 4px solid white;
   box-sizing: border-box;
   z-index: 50;
+}
+
+.highlightSerie .fa-caret-down {
+  display: block;
 }
