@@ -2,6 +2,7 @@
   width: 20%;
   box-sizing: border-box;
   display: flex;
+  margin-right: 30px;
   flex-direction: column;
 }
 
@@ -17,6 +18,29 @@
 
 .thumb div {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 2%;
+  left: 2%;
+  font-weight: 300;
+  font-size: 2.15625vw;
+}
+
+.thumb .fa-play {
+  position: absolute;
+  transform: scale(3);
+  left: calc(50% - 6.3px);
+  top: calc(50% - 8px);
+}
+
+.videoHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: .9vw;
+  font-weight: 700;
+  margin: .45vw 0 0;
+}
+
+.videoBody {
+  margin: .45vw 0 0;
+  padding:0;
+  font-sizing: .916663vw;
 }

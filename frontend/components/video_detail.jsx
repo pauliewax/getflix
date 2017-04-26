@@ -22,18 +22,19 @@ class VideoDetail extends React.Component {
     }
     return(
       <div className="videoDetail">
-        <div className="thumb">
-          <div>{ep}</div>
-          <img src={img} />
-        </div>
+          <div className="thumb">
+            <i className="fa fa-play"></i>
+            <div>{ep}</div>
+            <img src={img} />
+          </div>
         <div className="videoInfo">
-          <detail>
+          <div className="videoHeader">
             <div>{title}</div>
             <div>{duration}</div>
-          </detail>
-          <main>
+          </div>
+          <div className="videoBody">
             {body}
-          </main>
+          </div>
         </div>
       </div>
     );

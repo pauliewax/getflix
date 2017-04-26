@@ -22,8 +22,8 @@ class SeriesEpisodes extends React.Component {
     }
   }
 
-  generateRows(episodeDetails) {
-    let allEpisodes = Object.assign([], episodeDetails);
+  generateRows(episodes) {
+    let allEpisodes = Object.assign([], episodes);
     let allRows =[];
     while (allEpisodes.length !== 0)  {
       allRows.push(allEpisodes.slice(0,5));
@@ -33,19 +33,11 @@ class SeriesEpisodes extends React.Component {
   }
 
   render() {
-    let episodeDetails=[];
-    let episodeRows;
+    let episodeRows='';
 
     if (this.props.episodes) {
-      for (var i = 0; i < this.props.episodes.length; i++) {
-        let uniKey = `s${this.props.seriesDetail.id}-e${this.props.episodes[i].id}`;
-        episodeDetails.push(<VideoDetail key={uniKey} video={this.props.episodes[i]} />);
-
-        let rows = this.generateRows(episodeDetails);
-        episodeRows = rows.map(row=><VideoRow key={row[0].id} row={row} />);
-      }
-
-
+      let rows = this.generateRows(this.props.episodes);
+      episodeRows = rows.map(row=><VideoRow key={`s${this.props.seriesDetail.id}-v${row[0].id}`} row={row} />);
     }
 
 
@@ -53,7 +45,7 @@ class SeriesEpisodes extends React.Component {
       return(
         <div className="episodesTab">
           <div className="episodeCarousel">
-            { episodeDetails }
+            { episodeRows[0] }
           </div>
         </div>
       );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import VideoDetail from './video_detail.jsx';
 
 class VideoRow extends React.Component {
   constructor(props) {
@@ -7,9 +8,10 @@ class VideoRow extends React.Component {
   }
 
   render() {
+    let videos = this.props.row.map(video=><VideoDetail key={`v-${video.id}`} video={video} />);
     return(
-      <div>
-
+      <div className="videoRow">
+        { videos }
       </div>
     );
   }
