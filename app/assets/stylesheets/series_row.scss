@@ -32,7 +32,7 @@
   &:hover {
     transform: scale(1.85);
     opacity: 1;
-    z-index:400;
+    z-index:51;
   }
 }
 
@@ -42,11 +42,12 @@
 }
 
 .seriesRow .seriesStrip #noHover:hover {
-  transform: scale(.54);
+  transform: scale(.52);
+  z-index: 51
 }
 
 .seriesRow .seriesStrip #noHover .series {
-  transform-origin: left;
+  transform-origin: center left;
 }
 
 .serieWrapper {
