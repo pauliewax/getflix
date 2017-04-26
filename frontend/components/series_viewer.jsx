@@ -11,6 +11,12 @@ class SeriesViewer extends React.Component {
       this.state = {selectedTab: 'overview'};
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.seriesDetail !== this.props.seriesDetail) {
+      this.setState({selectedTab: 'overview'}, this.resetTabs());
+    }
+  }
+
   handleClose() {
     let thisViewer = document.getElementsByClassName(this.props.thisViewerClass)[0];
     thisViewer.classList.remove('viewerShow');
@@ -65,7 +71,7 @@ class SeriesViewer extends React.Component {
 
         <section className="viewerFooter">
           <detail className="viewerNav">
-            <div onClick={this.handleSelect} className="viewTab overviewBtn selectedBtn">OVERVIEW</div>
+            <div onClick={this.handleSelect} className="viewTab overviewBtn">OVERVIEW</div>
             <div onClick={this.handleSelect} className="viewTab episodeBtn">EPISODES</div>
             <div onClick={this.handleSelect} className="viewTab reviewBtn">REVIEWS</div>
           </detail>
