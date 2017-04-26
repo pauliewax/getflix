@@ -2,31 +2,42 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Series from './series';
 import SeriesViewer from './series_viewer';
+import { fetchSerie } from '../actions/series_actions';
 
 class SeriesRow extends React.Component {
   constructor(props) {
       super(props);
 
       this.state = {selectedSerie: ''};
+      this.handleHover = this.handleHover.bind(this);
+  }
+
+  handleHover(event) {
+    let seriesIds = this.props.row.map(serie=>serie.id);
+    let thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
+    if (thisViewer.classList[2]) {
+      this.props.fetchSerie(parseInt(event.currentTarget.classList[0].slice(6)));
+    }
   }
 
   componentWillReceiveProps(newProps) {
     let seriesIds = this.props.row.map(serie=>serie.id);
+    let thisViewer;
     if (
         (newProps.seriesDetail !== this.props.seriesDetail) &&
         (seriesIds.includes(newProps.seriesDetail.id))
       ) {
-      let thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
+        thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
       thisViewer.classList.add('viewerShow');
     } else {
-      let thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
+        thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
       thisViewer.classList.remove('viewerShow');
     }
   }
 
   render()  {
 
-    let series = this.props.row.map(serie=><li className={`serie-${serie.id} serieWrapper`} key={serie.id} ><Series  serie={serie} /></li>);
+    let series = this.props.row.map(serie=><li onMouseOver={this.handleHover} className={`serie-${serie.id} serieWrapper`} key={serie.id} ><Series serie={serie} /></li>);
 
     return(
       <div className="seriesRow">
@@ -48,6 +59,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
+    fetchSerie: (id) => (dispatch(fetchSerie(id)))
   };
 };
 

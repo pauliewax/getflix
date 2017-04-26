@@ -14,7 +14,7 @@ class Browse extends React.Component {
 
          <aside>
            <img className="splash-logo" src="http://www.pauliewax.com/wp-content/uploads/2017/04/getflixoriginal.png" />
-           <text>In the final chapter of the Man With No Bugs trilogy, our hero finally hits the stack limit. See how it all unfolds when running is undefined.</text>
+           <text>In the final chapter of the Man With No Bugs trilogy, our hero finally hits the stack limit. See how it all unfolds when escape is not a function.</text>
          </aside>
        </section>
      </div>
