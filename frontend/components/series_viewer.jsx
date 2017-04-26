@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import SeriesOverview from './viewer_overview';
 
 class SeriesViewer extends React.Component {
   constructor(props) {
@@ -54,6 +55,8 @@ class SeriesViewer extends React.Component {
       <div className="seriesViewer">
 <i onClick={this.handleClose} className="fa fa-times-thin viewerClose"></i>
         <div className="viewTitle">{ name }</div>
+
+        <SeriesOverview selected={this.state.selectedTab} />
 
         <section className="viewerFooter">
           <detail className="viewerNav">
