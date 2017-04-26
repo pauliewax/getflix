@@ -15,3 +15,13 @@ export const fetchVideo = (id) => {
     }
   );
 };
+
+export const fetchBySeries = (seriesId) => {
+  return $.ajax(
+    {
+      method: "get",
+      url: `/api/videos/series`,
+      data: { seriesId }
+    }
+  );
+};
