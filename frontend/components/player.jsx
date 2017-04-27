@@ -4,7 +4,7 @@ import { fetchVideo } from '../actions/video_actions';
 
 class Player extends React.Component {
   constructor(props) {
-      super(props);
+    super(props);
   }
 
   componentWillMount() {
@@ -17,7 +17,7 @@ class Player extends React.Component {
       // autoplay has to be in camelCase
       return(
         <div className="player">
-          <video id="videoPlayer" controls autoPlay>
+          <video id="videoPlayer" autoPlay>
             <source src={this.props.video.video_url} type="video/mp4"></source>
             Your browser does not video playback.
           </video>
