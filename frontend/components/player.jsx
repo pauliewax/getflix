@@ -18,7 +18,7 @@ class Player extends React.Component {
       // autoplay has to be in camelCase
       return(
         <div className="player">
-          <video id="videoPlayer">
+          <video id="videoPlayer" autoPlay>
             <source src={this.props.video.video_url} type="video/mp4"></source>
             Your browser does not video playback.
           </video>

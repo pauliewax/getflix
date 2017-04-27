@@ -6,6 +6,7 @@ class PlayerControls extends React.Component {
     super(props);
     this.pressPlay = this.pressPlay.bind(this);
     this.handleSlide = this.handleSlide.bind(this);
+    this.fullScreen = this.fullScreen.bind(this);
     this.state = {seekerVal: 0};
   }
 
@@ -40,15 +41,29 @@ class PlayerControls extends React.Component {
     video.currentTime = time;
   }
 
+  fullScreen() {
+    let video = document.getElementById("videoPlayer");
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.mozRequestFullscreen) {
+      video.mozRequestFullscreen();
+    } else if (video.webkitRequestFullscreen) {
+      video.webkitRequestFullscreen();
+    }
+  }
+
   render() {
     return(
       <div className="playerControls">
         <div className="playBar">
           <div className="playPause">
-            <i onClick={this.pressPlay} id="videoPlay" className="fa fa-play"></i>
-            <i onClick={this.pressPlay} id="videoPause" className="fa fa-pause hidePlay"></i>
+            <i onClick={this.pressPlay} id="videoPlay" className="fa fa-play hidePlay"></i>
+            <i onClick={this.pressPlay} id="videoPause" className="fa fa-pause"></i>
           </div>
           <input onChange={this.handleSlide} type="range" id="seeker" value={this.state.seekerVal}/>
+          <div className="fullScreen">
+            <i onClick={this.fullScreen} id="videoScreen" className="fa fa-arrows-alt"></i>
+          </div>
         </div>
       </div>
     );
