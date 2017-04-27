@@ -225,7 +225,7 @@ vid3 = Video.create(
   length: '59s',
   year: 1996,
   series_id: series1.id,
-  episode_num: 1,
+  episode_num: 2,
   video_url: 'https://www.youtube.com/embed/zJMi5lvQqq8',
   thumbnail_url: 'http://cdn.ambrosiaforheads.com/wp-content/uploads/2017/03/Iverson-Jordan.jpg'
 )

@@ -12,6 +12,33 @@
   position: relative;
 }
 
+#seriesPlay {
+  position: absolute;
+  color: white;
+  transform: scale(3);
+  left: calc(50% - 6.3px);
+  top: calc(24%);
+  visibility: hidden;
+  transition: color 200ms ease, transform 200ms ease;
+  z-index: 51;
+}
+
+.series:hover #seriesPlay {
+  visibility: visible;
+  color: white;
+  cursor: pointer;
+  z-index: 51;
+}
+
+.series:hover #seriesPlay:hover {
+  transform: scale(3.5);
+  color: red;
+}
+
+.seriesRow #noHover #seriesPlay {
+  top: calc(50% - 8px);
+}
+
 .imageScaler {
   margin-bottom: 56%;
 }
@@ -28,7 +55,7 @@
 .seriesInfo {
   position: absolute;
   top: 0;
-  margin-top: 28%;
+  margin-top: 31%;
   margin-left: 5%;
   white-space: nowrap;
   max-width: 80%;
@@ -51,7 +78,7 @@
 
 .seriesInfo text {
   display: block;
-  height: 4vmin;
+  height: 4.2vmin;
   overflow: hidden;
   font-size: .45vw;
   user-select: none;
@@ -67,7 +94,7 @@
   position: absolute;
   bottom: 0;
   margin-left: calc(50% - 5px);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   transform: scale(4, 2);
   opacity: 0;
   transition: opacity 500ms ease;

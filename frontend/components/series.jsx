@@ -28,6 +28,7 @@ class Series extends React.Component {
     return(
       <div className="series">
 
+        <i id="seriesPlay" className="fa fa-play"></i>
         <div className="seriesMedia">
           <div className="imageScaler"></div>
           <img className="seriesImg" src={this.props.serie.thumbnail_url}/>
