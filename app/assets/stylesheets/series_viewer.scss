@@ -94,12 +94,13 @@
   height: 90%;
   display: flex;
   justify-content: center;
+  min-height: 0;
+  min-width: 0;
 }
 
 .episodeCarousel {
   height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 .hideTab {

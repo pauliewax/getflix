@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchBySeries } from '../actions/video_actions';
 import VideoRow from './video_row';
+import Slider from 'react-slick';
 
 class SeriesEpisodes extends React.Component {
   constructor(props) {
@@ -33,20 +34,36 @@ class SeriesEpisodes extends React.Component {
   }
 
   render() {
-    let episodeRows='';
-
+    let episodeRows;
     if (this.props.episodes) {
       let rows = this.generateRows(this.props.episodes);
-      episodeRows = rows.map(row=><VideoRow key={`s${this.props.seriesDetail.id}-v${row[0].id}`} row={row} />);
+      episodeRows = rows.map(row=><div className="rowWrapper" key={`s${this.props.seriesDetail.id}-v${row[0].id}`}><VideoRow row={row} /></div>);
     }
 
-    return(
-      <div className="episodesTab">
-        <div className="episodeCarousel">
-          { episodeRows[0] }
+    let settings = {
+      dots: true,
+      infinite: true,
+      speed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: true,
+      initialSlide: 1,
+    };
+
+    if (episodeRows.length > 0) {
+      return(
+        <div className="episodesTab">
+            <Slider className="episodeCarousel" {...settings}>
+              { episodeRows }
+            </Slider>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return(
+        <div className="episodesTab">
+        </div>
+      );
+    }
   }
 }
 
