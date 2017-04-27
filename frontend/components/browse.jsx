@@ -10,11 +10,11 @@ class Browse extends React.Component {
    return(
      <div className="browser" >
        <section className="browse-splash">
-         <img className="splash-bg" src="http://www.pauliewax.com/wp-content/uploads/2017/04/splash-bg.jpg" />
+         <img className="splash-bg" src="http://www.pauliewax.com/wp-content/uploads/2017/04/splash-bg.png" />
 
          <aside>
            <img className="splash-logo" src="http://www.pauliewax.com/wp-content/uploads/2017/04/getflixoriginal.png" />
-           <text>In the final chapter of the Man With No Bugs trilogy, our hero finally hits the stack limit. See how it all unfolds when escape is not a function.</text>
+           <text>Dry air. Wet code. Escape is not defined. See how it all unfolds when the stack limit is reached in this critically acclaimed spaghetti coder.</text>
          </aside>
        </section>
      </div>
