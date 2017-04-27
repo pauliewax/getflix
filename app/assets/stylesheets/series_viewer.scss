@@ -99,7 +99,9 @@
 }
 
 .episodeCarousel {
-  height: 100%;
+  // Maybe ths height will break things
+  // but may solve carousel doubling up bug
+  height: 70%;
   width: 100%;
 }
 // NOTE: if you move hideTab up or down above
