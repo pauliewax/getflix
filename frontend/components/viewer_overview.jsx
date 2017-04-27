@@ -7,7 +7,6 @@ class SeriesOverview extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    // debugger
     if (newProps.selected !== 'overview') {
       let thisTab = document.getElementsByClassName('overviewTab')[0];
       thisTab.classList.add('hideTab');
@@ -32,6 +31,7 @@ class SeriesOverview extends React.Component {
 
     return(
       <div className="overviewTab">
+        <i id="overviewPlay" className="fa fa-play-circle"></i>
         <aside className="overviewDetails">
           <li>{year}</li>
           <li>{rating}</li>

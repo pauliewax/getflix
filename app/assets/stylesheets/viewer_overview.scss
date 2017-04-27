@@ -12,7 +12,22 @@
   width: auto;
 }
 
-.overviewBody {
-  margin: 200;
-  padding: 0;
+.overviewTab #overviewPlay {
+  position: absolute;
+  top: 0;
+  margin-top: 37%;
+  margin-left: 233%;
+  left: 0;
+  color: white;
+  cursor: pointer;
+  transform: scale(9);
+  z-index: 51;
+  opacity: .7;
+  transition: all 200ms ease;
+}
+
+#overviewPlay:hover {
+  transform: scale(10);
+  color: red;
+  opacity: 1;
 }

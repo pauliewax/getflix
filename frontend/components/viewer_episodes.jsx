@@ -40,21 +40,13 @@ class SeriesEpisodes extends React.Component {
       episodeRows = rows.map(row=><VideoRow key={`s${this.props.seriesDetail.id}-v${row[0].id}`} row={row} />);
     }
 
-
-    if (this.props.selected === 'episodes') {
-      return(
-        <div className="episodesTab">
-          <div className="episodeCarousel">
-            { episodeRows[0] }
-          </div>
+    return(
+      <div className="episodesTab">
+        <div className="episodeCarousel">
+          { episodeRows[0] }
         </div>
-      );
-    } else {
-      return(
-        <div className="episodesTab">
-        </div>
-      );
-    }
+      </div>
+    );
   }
 }
 

@@ -21,6 +21,7 @@
 
 .viewerNav {
   display: flex;
+  justify-content: center;
 }
 
 .viewerNav div {
@@ -85,6 +86,7 @@
   height: 90%;
   font-size: 1.125vw;
   color: #999;
+  position: relative;
 }
 
 .episodesTab {
