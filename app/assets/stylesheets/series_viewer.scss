@@ -97,13 +97,17 @@
   min-height: 0;
   min-width: 0;
 }
-
 .episodeCarousel {
   // Maybe ths height will break things
   // but may solve carousel doubling up bug
   height: 70%;
   width: 100%;
 }
+
+.rowWrapper {
+  width: 100%;
+}
+
 // NOTE: if you move hideTab up or down above
 // these other selectors, it breaks the viewerOverview
 .hideTab {

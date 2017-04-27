@@ -40,15 +40,14 @@ class SeriesEpisodes extends React.Component {
       episodeRows = rows.map(row=><div className="rowWrapper" key={`s${this.props.seriesDetail.id}-v${row[0].id}`}><VideoRow row={row} /></div>);
     }
 
-    let settings = {
+    const settings = {
       infinite: true,
-      dots: false,
-      draggable: false,
-      accessibility: false,
-      speed: 700,
+      speed: 600,
       slidesToShow: 1,
       slidesToScroll: 1,
-      initialSlide: 1,
+      accessibility: false,
+      draggable: false,
+      dots: false,
     };
 
     if (episodeRows.length > 0) {
