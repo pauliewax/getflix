@@ -7,12 +7,15 @@ class SeriesOverview extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
+    let overviewTabs = document.getElementsByClassName('overviewTab');
     if (newProps.selected !== 'overview') {
-      let thisTab = document.getElementsByClassName('overviewTab')[0];
-      thisTab.classList.add('hideTab');
+      for (var i = 0; i < overviewTabs.length; i++) {
+        overviewTabs[i].classList.add('hideTab');
+      }
     } else {
-      let thisTab = document.getElementsByClassName('overviewTab')[0];
-      thisTab.classList.remove('hideTab');
+      for (var i = 0; i < overviewTabs.length; i++) {
+        overviewTabs[i].classList.remove('hideTab');
+      }
     }
   }
 

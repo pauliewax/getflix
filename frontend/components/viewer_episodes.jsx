@@ -14,12 +14,16 @@ class SeriesEpisodes extends React.Component {
       this.props.fetchBySeries(newProps.seriesDetail.id);
     }
 
+    let episodeTabs = document.getElementsByClassName('episodesTab');
+
     if (newProps.selected !== 'episodes') {
-      let thisTab = document.getElementsByClassName('episodesTab')[0];
-      thisTab.classList.add('hideTab');
+      for (var i = 0; i < episodeTabs.length; i++) {
+        episodeTabs[i].classList.add('hideTab');
+      }
     } else {
-      let thisTab = document.getElementsByClassName('episodesTab')[0];
-      thisTab.classList.remove('hideTab');
+      for (var i = 0; i < episodeTabs.length; i++) {
+        episodeTabs[i].classList.remove('hideTab');
+      }
     }
   }
 
