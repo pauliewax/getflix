@@ -36,6 +36,7 @@
   border-radius: 15px;
   background-color: #252525;
   display: flex;
+  justify-content: space-between;
   box-shadow: 2px 2px 5px black;
   transition: all 250ms ease;
 }
@@ -71,9 +72,7 @@
   width: 70%;
   background: transparent;
   z-index: 100;
-  padding: 0 2%;
-  border-right: 1px solid black;
-  box-shadow: 1px 0px 0px #2d2d2d;
+  padding: 0 0 0 2%;
 }
 
 #seeker:focus {
@@ -120,8 +119,6 @@ input[type=range]::-ms-fill-upper {
   align-items: center;
   width: 5%;
   position: relative;
-  border-right: 1px solid black;
-  box-shadow: 1px 0px 0px #2d2d2d;
 }
 
 .muteButton {
@@ -136,12 +133,24 @@ input[type=range]::-ms-fill-upper {
 }
 
 .playTime {
+  color: white;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5%;
+  width: 10%;
   position: relative;
   border-right: 1px solid black;
   box-shadow: 1px 0px 0px #2d2d2d;
+  font-size: 1.2;
+  user-select: none;
+  cursor: default;
+}
+
+.playTime p {
+  margin-right: 4%;
+}
+
+.playTime p:last-of-type {
+  margin-right: 0;
 }

@@ -97,6 +97,8 @@ class PlayerControls extends React.Component {
 
     if (hour !== 0) {
       return `${hourStr}:${minStr}:${secStr}`;
+    } else if (min < 9) {
+      return `${(min).toString()}:${secStr}`;
     } else {
       return `${minStr}:${secStr}`;
     }
@@ -119,14 +121,15 @@ class PlayerControls extends React.Component {
           <input onChange={this.handleSlide} type="range" id="seeker" value={this.state.seekerVal}/>
           <div className="playTime">
             <p>{this.state.currentTime}</p>
+            <p>/</p>
             <p>{length}</p>
-          </div>
-          <div className="fullScreen">
-            <i onClick={this.fullScreen} id="videoScreen" className="fa fa-arrows-alt"></i>
           </div>
           <div className="muteButton">
             <i onClick={this.toggleSound} id="audioOn" className="fa fa-volume-up"></i>
             <i onClick={this.toggleSound} id="audioOff" className="fa fa-volume-off hidePlay"></i>
+          </div>
+          <div className="fullScreen">
+            <i onClick={this.fullScreen} id="videoScreen" className="fa fa-arrows-alt"></i>
           </div>
         </div>
       </div>
