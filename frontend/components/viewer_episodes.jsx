@@ -41,12 +41,13 @@ class SeriesEpisodes extends React.Component {
     }
 
     let settings = {
-      dots: true,
       infinite: true,
-      speed: 1000,
+      dots: false,
+      draggable: false,
+      accessibility: false,
+      speed: 700,
       slidesToShow: 1,
       slidesToScroll: 1,
-      centerMode: true,
       initialSlide: 1,
     };
 
