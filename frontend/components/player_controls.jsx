@@ -6,7 +6,7 @@ class PlayerControls extends React.Component {
     super(props);
     this.pressPlay = this.pressPlay.bind(this);
   }
-  
+
   pressPlay() {
     let video = document.getElementById("videoPlayer");
     if (video.paused === true) {
@@ -19,7 +19,9 @@ class PlayerControls extends React.Component {
   render() {
     return(
       <div className="playerControls">
-        <i onClick={this.pressPlay} id="videoPlay" className="fa fa-play"></i>
+        <div className="playBar">
+          <i onClick={this.pressPlay} id="videoPlay" className="fa fa-play"></i>
+        </div>
       </div>
     );
   }
