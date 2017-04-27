@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchVideo } from '../actions/video_actions';
+import PlayerControls from './player_controls';
 
 class Player extends React.Component {
   constructor(props) {
@@ -17,10 +18,11 @@ class Player extends React.Component {
       // autoplay has to be in camelCase
       return(
         <div className="player">
-          <video id="videoPlayer" autoPlay>
+          <video id="videoPlayer">
             <source src={this.props.video.video_url} type="video/mp4"></source>
             Your browser does not video playback.
           </video>
+          <PlayerControls />
         </div>
       );
     } else {
