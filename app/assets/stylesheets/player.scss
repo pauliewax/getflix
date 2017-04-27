@@ -37,7 +37,19 @@
   background-color: #252525;
   display: flex;
   box-shadow: 2px 2px 5px black;
+  transition: all 250ms ease;
+}
+
+.playBar i {
+  color: white;
+  transform: scale(2);
   transition: all 200ms ease;
+  cursor: pointer;
+}
+
+.playBar i:hover {
+  transform: scale(2.3);
+  color: red;
 }
 
 .playPause {
@@ -49,28 +61,6 @@
   position: relative;
   border-right: 1px solid black;
   box-shadow: 1px 0px 0px #2d2d2d;
-}
-
-#videoPlay {
-  color: white;
-  transform: scale(2);
-  transition: all 200ms ease;
-  cursor: pointer;
-}
-
-#videoPause {
-  color: white;
-  transform: scale(2);
-  transition: all 200ms ease;
-  cursor: pointer;
-}
-
-#videoPlay:hover {
-  transform: scale(2.3);
-}
-
-#videoPlay:hover {
-  transform: scale(2.3);
 }
 
 .hidePlay {
@@ -109,6 +99,7 @@ input[type=range]::-webkit-slider-thumb {
     background: #CB0000;
     box-shadow: 1px 2px 5px black;
     margin-top: -1.2%;
+    cursor: pointer;
 }
 
 input[type=range]::-ms-track {
@@ -133,13 +124,24 @@ input[type=range]::-ms-fill-upper {
   box-shadow: 1px 0px 0px #2d2d2d;
 }
 
-#videoScreen {
-  color: white;
-  transform: scale(2);
-  transition: all 200ms ease;
-  cursor: pointer;
+.muteButton {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5%;
+  position: relative;
+  border-right: 1px solid black;
+  box-shadow: 1px 0px 0px #2d2d2d;
 }
 
-#videoScreen:hover {
-  transform: scale(2.3);
+.playTime {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5%;
+  position: relative;
+  border-right: 1px solid black;
+  box-shadow: 1px 0px 0px #2d2d2d;
 }
