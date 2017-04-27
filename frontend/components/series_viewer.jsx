@@ -14,10 +14,15 @@ class SeriesViewer extends React.Component {
   componentWillReceiveProps(newProps) {
     if (newProps.seriesDetail !== this.props.seriesDetail) {
       this.setState({selectedTab: 'overview'}, this.resetTabs());
-      if (newProps.seriesDetail.episodes.length === 1) {
-        document.getElementsByClassName('episodeBtn')[0].classList.add('hideTab');
+      let episodeBtns = document.getElementsByClassName('episodeBtn');
+      if (newProps.seriesDetail.episodes.length <= 1) {
+        for (var i = 0; i < episodeBtns.length; i++) {
+          episodeBtns[i].classList.add('hideTab');
+        }
       } else {
-        document.getElementsByClassName('episodeBtn')[0].classList.remove('hideTab');
+        for (var i = 0; i < episodeBtns.length; i++) {
+          episodeBtns[i].classList.remove('hideTab');
+        }
       }
     }
   }
