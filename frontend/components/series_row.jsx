@@ -8,7 +8,7 @@ class SeriesRow extends React.Component {
   constructor(props) {
       super(props);
 
-      this.state = {selectedSerie: ''};
+      this.state = {selectedSerie: '', alreadySelected: false};
       this.handleHover = this.handleHover.bind(this);
   }
 
