@@ -1,11 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchSerie } from '../actions/series_actions';
+import { hashHistory } from 'react-router';
 
 class Series extends React.Component {
   constructor(props) {
       super(props);
       this.handleClick = this.handleClick.bind(this);
+      this.handlePlay = this.handlePlay.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -39,11 +41,15 @@ class Series extends React.Component {
     this.props.fetchSerie(this.props.serie.id);
   }
 
+  handlePlay() {
+    hashHistory.push(`/watch/${this.props.serie.firstEp[0].id}`);
+  }
+
   render()  {
     return(
       <div className="series">
 
-        <i id="seriesPlay" className="fa fa-play"></i>
+        <i onClick={this.handlePlay} id="seriesPlay" className="fa fa-play"></i>
         <div className="seriesMedia">
           <div className="imageScaler"></div>
           <img className="seriesImg" src={this.props.serie.thumbnail_url}/>

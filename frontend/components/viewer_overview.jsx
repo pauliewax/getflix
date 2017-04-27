@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { hashHistory } from 'react-router';
 
 class SeriesOverview extends React.Component {
   constructor(props) {
       super(props);
+      this.handlePlay = this.handlePlay.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -17,6 +19,10 @@ class SeriesOverview extends React.Component {
         overviewTabs[i].classList.remove('hideTab');
       }
     }
+  }
+
+  handlePlay() {
+    hashHistory.push(`/watch/${this.props.seriesDetail.firstEp[0].id}`);
   }
 
   render() {
@@ -34,7 +40,7 @@ class SeriesOverview extends React.Component {
 
     return(
       <div className="overviewTab">
-        <i id="overviewPlay" className="fa fa-play-circle"></i>
+        <i onClick={this.handlePlay} id="overviewPlay" className="fa fa-play-circle"></i>
         <aside className="overviewDetails">
           <li>{year}</li>
           <li>{rating}</li>

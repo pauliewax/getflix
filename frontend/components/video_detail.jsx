@@ -20,7 +20,6 @@ class VideoDetail extends React.Component {
     let duration;
     let ep;
     let video;
-
     if (this.props.video) {
       img = this.props.video.thumbnail_url;
       title = this.props.video.title;
