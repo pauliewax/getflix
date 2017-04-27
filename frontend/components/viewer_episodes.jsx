@@ -38,7 +38,7 @@ class SeriesEpisodes extends React.Component {
   }
 
   render() {
-    let episodeRows;
+    let episodeRows = [];
     if (this.props.episodes) {
       let rows = this.generateRows(this.props.episodes);
       episodeRows = rows.map(row=><div className="rowWrapper" key={`s${this.props.seriesDetail.id}-v${row[0].id}`}><VideoRow row={row} /></div>);
@@ -74,7 +74,7 @@ class SeriesEpisodes extends React.Component {
 const mapStateToProps = (state, ownProps) => {
   return {
     seriesDetail: state.series.seriesDetail,
-    episodes: state.videos
+    episodes: state.videos.videoList
   };
 };
 

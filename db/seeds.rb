@@ -204,7 +204,7 @@ vid1 = Video.create(
   year: 2016,
   series_id: series1.id,
   episode_num: 1,
-  video_url: 'https://www.youtube.com/embed/K0p7lQVkI1U',
+  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/nbadunks.mp4',
   thumbnail_url: 'http://cbssports.com/images/visual/whatshot/USATSI_9114927.jpg'
 )
 

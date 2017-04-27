@@ -7,6 +7,7 @@ import Landing from './landing';
 import Browse from './browse';
 import Genre from './genre';
 import Search from './search';
+import Player from './player';
 
 const Root = ({ store }) => {
 
@@ -35,6 +36,7 @@ const Root = ({ store }) => {
           <Route path="/browse/genre/:id" component={ Genre } onEnter={_ensureLoggedIn}/>
           <Route path="/search" component={Search} onEnter={_ensureLoggedIn}/>
         </Route>
+        <Route path="/watch/:id" component={Player} onEnter={_ensureLoggedIn}/>
       </Router>
     </Provider>
   );
