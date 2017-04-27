@@ -94,13 +94,15 @@
   height: 90%;
   display: flex;
   justify-content: center;
+  // required min heights for carousel to work
+  // with a flex parent
   min-height: 0;
   min-width: 0;
 }
 .episodeCarousel {
   // Maybe ths height will break things
   // but may solve carousel doubling up bug
-  height: 70%;
+  height: 100%;
   width: 100%;
 }
 
