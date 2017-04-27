@@ -51,7 +51,7 @@ class AccountMenu extends React.Component {
           </detail>
           <ul className="accountDropdown">
             <i className="fa fa-caret-up"></i>
-            <li>CRUD Later</li>
+
             <p onClick={this.handleSignout}>Sign out of Getflix</p>
           </ul>
 
