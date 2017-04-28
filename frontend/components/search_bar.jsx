@@ -8,6 +8,7 @@ class SearchBar extends React.Component {
       this.state = {inputVal: ''};
       this.handleInput = this.handleInput.bind(this);
       this.handleClick = this.handleClick.bind(this);
+      this.revealSearch = this.revealSearch.bind(this);
   }
 
   handleInput(event) {
@@ -22,12 +23,32 @@ class SearchBar extends React.Component {
     this.setState({inputVal: ""}, this.updateQueryString);
   }
 
+  revealSearch() {
+    document.getElementsByClassName("searchBar")[0].classList.add('revealSearch');
+    document.getElementsByClassName("inputField")[0].placeholder = "Search by Title";
+    document.getElementsByClassName("inputField")[0].classList.add('placeholderColor');
+  }
+
+  componentDidMount() {
+    var specifiedElement = document.getElementsByClassName('searchBar')[0];
+
+document.addEventListener('click', function(event) {
+  var isClickInside = specifiedElement.contains(event.target);
+
+  if (!isClickInside) {
+    document.getElementsByClassName("searchBar")[0].classList.remove('revealSearch');
+    document.getElementsByClassName("inputField")[0].placeholder = "Search";
+    document.getElementsByClassName("inputField")[0].classList.remove('placeholderColor');
+  }
+});
+  }
+
   render() {
     return(
       <div className="searchBar">
         <i className="fa fa-search"></i>
         <section className="inputBox">
-          <input className="inputField" value={this.state.inputVal} onChange={this.handleInput} placeholder="Search by Title" />
+          <input onClick={this.revealSearch} className="inputField" value={this.state.inputVal} onChange={this.handleInput} placeholder="Search" />
         </section>
         <div onClick={this.handleClick} className="closeBtn" >
           <i className="fa fa-times-thin"></i>

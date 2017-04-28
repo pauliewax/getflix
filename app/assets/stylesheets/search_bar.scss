@@ -2,11 +2,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0,0,0,.75);
+  background-color: transparent;
   height: 32px;
+  width: 100px;
+  border: none;
+  transition: all 250ms ease;
+}
+
+.inputField::-webkit-input-placeholder {
+  color: white;
+}
+
+.placeholderColor::-webkit-input-placeholder {
+  color: gray;
+}
+
+.revealSearch {
+  background-color: rgba(0,0,0,.75);
   width: 266px;
   border: 1px solid white;
-  // margin-right: 57px;
 }
 
 .inputBox {
