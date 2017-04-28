@@ -1,3 +1,34 @@
 .browseGenre {
   width: 100%;
 }
+
+.browseGenreTitle {
+  top: 0;
+  left: 0;
+  color: #999;
+  font-size: 1.4vw;
+  font-weight: 700;
+  margin-bottom: .5em;
+}
+
+.browseGenre .seriesViewer {
+  padding: 1px;
+  width: 100vw;
+  background-color: black;
+  height: 31vw;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.browseGenre .viewerContent {
+  display: block;
+}
+
+.browseGenre .overviewTab {
+  height: auto;
+}
+
+.browseGenre .episodeCarousel .slick-next {
+  margin-right: 140px;
+}

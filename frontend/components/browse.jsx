@@ -57,7 +57,7 @@ class Browse extends React.Component {
            <text>Dry air. Wet code. Escape is not defined. See how it all unfolds when the stack limit is reached in this critically acclaimed spaghetti coder.</text>
          </aside>
        </section>
-       <main>
+       <main className="genreSection">
          { browseGenres }
        </main>
      </div>
