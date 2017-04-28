@@ -12,12 +12,6 @@ class MyList extends React.Component {
     this.props.fetchFollows();
   }
 
-  componentWillReceiveProps(newProps) {
-    if (newProps.follows !== this.props.follows) {
-      this.props.fetchFollows();
-    }
-  }
-
   generateRows(followedSeries) {
     let allSeries = Object.assign([], followedSeries);
     let allRows =[];
