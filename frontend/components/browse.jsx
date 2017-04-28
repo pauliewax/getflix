@@ -24,11 +24,20 @@ class Browse extends React.Component {
  }
 
  render()  {
-   let seriesRows;
+   let seriesRows = [];
+   let genreNames = this.props.genres.map(genre=>genre.name);
    if (this.props.seriesList) {
-     let rows = this.generateRows();
-     seriesRows = rows.map(row=><SeriesRow key={row[0].id} row={row} rowId={row[0].id}/>);
-
+     for (var i = 0; i < genreNames.length; i++) {
+       let genreSeries = [];
+       for (var j = 0; j < this.props.seriesList.length; j++) {
+         let seriesGenres = this.props.seriesList[j].genres.map(genre=>genre.name);
+         if (seriesGenres.includes(genreNames[i])) {
+           genreSeries.push(this.props.seriesList[j]);
+         }
+       }
+       seriesRows.push(genreSeries);
+       window.test = seriesRows;
+     }
    }
 
    return(
@@ -42,7 +51,6 @@ class Browse extends React.Component {
          </aside>
        </section>
        <main>
-         {seriesRows}
        </main>
      </div>
    );
@@ -51,7 +59,8 @@ class Browse extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    seriesList: state.series.seriesList
+    seriesList: state.series.seriesList,
+    genres: state.genre
   };
 };
 
