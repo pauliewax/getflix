@@ -4,16 +4,15 @@ import { fetchAllSeries } from '../actions/series_actions';
 import { fetchGenres } from '../actions/genre_actions';
 import SeriesRow from './series_row';
 import BrowseGenre from './browse_genre';
-import Loader from 'react-loader';
+
 
 class Browse extends React.Component {
  constructor(props) {
    super(props);
-   this.state = {loaded: false};
  }
 
  componentWillMount() {
-   this.props.fetchAllSeries().then(this.props.fetchGenres()).then(this.setState({loaded: true}));
+   this.props.fetchAllSeries().then(this.props.fetchGenres());
  }
 
  render()  {
@@ -50,7 +49,6 @@ class Browse extends React.Component {
    }
 
    return(
-     <Loader loaded={this.state.loaded}>
      <div className="browser" >
        <section className="browse-splash">
          <img className="splash-bg" src="http://www.pauliewax.com/wp-content/uploads/2017/04/splash-bg.png" />
@@ -65,7 +63,6 @@ class Browse extends React.Component {
            { browseGenres }
        </main>
      </div>
-   </Loader>
    );
  }
 }
