@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchAllSeries } from '../actions/series_actions';
+import { fetchGenres } from '../actions/genre_actions';
 import SeriesRow from './series_row';
 
 class Browse extends React.Component {
@@ -9,7 +10,7 @@ class Browse extends React.Component {
  }
 
  componentWillMount() {
-   this.props.fetchAllSeries();
+   this.props.fetchAllSeries().then(this.props.fetchGenres());
  }
 
  generateRows() {
@@ -40,7 +41,9 @@ class Browse extends React.Component {
            <text>Dry air. Wet code. Escape is not defined. See how it all unfolds when the stack limit is reached in this critically acclaimed spaghetti coder.</text>
          </aside>
        </section>
+       <main>
          {seriesRows}
+       </main>
      </div>
    );
  }
@@ -54,7 +57,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    fetchAllSeries: () => (dispatch(fetchAllSeries()))
+    fetchAllSeries: () => (dispatch(fetchAllSeries())),
+    fetchGenres: () => (dispatch(fetchGenres()))
   };
 };
 
