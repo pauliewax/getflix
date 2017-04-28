@@ -26,3 +26,12 @@ export const fetchSearch = ( searchQuery ) => {
     }
   );
 };
+
+export const fetchAllSeries = () => {
+  return $.ajax(
+    {
+      method: "get",
+      url: `/api/series/`,
+    }
+  );
+};

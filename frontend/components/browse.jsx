@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchFollows } from '../actions/follow_actions';
+import { fetchAllSeries } from '../actions/series_actions';
 import SeriesRow from './series_row';
 
 class Browse extends React.Component {
@@ -9,11 +9,11 @@ class Browse extends React.Component {
  }
 
  componentWillMount() {
-   this.props.fetchFollows();
+   this.props.fetchAllSeries();
  }
 
  generateRows() {
-   let allSeries = Object.assign([], this.props.follows);
+   let allSeries = Object.assign([], this.props.seriesList);
    let allRows =[];
    while (allSeries.length !== 0)  {
      allRows.push(allSeries.slice(0,6));
@@ -23,11 +23,11 @@ class Browse extends React.Component {
  }
 
  render()  {
-   let seriesRows= "";
-
-   if (this.props.follows) {
+   let seriesRows;
+   if (this.props.seriesList) {
      let rows = this.generateRows();
-     seriesRows = rows.map(row=><SeriesRow key={row[0].id} row={row} rowId={row[0].id} />);
+     seriesRows = rows.map(row=><SeriesRow key={row[0].id} row={row} rowId={row[0].id}/>);
+
    }
 
    return(
@@ -39,8 +39,8 @@ class Browse extends React.Component {
            <img className="splash-logo" src="http://www.pauliewax.com/wp-content/uploads/2017/04/getflixoriginal.png" />
            <text>Dry air. Wet code. Escape is not defined. See how it all unfolds when the stack limit is reached in this critically acclaimed spaghetti coder.</text>
          </aside>
-         { seriesRows }
        </section>
+         {seriesRows}
      </div>
    );
  }
@@ -48,13 +48,13 @@ class Browse extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    follows: state.follows
+    seriesList: state.series.seriesList
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    fetchFollows: () => (dispatch(fetchFollows()))
+    fetchAllSeries: () => (dispatch(fetchAllSeries()))
   };
 };
 

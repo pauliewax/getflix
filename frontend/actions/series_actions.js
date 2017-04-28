@@ -28,3 +28,7 @@ export const fetchSerie = (id) => (dispatch) => {
 export const fetchSeries = (genreId) => (dispatch) => {
   return APIUtil.fetchSeries(genreId).then((series)=>dispatch(receiveSeries(series)));
 };
+
+export const fetchAllSeries = () => (dispatch) => {
+  return APIUtil.fetchAllSeries().then((series)=>dispatch(receiveSeries(series)));
+};
