@@ -273,7 +273,7 @@ vid1 = Video.create(
   title: 'NBA Dunk Competition',
   description: 'Aaron Gordon and Zach LaVine face off in one of the most ridiculous dunk competitions in recent memory.',
   length: '5m 43s',
-  series_id: series29.id,
+  series_id: series31.id,
   episode_num: 1,
   video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/nbadunks.mp4',
   thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/sports_dunk.jpg'
