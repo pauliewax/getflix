@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { hashHistory } from 'react-router';
-import { createFollow } from '../actions/follow_actions';
+import { createFollow, deleteFollow } from '../actions/follow_actions';
 
 class SeriesOverview extends React.Component {
   constructor(props) {
       super(props);
       this.handlePlay = this.handlePlay.bind(this);
       this.addFollow = this.addFollow.bind(this);
+      this.removeFollow = this.removeFollow.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -27,11 +28,19 @@ class SeriesOverview extends React.Component {
     hashHistory.push(`/watch/${this.props.seriesDetail.firstEp[0].id}`);
   }
 
-  addFollow() {
+  addFollow(e) {
     this.props.createFollow({
       user_id: this.props.user.id,
       series_id: this.props.seriesDetail.id
     });
+    //  dont need this logic do the hiding and showing
+    // in props per viewer for each seriesDetail
+    // let plus = e.currentTarget;
+    // plus.classList.add('hideMyList');
+  }
+
+  removeFollow(e) {
+    this.props.deleteFollow(this.props.seriesDetail.id);
   }
 
   render() {
@@ -58,6 +67,7 @@ class SeriesOverview extends React.Component {
           {body}
         </div>
         <div className="overviewMyList">
+          <i onClick={this.removeFollow} id="overviewCheck" className="fa fa-check-circle"></i>
           <i onClick={this.addFollow} id="overviewPlus" className="fa fa-plus-circle"></i>
           <div className="overviewListText">MY  LIST</div>
         </div>
@@ -75,7 +85,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    createFollow: (follow) => (dispatch(createFollow(follow)))
+    createFollow: (follow) => (dispatch(createFollow(follow))),
+    deleteFollow: (followId) => (dispatch(deleteFollow(followId)))
   };
 };
 

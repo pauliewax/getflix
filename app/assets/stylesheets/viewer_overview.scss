@@ -49,6 +49,22 @@
   color: white;
 }
 
+#overviewCheck {
+  transform: scale(2);
+  margin: 0 .6vw 0 .3vw;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+#overviewCheck:hover {
+  color: white;
+}
+
+.hideMyList {
+  display: none !important;
+}
+
+
 .overviewListText {
   color: white;
   font-size: 1.1vw;

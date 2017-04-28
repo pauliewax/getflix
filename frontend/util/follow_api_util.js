@@ -7,3 +7,12 @@ export const createFollow = (follow) => {
     }
   );
 };
+
+export const deleteFollow = (followId) => {
+  return $.ajax(
+    {
+      method: "delete",
+      url: `/api/follows/${followId}`
+    }
+  );
+};

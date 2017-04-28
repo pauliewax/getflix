@@ -10,6 +10,7 @@ Video.destroy_all
 Genre.destroy_all
 Series.destroy_all
 Categorization.destroy_all
+Follow.destroy_all
 
 guest = User.create(email: 'Guest', password: 'password')
 
