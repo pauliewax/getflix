@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchAllSeries } from '../actions/series_actions';
 import { fetchGenres } from '../actions/genre_actions';
 import SeriesRow from './series_row';
+import BrowseGenre from './browse_genre';
 
 class Browse extends React.Component {
  constructor(props) {
@@ -13,8 +14,8 @@ class Browse extends React.Component {
    this.props.fetchAllSeries().then(this.props.fetchGenres());
  }
 
- generateRows() {
-   let allSeries = Object.assign([], this.props.seriesList);
+ generateRows(genre) {
+   let allSeries = genre;
    let allRows =[];
    while (allSeries.length !== 0)  {
      allRows.push(allSeries.slice(0,6));
@@ -24,7 +25,9 @@ class Browse extends React.Component {
  }
 
  render()  {
-   let seriesRows = [];
+   let seriesByGenre = {};
+   let browseGenres = [];
+
    let genreNames = this.props.genres.map(genre=>genre.name);
    if (this.props.seriesList) {
      for (var i = 0; i < genreNames.length; i++) {
@@ -35,9 +38,13 @@ class Browse extends React.Component {
            genreSeries.push(this.props.seriesList[j]);
          }
        }
-       seriesRows.push(genreSeries);
-       window.test = seriesRows;
+       seriesByGenre[genreNames[i]] =genreSeries;
      }
+
+    for (var i = 0; i < genreNames.length; i++) {
+      browseGenres.push(<BrowseGenre genreName={genreNames[i]} series={seriesByGenre[genreNames[i]]}/>);
+    }
+
    }
 
    return(
@@ -51,6 +58,7 @@ class Browse extends React.Component {
          </aside>
        </section>
        <main>
+         { browseGenres }
        </main>
      </div>
    );
