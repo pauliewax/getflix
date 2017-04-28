@@ -43,8 +43,16 @@ class Browse extends React.Component {
     for (var i = 0; i < filteredGenres.length; i++) {
       browseGenres.push(<BrowseGenre key={`${genreNames[i]}-browser`} genreName={filteredGenres[i]} series={seriesByGenre[filteredGenres[i]]}/>);
     }
-
    }
+
+   let followedSeries = '';
+   let myList = '';
+
+   if ((this.props.follows) && (Object.keys(this.props.follows).length !== 0)) {
+     followedSeries = Object.values(this.props.follows).map(follow=>follow.series);
+     myList = <BrowseGenre key={`mylist-browser`} genreName={"My List"} series={followedSeries}/>;
+   }
+
 
    return(
      <div className="browser" >
@@ -57,6 +65,7 @@ class Browse extends React.Component {
          </aside>
        </section>
        <main className="genreSection">
+         { myList }
          { browseGenres }
        </main>
      </div>
