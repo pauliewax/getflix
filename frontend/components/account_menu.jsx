@@ -49,6 +49,7 @@ class AccountMenu extends React.Component {
                 <i className="fa fa-caret-down"></i>
           </detail>
           <ul className="accountDropdown">
+            <li onClick={()=>hashHistory.push('/mylist')} >My List</li>
             <i className="fa fa-caret-up"></i>
             <p onClick={this.handleSignout}>Sign out of Getflix</p>
           </ul>
