@@ -7,7 +7,6 @@
 .browse-splash {
   height: 762px;
   color: white;
-  z-index: -100;
 }
 .splash-bg {
   width: 100%;
@@ -35,13 +34,6 @@
 }
 
 .browser main {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  margin-left: 54px;
-  width: 93%;
-  display: flex;
-  flex-wrap: wrap;
-  z-index: 1000;
+  border: 1px solid blue;
+  height: calc(100% - 762px);
 }
