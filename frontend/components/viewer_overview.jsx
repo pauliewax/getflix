@@ -40,7 +40,17 @@ class SeriesOverview extends React.Component {
   }
 
   removeFollow(e) {
-    this.props.deleteFollow(this.props.seriesDetail.id);
+    let removedFollowId;
+    let iterableFollows = Object.values(this.props.follows);
+    debugger
+    for (var i = 0; i < iterableFollows.length; i++) {
+      let seriesFollow = iterableFollows[i];
+      let thisSeries = this.props.seriesDetail.id;
+      if ( (seriesFollow.series_id === thisSeries) && (this.props.user.id === seriesFollow.user_id) ) {
+        removedFollowId = seriesFollow.id;
+      }
+    }
+    this.props.deleteFollow(removedFollowId);
   }
 
   render() {
@@ -79,7 +89,8 @@ class SeriesOverview extends React.Component {
 const mapStateToProps = (state, ownProps) => {
   return {
     seriesDetail: state.series.seriesDetail,
-    user: state.session.currentUser
+    user: state.session.currentUser,
+    follows: state.follows
   };
 };
 
