@@ -34,7 +34,6 @@ class Browse extends React.Component {
            genreSeries.push(this.props.seriesList[j]);
          }
        }
-       window.test = genreSeries;
        if (genreSeries.length !== 0) {
          seriesByGenre[genreNames[i]] = genreSeries;
        }
@@ -68,7 +67,8 @@ class Browse extends React.Component {
 const mapStateToProps = (state, ownProps) => {
   return {
     seriesList: state.series.seriesList,
-    genres: state.genre
+    genres: state.genre,
+    follows: state.follows
   };
 };
 

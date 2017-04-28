@@ -33,7 +33,10 @@ class SeriesRow extends React.Component {
   componentWillReceiveProps(newProps) {
     let seriesIds = this.props.row.map(serie=>serie.id);
     let thisViewer;
-    if (
+    if ((newProps.seriesDetail) && (newProps.seriesDetail.id === window.justModified) && (seriesIds.includes(newProps.seriesDetail.id))) {
+      thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
+      thisViewer.classList.add('viewerShow');
+    } else if (
         (newProps.seriesDetail !== this.props.seriesDetail) &&
         (seriesIds.includes(newProps.seriesDetail.id))
       ) {
