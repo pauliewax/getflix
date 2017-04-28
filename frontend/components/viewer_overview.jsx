@@ -22,6 +22,27 @@ class SeriesOverview extends React.Component {
         overviewTabs[i].classList.remove('hideTab');
       }
     }
+
+    let followedSeriesIds = Object.values(newProps.follows).map(follow => follow.series_id);
+    let pluses = document.getElementsByClassName('overviewPlus');
+    let checks = document.getElementsByClassName('overviewCheck');
+    if (followedSeriesIds.includes(newProps.seriesDetail.id)) {
+      for (var i = 0; i < pluses.length; i++) {
+        pluses[i].classList.add('hideMyList');
+      }
+
+      for (var i = 0; i < checks.length; i++) {
+        checks[i].classList.remove('hideMyList');
+      }
+    } else {
+      for (var i = 0; i < pluses.length; i++) {
+        pluses[i].classList.remove('hideMyList');
+      }
+
+      for (var i = 0; i < checks.length; i++) {
+        checks[i].classList.add('hideMyList');
+      }
+    }
   }
 
   handlePlay() {
@@ -33,16 +54,11 @@ class SeriesOverview extends React.Component {
       user_id: this.props.user.id,
       series_id: this.props.seriesDetail.id
     });
-    //  dont need this logic do the hiding and showing
-    // in props per viewer for each seriesDetail
-    // let plus = e.currentTarget;
-    // plus.classList.add('hideMyList');
   }
 
   removeFollow(e) {
     let removedFollowId;
     let iterableFollows = Object.values(this.props.follows);
-    debugger
     for (var i = 0; i < iterableFollows.length; i++) {
       let seriesFollow = iterableFollows[i];
       let thisSeries = this.props.seriesDetail.id;
@@ -77,8 +93,8 @@ class SeriesOverview extends React.Component {
           {body}
         </div>
         <div className="overviewMyList">
-          <i onClick={this.removeFollow} id="overviewCheck" className="fa fa-check-circle"></i>
-          <i onClick={this.addFollow} id="overviewPlus" className="fa fa-plus-circle"></i>
+          <i onClick={this.removeFollow} className="overviewCheck fa fa-check-circle"></i>
+          <i onClick={this.addFollow} className="overviewPlus fa fa-plus-circle"></i>
           <div className="overviewListText">MY  LIST</div>
         </div>
       </div>

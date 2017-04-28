@@ -38,25 +38,25 @@
   align-items: center;
 }
 
-#overviewPlus {
+.overviewPlus {
   transform: scale(2);
   margin: 0 .6vw 0 .3vw;
   cursor: pointer;
   transition: all 200ms ease;
 }
 
-#overviewPlus:hover {
+.overviewPlus:hover {
   color: white;
 }
 
-#overviewCheck {
+.overviewCheck {
   transform: scale(2);
   margin: 0 .6vw 0 .3vw;
   cursor: pointer;
   transition: all 200ms ease;
 }
 
-#overviewCheck:hover {
+.overviewCheck:hover {
   color: white;
 }
 
