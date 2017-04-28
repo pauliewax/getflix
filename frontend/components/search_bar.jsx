@@ -33,15 +33,22 @@ class SearchBar extends React.Component {
   }
 
   componentDidMount() {
+
+    document.addEventListener('click', this.searchSlide);
+  }
+
+  searchSlide() {
     let searchbar = document.getElementsByClassName('searchBar')[0];
-    document.addEventListener('click', function(event) {
     let clickedsearch = searchbar.contains(event.target);
-      if (!clickedsearch) {
-        document.getElementsByClassName("searchBar")[0].classList.remove('revealSearch');
-        document.getElementsByClassName("inputField")[0].placeholder = "Search";
-        document.getElementsByClassName("inputField")[0].classList.remove('placeholderColor');
-      }
-    });
+    if (!clickedsearch) {
+      document.getElementsByClassName("searchBar")[0].classList.remove('revealSearch');
+      document.getElementsByClassName("inputField")[0].placeholder = "Search";
+      document.getElementsByClassName("inputField")[0].classList.remove('placeholderColor');
+    }
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.searchSlide);
   }
 
   render() {
