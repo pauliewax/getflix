@@ -69,7 +69,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    fetchSerie: (id) => (dispatch(fetchSerie(id)))
+    fetchSerie: (id) => (dispatch(fetchSerie(id))),
+
   };
 };
 

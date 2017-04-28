@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { hashHistory } from 'react-router';
 import { createFollow, deleteFollow } from '../actions/follow_actions';
+import { fetchFollows } from '../actions/follow_actions';
 
 class SeriesOverview extends React.Component {
   constructor(props) {
@@ -9,6 +10,10 @@ class SeriesOverview extends React.Component {
       this.handlePlay = this.handlePlay.bind(this);
       this.addFollow = this.addFollow.bind(this);
       this.removeFollow = this.removeFollow.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.fetchFollows();
   }
 
   componentWillReceiveProps(newProps) {
@@ -22,25 +27,26 @@ class SeriesOverview extends React.Component {
         overviewTabs[i].classList.remove('hideTab');
       }
     }
+    if (newProps.seriesDetail) {      
+      let followedSeriesIds = Object.values(newProps.follows).map(follow => follow.series_id);
+      let pluses = document.getElementsByClassName('overviewPlus');
+      let checks = document.getElementsByClassName('overviewCheck');
+      if (followedSeriesIds.includes(newProps.seriesDetail.id)) {
+        for (var i = 0; i < pluses.length; i++) {
+          pluses[i].classList.add('hideMyList');
+        }
 
-    let followedSeriesIds = Object.values(newProps.follows).map(follow => follow.series_id);
-    let pluses = document.getElementsByClassName('overviewPlus');
-    let checks = document.getElementsByClassName('overviewCheck');
-    if (followedSeriesIds.includes(newProps.seriesDetail.id)) {
-      for (var i = 0; i < pluses.length; i++) {
-        pluses[i].classList.add('hideMyList');
-      }
+        for (var i = 0; i < checks.length; i++) {
+          checks[i].classList.remove('hideMyList');
+        }
+      } else {
+        for (var i = 0; i < pluses.length; i++) {
+          pluses[i].classList.remove('hideMyList');
+        }
 
-      for (var i = 0; i < checks.length; i++) {
-        checks[i].classList.remove('hideMyList');
-      }
-    } else {
-      for (var i = 0; i < pluses.length; i++) {
-        pluses[i].classList.remove('hideMyList');
-      }
-
-      for (var i = 0; i < checks.length; i++) {
-        checks[i].classList.add('hideMyList');
+        for (var i = 0; i < checks.length; i++) {
+          checks[i].classList.add('hideMyList');
+        }
       }
     }
   }
@@ -113,7 +119,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     createFollow: (follow) => (dispatch(createFollow(follow))),
-    deleteFollow: (followId) => (dispatch(deleteFollow(followId)))
+    deleteFollow: (followId) => (dispatch(deleteFollow(followId))),
+    fetchFollows: () => (dispatch(fetchFollows()))
   };
 };
 
