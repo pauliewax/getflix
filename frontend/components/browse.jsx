@@ -17,9 +17,12 @@ class Browse extends React.Component {
  render()  {
    let seriesByGenre = {};
    let browseGenres = [];
+   let genreNames = [];
+   if (this.props.genres) {
+     genreNames = this.props.genres.map(genre=>genre.name);
+   }
 
-   let genreNames = this.props.genres.map(genre=>genre.name);
-   if (this.props.seriesList) {
+   if (this.props.seriesList.genres) {
      for (var i = 0; i < genreNames.length; i++) {
        let genreSeries = [];
        for (var j = 0; j < this.props.seriesList.length; j++) {
