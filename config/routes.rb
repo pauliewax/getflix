@@ -67,6 +67,7 @@ Rails.application.routes.draw do
       get 'genre', on: :collection
       get 'search', on: :collection
     end
+    resources :follows
   end
 
 end

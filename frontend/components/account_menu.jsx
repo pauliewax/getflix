@@ -41,7 +41,6 @@ class AccountMenu extends React.Component {
     return(
       <div onMouseLeave={this.handleLeave} className="accountMenu">
 
-
           <detail onClick={this.handleClick}  onMouseEnter={this.handleHover} >
                 <img src="http://www.pauliewax.com/wp-content/uploads/2017/04/PICON_027.png"/>
                 <p className="userName">
@@ -51,7 +50,6 @@ class AccountMenu extends React.Component {
           </detail>
           <ul className="accountDropdown">
             <i className="fa fa-caret-up"></i>
-
             <p onClick={this.handleSignout}>Sign out of Getflix</p>
           </ul>
 

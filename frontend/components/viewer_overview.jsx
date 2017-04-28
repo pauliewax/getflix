@@ -1,11 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { hashHistory } from 'react-router';
+import { createFollow } from '../actions/follow_actions';
 
 class SeriesOverview extends React.Component {
   constructor(props) {
       super(props);
       this.handlePlay = this.handlePlay.bind(this);
+      this.addFollow = this.addFollow.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -23,6 +25,13 @@ class SeriesOverview extends React.Component {
 
   handlePlay() {
     hashHistory.push(`/watch/${this.props.seriesDetail.firstEp[0].id}`);
+  }
+
+  addFollow() {
+    this.props.createFollow({
+      user_id: this.props.user.id,
+      series_id: this.props.seriesDetail.id
+    });
   }
 
   render() {
@@ -48,6 +57,10 @@ class SeriesOverview extends React.Component {
         <div className="overviewBody">
           {body}
         </div>
+        <div className="overviewMyList">
+          <i onClick={this.addFollow} id="overviewPlus" className="fa fa-plus-circle"></i>
+          <div className="overviewListText">MY  LIST</div>
+        </div>
       </div>
     );
   }
@@ -55,12 +68,14 @@ class SeriesOverview extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    seriesDetail: state.series.seriesDetail
+    seriesDetail: state.series.seriesDetail,
+    user: state.session.currentUser
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
+    createFollow: (follow) => (dispatch(createFollow(follow)))
   };
 };
 

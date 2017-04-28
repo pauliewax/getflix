@@ -1,0 +1,7 @@
+From account_menu.jsx accountDropdown
+
+<li>CRUD Later</li>
+
+From series_viewer.jsx viewerNav
+
+<div onClick={this.handleSelect} className="viewTab reviewBtn">REVIEWS</div>

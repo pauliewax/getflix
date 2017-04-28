@@ -1,7 +1,6 @@
 class Api::SeriesController < ApplicationController
   def show
     @serie = Series.find_by_id(params[:id])
-
     render :show
   end
 

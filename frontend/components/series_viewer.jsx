@@ -83,7 +83,6 @@ class SeriesViewer extends React.Component {
           <detail className="viewerNav">
             <div onClick={this.handleSelect} className="viewTab overviewBtn">OVERVIEW</div>
             <div onClick={this.handleSelect} className="viewTab episodeBtn">EPISODES</div>
-            <div onClick={this.handleSelect} className="viewTab reviewBtn">REVIEWS</div>
           </detail>
         </section>
 

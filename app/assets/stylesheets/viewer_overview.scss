@@ -31,3 +31,26 @@
   color: red;
   opacity: 1;
 }
+
+.overviewMyList {
+  display: flex;
+  margin-top: 1.5vw;
+  align-items: center;
+}
+
+#overviewPlus {
+  transform: scale(2);
+  margin: 0 .6vw 0 .3vw;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+#overviewPlus:hover {
+  color: white;
+}
+
+.overviewListText {
+  color: white;
+  font-size: 1.1vw;
+  margin-left: .6vw;
+}

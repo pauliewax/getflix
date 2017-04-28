@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170421000730) do
+ActiveRecord::Schema.define(version: 20170427231547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(version: 20170421000730) do
     t.integer "genre_id"
     t.integer "media_id"
     t.string  "media_type"
+  end
+
+  create_table "follows", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "series_id"
   end
 
   create_table "genres", force: :cascade do |t|

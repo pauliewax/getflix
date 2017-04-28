@@ -6,4 +6,7 @@ class Series < ActiveRecord::Base
   has_many :genres, :through => :categorizations, :as => :media
 
   has_many :videos
+
+  has_many :follows
+  has_many :users, :through => :follows, :source => :user
 end
