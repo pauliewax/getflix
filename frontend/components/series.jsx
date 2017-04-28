@@ -42,10 +42,10 @@ class Series extends React.Component {
   }
 
   handlePlay() {
-    if (this.props.serie.firstEp[0].id) {
+    if (this.props.serie.firstEp[0]) {
       hashHistory.push(`/watch/${this.props.serie.firstEp[0].id}`);
     } else {
-      hashHistory.push(`/watch/117`);
+      hashHistory.push(`/watch/28`);
     }
   }
 

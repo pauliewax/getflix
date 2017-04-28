@@ -27,7 +27,7 @@ class SeriesOverview extends React.Component {
         overviewTabs[i].classList.remove('hideTab');
       }
     }
-    if (newProps.seriesDetail) {      
+    if (newProps.seriesDetail) {
       let followedSeriesIds = Object.values(newProps.follows).map(follow => follow.series_id);
       let pluses = document.getElementsByClassName('overviewPlus');
       let checks = document.getElementsByClassName('overviewCheck');
@@ -52,7 +52,11 @@ class SeriesOverview extends React.Component {
   }
 
   handlePlay() {
-    hashHistory.push(`/watch/${this.props.seriesDetail.firstEp[0].id}`);
+    if (this.props.serie.firstEp[0]) {
+      hashHistory.push(`/watch/${this.props.serie.firstEp[0].id}`);
+    } else {
+      hashHistory.push(`/watch/28`);
+    }
   }
 
   addFollow(e) {
