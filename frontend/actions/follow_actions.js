@@ -25,6 +25,10 @@ export const removeFollow = (follow) => {
   };
 };
 
+export const fetchFollows = () => (dispatch) => {
+  return APIUtil.fetchFollows().then((follows)=>dispatch(receiveFollows(follows)));
+};
+
 export const createFollow = (follow) => (dispatch) => {
   return APIUtil.createFollow(follow).then((follow)=>dispatch(receiveFollow(follow)));
 };
