@@ -50,7 +50,7 @@ class Browse extends React.Component {
 
    if ((this.props.follows) && (Object.keys(this.props.follows).length !== 0)) {
      followedSeries = Object.values(this.props.follows).map(follow=>follow.series);
-     myList = <BrowseGenre key={`mylist-browser`} genreName={"My List"} series={followedSeries}/>;
+     myList = <BrowseGenre key={`mylist-browser`} genreName={"My List"} favList={"yes"} series={followedSeries}/>;
    }
 
 

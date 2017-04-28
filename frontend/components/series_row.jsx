@@ -33,7 +33,20 @@ class SeriesRow extends React.Component {
   componentWillReceiveProps(newProps) {
     let seriesIds = this.props.row.map(serie=>serie.id);
     let thisViewer;
-    if ((newProps.seriesDetail) && (newProps.seriesDetail.id === window.justModified) && (seriesIds.includes(newProps.seriesDetail.id))) {
+
+    if((newProps.seriesDetail) && (seriesIds.includes(newProps.seriesDetail.id) && (this.props.favList) && (window.fromFavList === 'yes'))) {
+      thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
+      thisViewer.classList.add('viewerShow');
+    } else if ((newProps.seriesDetail) && (seriesIds.includes(newProps.seriesDetail.id) && (this.props.favList) && (window.fromFavList === 'no'))) {
+      thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
+      thisViewer.classList.remove('viewerShow');
+    } else if ((newProps.seriesDetail) && (seriesIds.includes(newProps.seriesDetail.id) && (!this.props.favList) && (window.fromFavList === 'yes'))) {
+      thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
+      thisViewer.classList.remove('viewerShow');
+    } else if ((newProps.seriesDetail) && (seriesIds.includes(newProps.seriesDetail.id) && (!this.props.favList) && (window.fromFavList === 'no'))) {
+      thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
+      thisViewer.classList.add('viewerShow');
+    } else if ((newProps.seriesDetail) && (newProps.seriesDetail.id === window.justModified) && (seriesIds.includes(newProps.seriesDetail.id))) {
       thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
       thisViewer.classList.add('viewerShow');
     } else if (
@@ -50,7 +63,7 @@ class SeriesRow extends React.Component {
 
   render()  {
 
-    let series = this.props.row.map(serie=><li onMouseOver={this.handleHover} className={`serie-${serie.id} serieWrapper`} key={serie.id} ><Series serie={serie} /></li>);
+    let series = this.props.row.map(serie=><li onMouseOver={this.handleHover} className={`serie-${serie.id} serieWrapper`} key={serie.id} ><Series favList={this.props.favList} serie={serie} /></li>);
 
     return(
       <div className="seriesRow">

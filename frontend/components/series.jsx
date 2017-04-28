@@ -39,6 +39,11 @@ class Series extends React.Component {
 
   handleClick() {
     this.props.fetchSerie(this.props.serie.id);
+    if (this.props.favList) {
+      window.fromFavList = "yes";
+    } else {
+      window.fromFavList = "no";
+    }
   }
 
   handlePlay() {
