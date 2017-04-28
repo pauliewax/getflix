@@ -8,6 +8,7 @@ import Browse from './browse';
 import Genre from './genre';
 import Search from './search';
 import Player from './player';
+import MyList from './my_list';
 
 const Root = ({ store }) => {
 
@@ -35,6 +36,7 @@ const Root = ({ store }) => {
           <Route path="/browse" component={ Browse } onEnter={_ensureLoggedIn}/>
           <Route path="/browse/genre/:id" component={ Genre } onEnter={_ensureLoggedIn}/>
           <Route path="/search" component={Search} onEnter={_ensureLoggedIn}/>
+          <Route path="/mylist" component={MyList} onEnter={_ensureLoggedIn}/>
         </Route>
         <Route path="/watch/:id" component={Player} onEnter={_ensureLoggedIn}/>
       </Router>
