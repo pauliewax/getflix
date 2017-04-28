@@ -268,3 +268,114 @@ mpaa_rating: 'TV-14',
 description: 'Where amazing happens.',
 thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/sports_dunk.jpg'
 )
+
+vid1 = Video.create(
+  title: 'NBA Dunk Competition',
+  description: 'Aaron Gordon and Zach LaVine face off in one of the most ridiculous dunk competitions in recent memory.',
+  length: '5m 43s',
+  year: 2016,
+  series_id: series29.id,
+  episode_num: 1,
+  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/nbadunks.mp4',
+  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/sports_dunk.jpg'
+)
+
+vid2 = Video.create(
+  title: 'Krazee-Eyez Killa',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies bibendum tellus, dapibus pellentesque tortor vulputate id.',
+  length: '28m',
+  series_id: series3.id,
+  episode_num: 1,
+  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
+  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb1.jpg'
+)
+
+vid3 = Video.create(
+  title: 'The Doll',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies bibendum tellus, dapibus pellentesque tortor vulputate id.',
+  length: '28m',
+  series_id: series3.id,
+  episode_num: 1,
+  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
+  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb2.jpg'
+)
+
+vid4 = Video.create(
+  title: 'Seinfeld',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies bibendum tellus, dapibus pellentesque tortor vulputate id.',
+  length: '28m',
+  series_id: series3.id,
+  episode_num: 1,
+  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
+  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb3.jpg'
+)
+
+vid5 = Video.create(
+  title: 'The Table Read',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies bibendum tellus, dapibus pellentesque tortor vulputate id.',
+  length: '28m',
+  series_id: series3.id,
+  episode_num: 1,
+  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
+  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb4.jpg'
+)
+
+vid6 = Video.create(
+  title: 'The Car Pool Lane',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies bibendum tellus, dapibus pellentesque tortor vulputate id.',
+  length: '28m',
+  series_id: series3.id,
+  episode_num: 1,
+  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
+  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb5.jpg'
+)
+
+vid7 = Video.create(
+  title: 'Mister Softee',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies bibendum tellus, dapibus pellentesque tortor vulputate id.',
+  length: '28m',
+  series_id: series3.id,
+  episode_num: 1,
+  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
+  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb6.jpg'
+)
+
+vid8 = Video.create(
+  title: 'The Therapists',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies bibendum tellus, dapibus pellentesque tortor vulputate id.',
+  length: '28m',
+  series_id: series3.id,
+  episode_num: 1,
+  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
+  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb7.jpg'
+)
+
+vid9 = Video.create(
+  title: 'The Grand Opening',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies bibendum tellus, dapibus pellentesque tortor vulputate id.',
+  length: '28m',
+  series_id: series3.id,
+  episode_num: 1,
+  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
+  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb8.jpg'
+)
+
+vid10 = Video.create(
+  title: 'The End',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies bibendum tellus, dapibus pellentesque tortor vulputate id.',
+  length: '28m',
+  series_id: series3.id,
+  episode_num: 1,
+  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
+  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb9.jpg'
+)
+
+vid11 = Video.create(
+  title: 'Officer Krupke',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies bibendum tellus, dapibus pellentesque tortor vulputate id.',
+  length: '28m',
+  series_id: series3.id,
+  episode_num: 1,
+  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
+  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb10.jpg'
+)
