@@ -1,12 +1,13 @@
 .browser {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .browse-splash {
-  // overflow: hidden;
   height: 762px;
   color: white;
+  z-index: -100;
 }
 .splash-bg {
   width: 100%;
@@ -34,8 +35,13 @@
 }
 
 .browser main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   margin-left: 54px;
   width: 93%;
   display: flex;
   flex-wrap: wrap;
+  z-index: 1000;
 }

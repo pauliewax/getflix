@@ -25,7 +25,7 @@ class BrowseGenre extends React.Component {
     }
 
     return(
-      <div className="BrowseGenre">
+      <div className="browseGenre">
         { seriesRows }
       </div>
     );

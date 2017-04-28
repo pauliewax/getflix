@@ -28,11 +28,15 @@ class Browse extends React.Component {
            genreSeries.push(this.props.seriesList[j]);
          }
        }
-       seriesByGenre[genreNames[i]] =genreSeries;
+       window.test = genreSeries;
+       if (genreSeries.length !== 0) {
+         seriesByGenre[genreNames[i]] = genreSeries;
+       }
      }
 
-    for (var i = 0; i < genreNames.length; i++) {
-      browseGenres.push(<BrowseGenre key={`${genreNames[i]}-browser`} genreName={genreNames[i]} series={seriesByGenre[genreNames[i]]}/>);
+    let filteredGenres = Object.keys(seriesByGenre);
+    for (var i = 0; i < filteredGenres.length; i++) {
+      browseGenres.push(<BrowseGenre key={`${genreNames[i]}-browser`} genreName={filteredGenres[i]} series={seriesByGenre[filteredGenres[i]]}/>);
     }
 
    }
