@@ -6,10 +6,14 @@ import PlayerControls from './player_controls';
 class Player extends React.Component {
   constructor(props) {
     super(props);
+    this.handleBack = this.handleBack.bind(this);
   }
 
   componentWillMount() {
     this.props.fetchVideo(this.props.params.id);
+  }
+  handleBack() {
+    this.props.router.goBack();
   }
 
   render() {
@@ -18,6 +22,7 @@ class Player extends React.Component {
       // autoplay has to be in camelCase
       return(
         <div className="player">
+          <i onClick={this.handleBack} className="fa fa-arrow-left"></i>
           <video id="videoPlayer" autoPlay>
             <source src={this.props.video.video_url} type="video/mp4"></source>
             Your browser does not video playback.

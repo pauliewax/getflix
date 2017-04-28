@@ -6,6 +6,24 @@
   position: relative;
 }
 
+.player .fa-arrow-left {
+  z-index: 100;
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  color: white;
+  transform: scale(4);
+  opacity: .3;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+
+.player .fa-arrow-left:hover {
+  transform: scale(4.5);
+  color: red;
+  opacity: .7;
+}
+
 #videoPlayer {
   height: 100%;
 }
