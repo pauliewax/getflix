@@ -14,16 +14,6 @@ class Browse extends React.Component {
    this.props.fetchAllSeries().then(this.props.fetchGenres());
  }
 
- generateRows(genre) {
-   let allSeries = genre;
-   let allRows =[];
-   while (allSeries.length !== 0)  {
-     allRows.push(allSeries.slice(0,6));
-     allSeries = allSeries.slice(6);
-   }
-   return allRows;
- }
-
  render()  {
    let seriesByGenre = {};
    let browseGenres = [];
@@ -42,7 +32,7 @@ class Browse extends React.Component {
      }
 
     for (var i = 0; i < genreNames.length; i++) {
-      browseGenres.push(<BrowseGenre genreName={genreNames[i]} series={seriesByGenre[genreNames[i]]}/>);
+      browseGenres.push(<BrowseGenre key={`${genreNames[i]}-browser`} genreName={genreNames[i]} series={seriesByGenre[genreNames[i]]}/>);
     }
 
    }
