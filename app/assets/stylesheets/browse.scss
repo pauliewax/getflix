@@ -5,10 +5,10 @@
 }
 
 .browse-splash {
-  height: 762px;
   color: white;
 }
 .splash-bg {
+  position: absolute;
   width: 100%;
 }
 
@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 26%;
+  top: 22%;
   left: 4%;
   width: 37%;
 }
@@ -34,5 +34,10 @@
 }
 
 .browser main {
-  height: calc(100% - 762px);
+  padding-top: 54%;
+  margin-left: 54px;
+  width: 93%;
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100% - 10%);
 }

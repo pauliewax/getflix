@@ -21,12 +21,12 @@ class BrowseGenre extends React.Component {
     let seriesRows = [];
     if (this.props.series) {
       let rows = this.generateRows(this.props.series);
-      seriesRows = rows.map(row=><SeriesRow key={row[0].id} row={row} rowId={row[0].id}/>);
+      seriesRows = rows.map(row=><li key={row[0].id}><SeriesRow row={row} rowId={row[0].id}/></li>);
     }
 
     return(
       <div className="browseGenre">
-        { seriesRows }
+        { seriesRows[0] }
       </div>
     );
   }
