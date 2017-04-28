@@ -20,6 +20,9 @@ class SearchBar extends React.Component {
   }
 
   handleClick() {
+    document.getElementsByClassName("searchBar")[0].classList.remove('revealSearch');
+    document.getElementsByClassName("inputField")[0].placeholder = "Search";
+    document.getElementsByClassName("inputField")[0].classList.remove('placeholderColor');
     this.setState({inputVal: ""}, this.updateQueryString);
   }
 
@@ -30,17 +33,15 @@ class SearchBar extends React.Component {
   }
 
   componentDidMount() {
-    var specifiedElement = document.getElementsByClassName('searchBar')[0];
-
-document.addEventListener('click', function(event) {
-  var isClickInside = specifiedElement.contains(event.target);
-
-  if (!isClickInside) {
-    document.getElementsByClassName("searchBar")[0].classList.remove('revealSearch');
-    document.getElementsByClassName("inputField")[0].placeholder = "Search";
-    document.getElementsByClassName("inputField")[0].classList.remove('placeholderColor');
-  }
-});
+    let searchbar = document.getElementsByClassName('searchBar')[0];
+    document.addEventListener('click', function(event) {
+    let clickedsearch = searchbar.contains(event.target);
+      if (!clickedsearch) {
+        document.getElementsByClassName("searchBar")[0].classList.remove('revealSearch');
+        document.getElementsByClassName("inputField")[0].placeholder = "Search";
+        document.getElementsByClassName("inputField")[0].classList.remove('placeholderColor');
+      }
+    });
   }
 
   render() {
