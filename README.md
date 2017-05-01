@@ -17,16 +17,26 @@
 
 ## Technical Details
 
+![overview]
+
 #### Title Overview Pane
 The overview dropdown is a modular component that handles both series and movies. When fetching information about a title from the database, it determines whether an episode navigation tab should be rendered based on the amount of video content associated with the title.
 
 #### Search
-The search engine takes advantage of query strings to create sharable links to specific queries. It also allows for case-insensitive lookup, as well as search by fragment or substring of a title.
+GetFlix's search engine takes advantage of query strings to create sharable links to specific queries. It also allows for case-insensitive lookup, as well as search by fragment or substring of a title.
 
 #### Navigation Bar
 
-A single navigation bar is used across all routes, and renders the appropriate components (Account Menu vs Sign In), or receives distinct styling (Absolute vs Fixed) based on the location pathname.
+A single navigation bar is used across all routes, and renders the appropriate components (Account Menu vs Sign In), or receives distinct styling (absolute vs fixed) based on the location pathname.
+
+### Video controls
+
+![play]
+
+Video streaming utilizes HTML5 video with a custom control panel. The controls encourage intuitive, full-screen viewing by disappearing when not hovered over. The progress bar displays time elapsed and total runtime, in addition to allowing for accurate seeking/skipping within the video.
 
 [getflix]:  https://getflix-app.herokuapp.com
 
 [home]: ./docs/images/home.png
+[overview]: ./docs/images/overview.png
+[play]: ./docs/images/play.png
