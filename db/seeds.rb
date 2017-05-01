@@ -249,7 +249,7 @@ series29 = Series.create(
 title: 'Red Bull BC One',
 year: '2013',
 mpaa_rating: 'TV-PG',
-description: "Muhammad Ali's own audio journals, friends, family and fellow boxers provide insight into the extraordinary life and legendary career of the pugilist.",
+description: "Red Bull BC One is the biggest one-on- one breakdancing competition in the world. Every year, thousands of dancers across the globe vie for a chance to represent at the World Final.",
 thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/sports_breaking.jpg'
 )
 

@@ -9,9 +9,10 @@ class Player extends React.Component {
     this.handleBack = this.handleBack.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchVideo(this.props.params.id);
   }
+
   handleBack() {
     this.props.router.goBack();
   }
@@ -25,7 +26,7 @@ class Player extends React.Component {
           <i onClick={this.handleBack} className="fa fa-arrow-left"></i>
           <video id="videoPlayer" autoPlay>
             <source src={this.props.video.video_url} type="video/mp4"></source>
-            Your browser does not video playback.
+            Your browser does not support video playback.
           </video>
           <PlayerControls />
         </div>

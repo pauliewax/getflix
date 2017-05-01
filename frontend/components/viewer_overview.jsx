@@ -52,11 +52,10 @@ class SeriesOverview extends React.Component {
   }
 
   handlePlay() {
-
     if (this.props.seriesDetail.firstEp[0]) {
-      hashHistory.push(`/watch/${this.props.seriesDetail.firstEp[0]}`);
+      hashHistory.push(`/watch/${this.props.seriesDetail.firstEp[0].id}`);
     } else {
-      hashHistory.push(`/watch/28`);
+      hashHistory.push(`/watch/117`);
     }
   }
 
