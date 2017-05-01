@@ -15,6 +15,17 @@
 * Add / remove shows from 'My List' page
 * Custom video controls
 
+## Technical Details
+
+#### Title Overview Pane
+The overview dropdown is a modular component that handles both series and movies. When fetching information about a title from the database, it determines whether an episode navigation tab should be rendered based on the amount of video content associated with the title.
+
+#### Search
+The search engine takes advantage of query strings to create sharable links to specific queries. It also allows for case-insensitive lookup, as well as search by fragment or substring of a title.
+
+#### Navigation Bar
+
+A single navigation bar is used across all routes, and renders the appropriate components (Account Menu vs Sign In), or receives distinct styling (Absolute vs Fixed) based on the location pathname.
 
 [getflix]:  https://getflix-app.herokuapp.com
 
