@@ -3,6 +3,9 @@
 ![home]
 
 [GetFlix][getflix] is a NetFlix inspired, full-stack web application. Built on an RoR backend, PostgreSQL database, and React/Redux frontend architecture - it provides similar functionality to the popular video-streaming service.
+
+## Summary
+
 * Create an account
 * Sign in / out
 * Homepage populates with videos from every genre
