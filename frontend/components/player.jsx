@@ -9,7 +9,7 @@ class Player extends React.Component {
     this.handleBack = this.handleBack.bind(this);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchVideo(this.props.params.id);
   }
 
@@ -18,19 +18,23 @@ class Player extends React.Component {
   }
 
   render() {
-
     if (this.props.video) {
-      // autoplay has to be in camelCase
-      return(
-        <div className="player">
-          <i onClick={this.handleBack} className="fa fa-arrow-left"></i>
-          <video id="videoPlayer" autoPlay>
-            <source src={this.props.video.video_url} type="video/mp4"></source>
-            Your browser does not support video playback.
-          </video>
-          <PlayerControls />
-        </div>
-      );
+      if (this.props.video.id === parseInt(this.props.params.id)) {
+        return(
+          <div className="player">
+            <i onClick={this.handleBack} className="fa fa-arrow-left"></i>
+            <video id="videoPlayer" autoPlay>
+              <source src={this.props.video.video_url} type="video/mp4"></source>
+              Your browser does not support video playback.
+            </video>
+            <PlayerControls />
+          </div>
+        );
+      } else {
+        return (
+          <div></div>
+        );
+      }
     } else {
       return (
         <div></div>
