@@ -73,7 +73,7 @@ class SeriesViewer extends React.Component {
     return(
       <div className="seriesViewer">
 <i onClick={this.handleClose} className="fa fa-times-thin viewerClose"></i>
-        <main className="viewerContent">
+        <main id="browserVC" className="viewerContent">
           <div className="viewTitle">{ name }</div>
           <SeriesOverview selected={this.state.selectedTab} />
           <SeriesEpisodes selected={this.state.selectedTab} />
