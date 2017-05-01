@@ -1,4 +1,3 @@
-// might not ever use fetchVideos
 export const fetchVideos = () => {
   return $.ajax(
     {

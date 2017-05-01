@@ -68,8 +68,6 @@ class SearchBar extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    // MAYBE DONT NEED THIS HERE, USEFUL TO SEE IF SEARCH WORKED FOR A WILLRECEIVEPROPS
-    seriesList: state.series.seriesList
   };
 };
 
