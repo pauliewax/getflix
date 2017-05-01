@@ -55,7 +55,8 @@ class SeriesOverview extends React.Component {
     if (this.props.seriesDetail.firstEp[0]) {
       hashHistory.push(`/watch/${this.props.seriesDetail.firstEp[0].id}`);
     } else {
-      hashHistory.push(`/watch/117`);
+      hashHistory.push(`/watch/39`);
+      // remove RICKROLL
     }
   }
 
