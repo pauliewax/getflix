@@ -33,7 +33,6 @@ class SearchBar extends React.Component {
   }
 
   componentDidMount() {
-
     document.addEventListener('click', this.searchSlide);
   }
 

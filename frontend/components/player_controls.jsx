@@ -9,15 +9,18 @@ class PlayerControls extends React.Component {
     this.handleSlide = this.handleSlide.bind(this);
     this.fullScreen = this.fullScreen.bind(this);
     this.toggleSound = this.toggleSound.bind(this);
+    this.timeTracker = this.timeTracker.bind(this);
   }
 
   componentDidMount() {
     let video = document.getElementById("videoPlayer");
-    video.addEventListener("timeupdate", function() {
-      let value = ( 100 / video.duration ) * video.currentTime;
-      let timeNow = this.getPlayTime(video.currentTime);
-      this.setState({seekerVal: value, currentTime: timeNow});
-    }.bind(this));
+    video.addEventListener("timeupdate", this.timeTracker(video));
+  }
+
+  timeTracker(video) {
+    let value = ( 100 / video.duration ) * video.currentTime;
+    let timeNow = this.getPlayTime(video.currentTime);
+    this.setState({seekerVal: value, currentTime: timeNow});
   }
 
   pressPlay() {
