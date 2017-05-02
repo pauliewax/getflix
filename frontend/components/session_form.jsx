@@ -57,9 +57,11 @@ class SessionForm extends React.Component {
     }
 
     let guestLogin = <div></div>;
+    let demoLogin = <div></div>;
 
     if (formType === "/login") {
       guestLogin = <Link className="guestLogin" onClick={this.handleGuest} to="/" >Sign in as a guest?</Link>;
+      demoLogin = <button onClick={this.handleGuest}><i className="fa fa-key" aria-hidden="true"></i>Demo Login</button>;
     }
 
     return (
@@ -83,6 +85,7 @@ class SessionForm extends React.Component {
 
             { guestLogin }
             <button className="submitBtn" >{ buttonText }</button>
+            { demoLogin }
 
             <label className="otherForm">
               <detail>
@@ -92,10 +95,6 @@ class SessionForm extends React.Component {
                   className="otherLink">{otherFormText}
                 </Link>
               </detail>
-              <button onClick={this.handleGuest}>
-                <i className="fa fa-key" aria-hidden="true"></i>
-                DEMO LOGIN
-              </button>
             </label>
           </form>
 
