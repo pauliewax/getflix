@@ -14,13 +14,19 @@ class PlayerControls extends React.Component {
 
   componentDidMount() {
     let video = document.getElementById("videoPlayer");
-    video.addEventListener("timeupdate", this.timeTracker(video));
+    video.addEventListener("timeupdate", this.timeTracker);
   }
 
-  timeTracker(video) {
+  timeTracker() {
+    let video = document.getElementById("videoPlayer");
     let value = ( 100 / video.duration ) * video.currentTime;
     let timeNow = this.getPlayTime(video.currentTime);
     this.setState({seekerVal: value, currentTime: timeNow});
+  }
+
+  componentWillUnmount() {
+    let video = document.getElementById("videoPlayer");
+    video.removeEventListener("timeupdate", this.timeTracker);
   }
 
   pressPlay() {
