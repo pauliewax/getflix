@@ -1,3 +1,7 @@
+video::-webkit-media-controls-enclosure {
+  display:none !important;
+}
+
 .player {
   display: flex;
   justify-content: center;
@@ -29,6 +33,7 @@
 }
 
 .playerControls {
+  z-index: 2147483647;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -98,32 +103,33 @@
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-    height: 15%;
-    background: #CB0000;
-    border: none;
-    box-shadow: 2px 2px 5px black;
+  height: 15%;
+  background: #CB0000;
+  border: none;
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
 }
 
 input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 2vmax;
-    width: 2vmax;
-    border-radius: 50%;
-    background: #CB0000;
-    box-shadow: 1px 2px 5px black;
-    margin-top: -1.2%;
-    cursor: pointer;
+  -webkit-appearance: none;
+  height: 2vmax;
+  width: 2vmax;
+  border-radius: 50%;
+  background: #CB0000;
+  box-shadow: 1px 2px 5px black;
+  margin-top: -1.2%;
+  cursor: pointer;
 }
 
 input[type=range]::-ms-track {
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
 }
 
 input[type=range]::-ms-fill-upper {
-    background: #ddd;
-    border-radius: 10px;
+  background: #ddd;
+  border-radius: 10px;
 }
 
 .fullScreen {
