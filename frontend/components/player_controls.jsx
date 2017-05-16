@@ -54,12 +54,20 @@ class PlayerControls extends React.Component {
 
   fullScreen() {
     let video = document.getElementById("videoPlayer");
-    if (video.requestFullscreen) {
-      video.requestFullscreen();
-    } else if (video.mozRequestFullscreen) {
-      video.mozRequestFullscreen();
-    } else if (video.webkitRequestFullscreen) {
-      video.webkitRequestFullscreen();
+    if (document.fullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitIsFullScreen) {
+      document.webkitExitFullscreen();
+    } else if (document.mozFullScreen) {
+      document.mozCancelFullScreen();
+    } else {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.mozRequestFullscreen) {
+        video.mozRequestFullscreen();
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+      }
     }
   }
 
