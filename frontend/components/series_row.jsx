@@ -10,6 +10,8 @@ class SeriesRow extends React.Component {
 
       this.state = {selectedSerie: '', alreadySelected: false};
       this.handleHover = this.handleHover.bind(this);
+      this.handleEdge = this.handleEdge.bind(this);
+      this.handleReset = this.handleReset.bind(this);
   }
 
   handleHover(event) {
@@ -28,6 +30,14 @@ class SeriesRow extends React.Component {
         rowObj.id = '';
       }
     }
+  }
+
+  handleEdge(event) {
+    event.target.parentElement.id = "noHover2";
+  }
+
+  handleReset(event) {
+    event.target.parentElement.id = '';
   }
 
   componentWillReceiveProps(newProps) {
@@ -53,8 +63,8 @@ class SeriesRow extends React.Component {
       <div className="seriesRow">
             <div className="seriesStrip">
               { series }
+              <div onMouseOver={this.handleEdge} onMouseLeave={this.handleReset} id="clearFlex"></div>
             </div>
-
         <div className={`viewer viewer-${this.props.rowId}`}><SeriesViewer thisViewerClass={`viewer-${this.props.rowId}`} /></div>
       </div>
     );

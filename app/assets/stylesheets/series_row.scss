@@ -98,3 +98,19 @@
   z-index: 200;
   transition: all 500ms ease-out;
 }
+
+#clearFlex {
+  flex-grow: 1;
+}
+
+#noHover2:hover {
+  transform: translate3d(0, 0, 0);
+}
+
+#noHover2:hover .series {
+  opacity: 1;
+}
+
+#noHover2:hover #noHover {
+  transform: translate3d(0, 0, 0);
+}
