@@ -6,17 +6,24 @@ import { hashHistory } from 'react-router';
 class Series extends React.Component {
   constructor(props) {
       super(props);
+      this.state = {resetHighlighting: false};
       this.handleClick = this.handleClick.bind(this);
       this.handlePlay = this.handlePlay.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
-    let thisSerie = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
+    let thisSerie = this.props.serie.id;
+    let thisSerieObj = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
+
     if (newProps.seriesDetail) {
-      if ((newProps.seriesDetail.id === this.props.serie.id) && (window.lastSelected !== this.props.serie.id)) {
-        thisSerie.classList.add('highlightSerie');
+      let selectedSerie = newProps.seriesDetail.id;
+      if ((selectedSerie === thisSerie) && (window.lastSelected === thisSerie) && (this.state.resetHighlighting = false)) {
+        thisSerieObj.classList.remove('highlightSerie');
+        this.setState({resetHighlighting: true});
+      } else if ((selectedSerie === thisSerie) && ((window.lastSelected !== thisSerie) || (this.state.resetHighlighting = true))) {
+        thisSerieObj.classList.add('highlightSerie');
       } else {
-        thisSerie.classList.remove('highlightSerie');
+        thisSerieObj.classList.remove('highlightSerie');
       }
     }
   }
