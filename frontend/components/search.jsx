@@ -18,10 +18,6 @@ class Search extends React.Component {
     if (newProps.location.query.q !== lastQuery) {
       this.props.fetchSearch(newProps.location.query.q);
     }
-
-    if (newProps.location.query.q === '') {
-      hashHistory.push('/browse');
-    }
   }
 
   generateRows() {

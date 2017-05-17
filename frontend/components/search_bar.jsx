@@ -9,6 +9,7 @@ class SearchBar extends React.Component {
       this.handleInput = this.handleInput.bind(this);
       this.handleClick = this.handleClick.bind(this);
       this.revealSearch = this.revealSearch.bind(this);
+      this.searchSlide = this.searchSlide.bind(this);
   }
 
   handleInput(event) {
@@ -16,14 +17,17 @@ class SearchBar extends React.Component {
   }
 
   updateQueryString() {
-    hashHistory.push(`/search?q=${this.state.inputVal}`);
+    if (this.state.inputVal !== '') {
+      hashHistory.push(`/search?q=${this.state.inputVal}`);
+    }
   }
 
   handleClick() {
-    document.getElementsByClassName("searchBar")[0].classList.remove('revealSearch');
-    document.getElementsByClassName("inputField")[0].placeholder = "Search";
-    document.getElementsByClassName("inputField")[0].classList.remove('placeholderColor');
+    // document.getElementsByClassName("searchBar")[0].classList.remove('revealSearch');
+    // document.getElementsByClassName("inputField")[0].placeholder = "Search";
+    // document.getElementsByClassName("inputField")[0].classList.remove('placeholderColor');
     this.setState({inputVal: ''}, this.updateQueryString);
+    hashHistory.push('/browse');
   }
 
   revealSearch() {
@@ -39,7 +43,7 @@ class SearchBar extends React.Component {
   searchSlide() {
     let searchbar = document.getElementsByClassName('searchBar')[0];
     let clickedsearch = searchbar.contains(event.target);
-    if (!clickedsearch) {
+    if (!clickedsearch && this.state.inputVal === '') {
       document.getElementsByClassName("searchBar")[0].classList.remove('revealSearch');
       document.getElementsByClassName("inputField")[0].placeholder = "Search";
       document.getElementsByClassName("inputField")[0].classList.remove('placeholderColor');

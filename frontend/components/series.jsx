@@ -32,6 +32,7 @@ class Series extends React.Component {
     let thisSerie = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
     if (this.checkForHighlighting(thisSerie)) {
       window.lastSelected = this.props.serie.id;
+      console.log(this.props.serie.title, this.props.serie.id)
     }
   }
 
