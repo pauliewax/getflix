@@ -58,7 +58,7 @@ class SearchBar extends React.Component {
           <input onClick={this.revealSearch} className="inputField" value={this.state.inputVal} onChange={this.handleInput} placeholder="Search" />
         </section>
         <div onClick={this.handleClick} className="closeBtn" >
-          <i className="fa fa-times-thin"></i>
+          <i className="fa fa-times"></i>
         </div>
       </div>
     );
