@@ -28,7 +28,7 @@
 }
 
 .revealSearch .closeBtn {
-  display: block;
+  display: flex;
 }
 
 .inputBox {
@@ -52,12 +52,10 @@
   padding-right: 8px;
 }
 
-.fa-times-thin {
-  transform: scale(1.8);
-}
-
-.fa-times-thin:before {
-	content: '\00d7';
+.searchBar img {
+  height: 14px;
+  width: auto;
+  padding-right: 8px;
 }
 
 .closeBtn {

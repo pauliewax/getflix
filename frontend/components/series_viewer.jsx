@@ -72,7 +72,8 @@ class SeriesViewer extends React.Component {
 
     return(
       <div className="seriesViewer">
-<i onClick={this.handleClose} className="fa fa-times-thin viewerClose"></i>
+<i  className="fa fa-times-thin viewerClose"></i>
+        <img onClick={this.handleClose} className="viewerClose" src='http://www.pauliewax.com/wp-content/uploads/2017/05/multiply.png' />
         <main id="browserVC" className="viewerContent">
           <div className="viewTitle">{ name }</div>
           <SeriesOverview selected={this.state.selectedTab} />
