@@ -65,6 +65,7 @@ class SeriesViewer extends React.Component {
 
   render() {
     let img;
+    let name;
     if (this.props.seriesDetail) {
       name = this.props.seriesDetail.title;
       img = this.props.seriesDetail.url;

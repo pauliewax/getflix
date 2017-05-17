@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
     document.getElementsByClassName("searchBar")[0].classList.remove('revealSearch');
     document.getElementsByClassName("inputField")[0].placeholder = "Search";
     document.getElementsByClassName("inputField")[0].classList.remove('placeholderColor');
-    this.setState({inputVal: ""}, this.updateQueryString);
+    this.setState({inputVal: ''}, this.updateQueryString);
   }
 
   revealSearch() {
