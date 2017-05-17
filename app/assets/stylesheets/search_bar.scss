@@ -9,6 +9,10 @@
   transition: all 250ms ease;
 }
 
+.searchBar .closeBtn {
+  display: none;
+}
+
 .inputField::-webkit-input-placeholder {
   color: white;
 }
@@ -21,6 +25,10 @@
   background-color: rgba(0,0,0,.75);
   width: 266px;
   border: 1px solid white;
+}
+
+.revealSearch .closeBtn {
+  display: block;
 }
 
 .inputBox {
