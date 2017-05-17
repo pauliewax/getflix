@@ -9,6 +9,15 @@
   transition: all 250ms ease;
 }
 
+.searchBar input[type=text] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
 .inputField::-webkit-input-placeholder {
   color: white;
 }
