@@ -57,7 +57,7 @@ class SeriesRow extends React.Component {
 
   render()  {
 
-    let series = this.props.row.map(serie=><li onMouseOver={this.handleHover} className={`serie-${serie.id} serieWrapper`} key={serie.id} ><Series serie={serie} /></li>);
+    let series = this.props.row.map(serie=><li onMouseEnter={this.handleHover} className={`serie-${serie.id} serieWrapper`} key={serie.id} ><Series serie={serie} /></li>);
 
     return(
       <div className="seriesRow">

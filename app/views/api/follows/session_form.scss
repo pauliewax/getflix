@@ -1,0 +1,97 @@
+.sessionForm {
+  position: relative;
+}
+.formWindow {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  margin-left: -230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 460px;
+  background-color: #f3f3f3;
+}
+.splashImg {
+  width: 100%;
+}
+
+.formWindow label {
+  width: 380px;
+  font-size: 16px;
+  margin-bottom: 22px;
+}
+
+.formWindow label input {
+  height: 44px;
+  width: 380px;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.formWindow h1 {
+  width: 380px;
+  font-size: 32px;
+  margin-top: 22px;
+  margin-bottom: 20px;
+}
+
+.errorBox {
+  padding: 20px 10px;
+  width: 380px;
+  background-color: #999999;
+  color: white;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.sessionForm button {
+  width: 380px;
+  height: 50px;
+  background-color: rgb(229, 9, 20);
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: white;
+}
+
+.guestLogin {
+ width: 380px;
+ font-size: 14px;
+ text-decoration: none;
+ margin-bottom: 19px;
+}
+
+.guestLogin:hover {
+  text-decoration: underline;
+}
+
+.otherForm {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-top: 1px solid #CCCCCC;
+  padding-top: 20px;
+}
+
+.otherLink {
+  text-decoration: none;
+}
+
+.otherLink:hover {
+  text-decoration: underline;
+}
+
+.fa-key {
+  color: yellow;
+}
+
+.otherForm button:hover {
+  opacity: .6;
+}
+
+.fa-key {
+  transform: scale(.7);
+}
