@@ -13,20 +13,28 @@ class SeriesRow extends React.Component {
       this.removeDeadspaceFix = this.removeDeadspaceFix.bind(this);
   }
 
+  addHover()  {
+    for (var i = 0; i < this.props.row.length; i++) {
+      let rowObj = document.getElementsByClassName(`serie-${this.props.row[i].id}`)[0];
+      rowObj.id = "noHover";
+    }
+  }
+
+  removeHover() {
+    for (var i = 0; i < this.props.row.length; i++) {
+      let rowObj = document.getElementsByClassName(`serie-${this.props.row[i].id}`)[0];
+      rowObj.id = '';
+    }
+  }
+
   handleHover(event) {
     let thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
     // This line checks if the viewerShow class has been added, meaning the viewer is open for this row
     if (thisViewer.classList[2]) {
       this.props.fetchSerie(parseInt(event.currentTarget.classList[0].slice(6)));
-      for (var i = 0; i < this.props.row.length; i++) {
-        let rowObj = document.getElementsByClassName(`serie-${this.props.row[i].id}`)[0];
-        rowObj.id = "noHover";
-      }
+      this.addHover();
     } else {
-      for (var i = 0; i < this.props.row.length; i++) {
-        let rowObj = document.getElementsByClassName(`serie-${this.props.row[i].id}`)[0];
-        rowObj.id = '';
-      }
+      this.removeHover();
     }
   }
 
@@ -62,7 +70,7 @@ class SeriesRow extends React.Component {
         selectedSerie.classList.add('highlightSerie');
     } else {
         thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
-      thisViewer.classList.remove('viewerShow');
+        thisViewer.classList.remove('viewerShow');
     }
   }
 
