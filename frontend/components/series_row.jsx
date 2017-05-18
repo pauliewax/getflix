@@ -9,8 +9,8 @@ class SeriesRow extends React.Component {
       super(props);
 
       this.handleHover = this.handleHover.bind(this);
-      this.handleEdge = this.handleEdge.bind(this);
-      this.handleReset = this.handleReset.bind(this);
+      this.addDeadspaceFix = this.addDeadspaceFix.bind(this);
+      this.removeDeadspaceFix = this.removeDeadspaceFix.bind(this);
   }
 
   handleHover(event) {
@@ -18,7 +18,6 @@ class SeriesRow extends React.Component {
     // This line checks if the viewerShow class has been added, meaning the viewer is open for this row
     if (thisViewer.classList[2]) {
       this.props.fetchSerie(parseInt(event.currentTarget.classList[0].slice(6)));
-
       for (var i = 0; i < this.props.row.length; i++) {
         let rowObj = document.getElementsByClassName(`serie-${this.props.row[i].id}`)[0];
         rowObj.id = "noHover";
@@ -31,23 +30,36 @@ class SeriesRow extends React.Component {
     }
   }
 
-  handleEdge(event) {
+  addDeadspaceFix(event) {
     event.target.parentElement.id = "noHover2";
   }
 
-  handleReset(event) {
+  removeDeadspaceFix(event) {
     event.target.parentElement.id = '';
   }
 
   componentWillReceiveProps(newProps) {
     let seriesIds = this.props.row.map(serie=>serie.id);
-    let thisViewer;
+    let thisViewer,
+        selectedSerie;
+
+    if (newProps.seriesDetail) {
+      selectedSerie = document.getElementsByClassName(`serie-${newProps.seriesDetail.id}`)[0];
+      for (var i = 0; i < this.props.row.length; i++) {
+        let rowObj = document.getElementsByClassName(`serie-${this.props.row[i].id}`)[0];
+        if (rowObj.classList[0] !== selectedSerie.classList[0]) {
+          rowObj.classList.remove('highlightSerie');
+        }
+      }
+    }
     if (
         (newProps.seriesDetail !== this.props.seriesDetail) &&
         (seriesIds.includes(newProps.seriesDetail.id))
       ) {
         thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
-      thisViewer.classList.add('viewerShow');
+        thisViewer.classList.add('viewerShow');
+        selectedSerie = document.getElementsByClassName(`serie-${newProps.seriesDetail.id}`)[0];
+        selectedSerie.classList.add('highlightSerie');
     } else {
         thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
       thisViewer.classList.remove('viewerShow');
@@ -62,7 +74,7 @@ class SeriesRow extends React.Component {
       <div className="seriesRow">
             <div className="seriesStrip">
               { series }
-              <div onMouseEnter={this.handleEdge} onMouseLeave={this.handleReset} id="clearFlex"></div>
+              <div onMouseEnter={this.addDeadspaceFix} onMouseLeave={this.removeDeadspaceFix} id="clearFlex"></div>
             </div>
         <div className={`viewer viewer-${this.props.rowId}`}><SeriesViewer thisViewerClass={`viewer-${this.props.rowId}`} /></div>
       </div>

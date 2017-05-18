@@ -6,42 +6,35 @@ import { hashHistory } from 'react-router';
 class Series extends React.Component {
   constructor(props) {
       super(props);
-      this.state = {resetHighlighting: false};
       this.handleClick = this.handleClick.bind(this);
       this.handlePlay = this.handlePlay.bind(this);
   }
 
-  componentWillReceiveProps(newProps) {
-    let thisSerie = this.props.serie.id;
-    let thisSerieObj = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
-    if (newProps.seriesDetail) {
-      let selectedSerie = newProps.seriesDetail.id;
-      if ((selectedSerie === thisSerie) && (window.lastSelected === thisSerie) && (this.state.resetHighlighting === false)) {
-        thisSerieObj.classList.remove('highlightSerie');
-        this.setState({resetHighlighting: true});
-      } else if ((selectedSerie === thisSerie) && ((window.lastSelected !== thisSerie) || (this.state.resetHighlighting === true))) {
-        thisSerieObj.classList.add('highlightSerie');
-      } else {
-        thisSerieObj.classList.remove('highlightSerie');
-      }
-    }
-  }
+  // componentWillReceiveProps(newProps) {
+  //   let thisSerie = this.props.serie.id;
+  //   let thisSerieObj = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
+  //   let focusSerie = newProps.seriesDetail.id;
+  //
+  //   if (focusSerie === thisSerie) {
+  //     thisSerieObj.classList.add('highlightSerie');
+  //   } else {
+  //     thisSerieObj.classList.remove('highlightSerie');
+  //   }
+  // }
 
-  componentWillUnmount() {
-    let thisSerie = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
-    if (this.checkForHighlighting(thisSerie)) {
-      window.lastSelected = this.props.serie.id;
-    }
-  }
+  // componentWillUnmount() {
+  //   let thisSerie = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
+  //   if (this.checkForHighlighting(thisSerie)) {
+  //     window.lastSelected = this.props.serie.id;
+  //   }
+  // }
 
-  checkForHighlighting(obj)  {
-    for (var i = 0; i < obj.classList.length; i++) {
-      if  (obj.classList[i] === 'highlightSerie') {
-        return true;
-      }
-    }
-    return false;
-  }
+  // checkForHighlighting(obj)  {
+  //   if (obj.classList.contains('highlightSerie')) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
 
   handleClick() {
     this.props.fetchSerie(this.props.serie.id);
