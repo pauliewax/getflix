@@ -12,6 +12,14 @@ class SearchBar extends React.Component {
       this.searchSlide = this.searchSlide.bind(this);
   }
 
+  componentDidMount() {
+    document.addEventListener('click', this.searchSlide);
+    if (this.props.queryString !== '') {
+      this.revealSearch();
+      this.setState({inputVal: this.props.queryString});
+    }
+  }
+
   componentWillReceiveProps(newProps) {
     if (newProps.location !== '/search') {
       this.setState({inputVal: ''});
@@ -38,14 +46,6 @@ class SearchBar extends React.Component {
     document.getElementsByClassName("searchBar")[0].classList.add('revealSearch');
     document.getElementsByClassName("inputField")[0].placeholder = "Search by Title";
     document.getElementsByClassName("inputField")[0].classList.add('placeholderColor');
-  }
-
-  componentDidMount() {
-    document.addEventListener('click', this.searchSlide);
-    if (this.props.queryString !== '') {
-      this.revealSearch();
-      this.setState({inputVal: this.props.queryString});
-    }
   }
 
   searchSlide() {
