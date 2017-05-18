@@ -31,9 +31,19 @@
   background-color: #e50914;
   color: white;
   padding: 12px 28px;
+  margin-right: 22px;
   border-radius: 2px;
 }
 
 .landingBlock button:hover {
   background-color: #f40612;
+}
+
+.fa-key {
+  color: white;
+  margin-right: 4px;
+}
+
+.fa-key {
+  transform: scale(.7);
 }

@@ -1,17 +1,47 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { hashHistory } from 'react-router';
+import { login } from '../actions/session_actions';
 
-const Landing = () => (
-  <div className="landing" >
+class Landing extends React.Component {
+  constructor(props) {
+      super(props);
 
-    <section className="landingBlock">
-      <h2>See what's next.</h2>
-      <p>WATCH ANYWHERE. CANCEL ANYTIME.</p>
-      <button className="button" onClick={()=>hashHistory.push("/signup")}>Join Free For a Month</button>
-    </section>
+  this.handleGuest = this.handleGuest.bind(this);
+  }
 
-    <img src ="http://www.pauliewax.com/wp-content/uploads/2017/04/landing.jpg" />
-  </div>
-);
+  handleGuest(e) {
+    e.preventDefault();
+    this.props.login({email: "Guest", password: "password"})
+      .then(() => this.props.router.push("/browse"));
+  }
 
-export default Landing;
+  render() {
+    return(
+      <div className="landing" >
+
+        <section className="landingBlock">
+          <h2>See what's next.</h2>
+          <p>WATCH ANYWHERE. CANCEL ANYTIME.</p>
+          <button className="button" onClick={this.handleGuest}><i className="fa fa-key" aria-hidden="true"></i>Demo Login</button>
+          <button className="button" onClick={()=>hashHistory.push("/signup")}>Join Free For a Month</button>
+        </section>
+
+        <img src ="http://www.pauliewax.com/wp-content/uploads/2017/04/landing.jpg" />
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+  };
+};
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    login: (user) => (dispatch(login(user)))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Landing);
