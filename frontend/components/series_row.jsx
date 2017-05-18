@@ -31,8 +31,8 @@ class SeriesRow extends React.Component {
     let thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
     // This line checks if the viewerShow class has been added, meaning the viewer is open for this row
     if (thisViewer.classList[2]) {
-      this.props.fetchSerie(parseInt(event.currentTarget.classList[0].slice(6)));
-      this.addHover();
+      this.props.fetchSerie(parseInt(event.currentTarget.classList[0].slice(6)))
+      .then(this.addHover());
     } else {
       this.removeHover();
     }
