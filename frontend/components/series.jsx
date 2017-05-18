@@ -12,17 +12,14 @@ class Series extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    console.log(this.props.serie.title, 'receivin props')
     let thisSerie = this.props.serie.id;
     let thisSerieObj = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
     if (newProps.seriesDetail) {
       let selectedSerie = newProps.seriesDetail.id;
-      if ((selectedSerie === thisSerie) && (window.lastSelected === thisSerie)) {
-        // && (window.lastSelected === thisSerie) && (this.state.resetHighlighting = false)
-        debugger
-        // thisSerieObj.classList.remove('highlightSerie');
-        // this.setState({resetHighlighting: true});
-      } else if ((selectedSerie === thisSerie) && ((window.lastSelected !== thisSerie) || (this.state.resetHighlighting = true))) {
+      if ((selectedSerie === thisSerie) && (window.lastSelected === thisSerie) && (this.state.resetHighlighting === false)) {
+        thisSerieObj.classList.remove('highlightSerie');
+        this.setState({resetHighlighting: true});
+      } else if ((selectedSerie === thisSerie) && ((window.lastSelected !== thisSerie) || (this.state.resetHighlighting === true))) {
         thisSerieObj.classList.add('highlightSerie');
       } else {
         thisSerieObj.classList.remove('highlightSerie');
@@ -34,7 +31,6 @@ class Series extends React.Component {
     let thisSerie = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
     if (this.checkForHighlighting(thisSerie)) {
       window.lastSelected = this.props.serie.id;
-      console.log(window.lastSelected, this.props.serie.title)
     }
   }
 
