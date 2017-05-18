@@ -22,7 +22,7 @@ class NavBar extends React.Component {
 
   transparencySwitch() {
     let fixNav = document.getElementsByClassName('navBar')[0];
-    if (window.scrollY > 10) {
+    if (window.scrollY > 10 && fixNav.classList.contains('fixed')) {
       fixNav.classList.add('fixedOpaque');
     } else {
       fixNav.classList.remove('fixedOpaque');
