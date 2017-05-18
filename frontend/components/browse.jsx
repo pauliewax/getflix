@@ -14,7 +14,7 @@ class Browse extends React.Component {
  componentWillMount() {
    this.props.fetchAllSeries().then(this.props.fetchGenres());
  }
-
+ 
  render()  {
    let seriesByGenre = {};
    let browseGenres = [];

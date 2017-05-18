@@ -12,6 +12,23 @@ class NavBar extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    document.addEventListener('scroll', this.transparencySwitch);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.transparencySwitch);
+  }
+
+  transparencySwitch() {
+    let fixNav = document.getElementsByClassName('fixed')[0];
+    if (window.scrollY > 10) {
+      fixNav.style.background = 'rgba(0,0,0,.7)';
+    } else {
+      fixNav.style.background = 'linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,0) )';
+    }
+  }
+
   render() {
     let absoluteNavPaths = ["/", "/signup", "/login"];
 
