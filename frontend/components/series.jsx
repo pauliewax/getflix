@@ -10,32 +10,6 @@ class Series extends React.Component {
       this.handlePlay = this.handlePlay.bind(this);
   }
 
-  // componentWillReceiveProps(newProps) {
-  //   let thisSerie = this.props.serie.id;
-  //   let thisSerieObj = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
-  //   let focusSerie = newProps.seriesDetail.id;
-  //
-  //   if (focusSerie === thisSerie) {
-  //     thisSerieObj.classList.add('highlightSerie');
-  //   } else {
-  //     thisSerieObj.classList.remove('highlightSerie');
-  //   }
-  // }
-
-  // componentWillUnmount() {
-  //   let thisSerie = document.getElementsByClassName(`serie-${this.props.serie.id}`)[0];
-  //   if (this.checkForHighlighting(thisSerie)) {
-  //     window.lastSelected = this.props.serie.id;
-  //   }
-  // }
-
-  // checkForHighlighting(obj)  {
-  //   if (obj.classList.contains('highlightSerie')) {
-  //     return true;
-  //   }
-  //   return false;
-  // }
-
   handleClick() {
     this.props.fetchSerie(this.props.serie.id);
   }
