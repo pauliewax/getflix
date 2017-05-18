@@ -52,6 +52,10 @@
   display: inline-block;
 }
 
+.fixedOpaque {
+  background: rgba(0,0,0,.7);
+}
+
 .navBar aside {
   margin-right: 57px;
   display: flex;
