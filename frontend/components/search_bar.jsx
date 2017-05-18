@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { hashHistory } from 'react-router';
+import { hashHistory, withRouter } from 'react-router';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -12,6 +12,12 @@ class SearchBar extends React.Component {
       this.searchSlide = this.searchSlide.bind(this);
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.location !== '/search') {
+      this.setState({inputVal: ''});
+    }
+  }
+
   handleInput(event) {
     this.setState({inputVal: event.currentTarget.value}, this.updateQueryString);
   }
@@ -19,15 +25,13 @@ class SearchBar extends React.Component {
   updateQueryString() {
     if (this.state.inputVal !== '') {
       hashHistory.push(`/search?q=${this.state.inputVal}`);
+    } else {
+      hashHistory.push('/browse');
     }
   }
 
   handleClick() {
-    // document.getElementsByClassName("searchBar")[0].classList.remove('revealSearch');
-    // document.getElementsByClassName("inputField")[0].placeholder = "Search";
-    // document.getElementsByClassName("inputField")[0].classList.remove('placeholderColor');
     this.setState({inputVal: ''}, this.updateQueryString);
-    hashHistory.push('/browse');
   }
 
   revealSearch() {
@@ -38,6 +42,10 @@ class SearchBar extends React.Component {
 
   componentDidMount() {
     document.addEventListener('click', this.searchSlide);
+    if (this.props.queryString !== '') {
+      this.revealSearch();
+      this.setState({inputVal: this.props.queryString});
+    }
   }
 
   searchSlide() {
@@ -71,6 +79,8 @@ class SearchBar extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    location: ownProps.router.location.pathname,
+    queryString: ownProps.router.location.search.slice(3)
   };
 };
 
@@ -80,4 +90,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchBar));
