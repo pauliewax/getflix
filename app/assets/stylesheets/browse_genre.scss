@@ -11,24 +11,6 @@
   margin-bottom: .5em;
 }
 
-.browseGenre .seriesViewer {
-  padding: 1px;
-  width: 100vw;
-  background-color: black;
-  height: 31vw;
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-}
-
 .browseGenre .viewerContent {
   display: block;
-}
-
-.browseGenre .overviewTab {
-  height: auto;
-}
-
-.browseGenre .episodeCarousel .slick-next {
-  margin-right: 140px;
 }
