@@ -39,7 +39,7 @@ class MyList extends React.Component {
         <aside>
           <p>My List</p>
         </aside>
-        <main>{seriesRows}</main>
+        <main id="mainRows">{seriesRows}</main>
       </div>
     );
   }
