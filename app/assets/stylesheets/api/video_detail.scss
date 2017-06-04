@@ -4,6 +4,11 @@
   display: flex;
   margin-right: 30px;
   flex-direction: column;
+  padding: 1px;
+}
+
+.videoDetail:last-of-type {
+  margin-right: 0px;
 }
 
 .videoDetail .thumb {
@@ -55,6 +60,6 @@
 
 .videoBody {
   margin: .45vw 0 0;
-  padding:0;
-  font-sizing: .916663vw;
+  padding: 0;
+  font-size: .916663vw;
 }

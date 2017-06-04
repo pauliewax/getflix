@@ -47,3 +47,9 @@
 .fa-key {
   transform: scale(.7);
 }
+
+@media (max-width: 1200px) {
+  .landing img {
+    width: 1200px;
+  }
+}
