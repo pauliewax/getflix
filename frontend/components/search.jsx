@@ -41,7 +41,7 @@ class Search extends React.Component {
         <aside>
           <p>Search Results:</p>
         </aside>
-        <main>
+        <main id="searchRows">
           {seriesRows}
         </main>
       </div>

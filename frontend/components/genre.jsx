@@ -43,7 +43,7 @@ class Genre extends React.Component {
         <aside>
           <p>{genreName}</p>
         </aside>
-        <main>{seriesRows}</main>
+        <main id="genreRows">{seriesRows}</main>
       </div>
     );
   }

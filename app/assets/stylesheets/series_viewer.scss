@@ -67,12 +67,12 @@
 }
 
 .viewerContent {
-  margin: 20px 0 0 53px;
+  margin: 20px auto 0 auto;
   color: white;
   z-index: 1;
   display: flex;
-  justify-content: flex-start;
-  width: 100%;
+  flex-direction: column;
+  width: 93%;
 }
 
 .viewTitle {
