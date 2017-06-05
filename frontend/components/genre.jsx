@@ -8,7 +8,7 @@ class Genre extends React.Component {
       super(props);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchSeries(this.props.params.id);
   }
 

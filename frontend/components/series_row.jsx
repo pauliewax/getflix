@@ -55,9 +55,7 @@ class SeriesRow extends React.Component {
       selectedSerie = document.getElementsByClassName(`serie-${newProps.seriesDetail.id}`)[0];
       for (let i = 0; i < this.props.row.length; i++) {
         let rowObj = document.getElementsByClassName(`serie-${this.props.row[i].id}`)[0];
-        if (rowObj.classList[0] !== selectedSerie.classList[0]) {
-          rowObj.classList.remove('highlightSerie');
-        }
+        rowObj.classList.remove('highlightSerie');
       }
     }
     if (

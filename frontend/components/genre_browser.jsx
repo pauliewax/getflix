@@ -11,7 +11,7 @@ class GenreBrowser extends React.Component {
       this.handleLeave = this.handleLeave.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchGenres();
   }
 

@@ -9,7 +9,7 @@ class Player extends React.Component {
     this.handleBack = this.handleBack.bind(this);
   }
 
-  componentWillMount() {
+ componentDidMount() {
     this.props.fetchVideo(this.props.params.id);
   }
 
