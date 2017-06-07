@@ -42,7 +42,7 @@ class AccountMenu extends React.Component {
       <div onMouseLeave={this.handleLeave} className="accountMenu">
 
           <detail onClick={this.handleClick}  onMouseEnter={this.handleHover} >
-                <img src="http://www.pauliewax.com/wp-content/uploads/2017/04/PICON_027.png"/>
+                <img src="https://s3.us-east-2.amazonaws.com/getflix-pro/avatar.png"/>
                 <p className="userName">
                   { username }
                 </p>

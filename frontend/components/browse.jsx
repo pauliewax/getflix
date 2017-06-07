@@ -51,10 +51,10 @@ class Browse extends React.Component {
    return(
      <div className="browser" >
        <section className="browse-splash">
-         <img className="splash-bg" src="http://www.pauliewax.com/wp-content/uploads/2017/04/splash-bg.png" />
+         <img className="splash-bg" src="https://s3.us-east-2.amazonaws.com/getflix-pro/splash.png" />
 
          <aside>
-           <img className="splash-logo" src="http://www.pauliewax.com/wp-content/uploads/2017/04/getflixoriginal.png" />
+           <img className="splash-logo" src="https://s3.us-east-2.amazonaws.com/getflix-pro/getflixoriginal.png" />
            <text>Dry air. Wet code. Escape is not defined. See how it all unfolds when the stack limit is reached in this critically acclaimed spaghetti coder.</text>
          </aside>
        </section>

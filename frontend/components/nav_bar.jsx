@@ -45,7 +45,7 @@ class NavBar extends React.Component {
       return(
         <div>
           <nav className="navBar absolute">
-            <img className="logo" onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
+            <img className="logo" onClick={()=>hashHistory.push("/")} src="https://s3.us-east-2.amazonaws.com/getflix-pro/logo.png" />
             { navButton }
           </nav>
         </div>
@@ -56,7 +56,7 @@ class NavBar extends React.Component {
           <nav className="navBar fixed">
             <section>
               <div>
-                <img className="logo" onClick={()=>hashHistory.push("/")} src="http://www.pauliewax.com/wp-content/uploads/2017/04/logo.png" />
+                <img className="logo" onClick={()=>hashHistory.push("/")} src="https://s3.us-east-2.amazonaws.com/getflix-pro/logo.png" />
               </div>
               <GenreBrowser />
             </section>

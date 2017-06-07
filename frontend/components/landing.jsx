@@ -27,7 +27,7 @@ class Landing extends React.Component {
           <button className="button" onClick={()=>hashHistory.push("/signup")}>Join Free For a Month</button>
         </section>
 
-        <img src ="http://www.pauliewax.com/wp-content/uploads/2017/04/landing.jpg" />
+        <img src ="https://s3.us-east-2.amazonaws.com/getflix-pro/landing.jpg" />
       </div>
     );
   }
