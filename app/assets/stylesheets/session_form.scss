@@ -92,3 +92,9 @@
 .otherForm button:hover {
   opacity: .6;
 }
+
+@media (max-width: 1200px) {
+  .splashImg {
+    width: 1200px;
+  }
+}
