@@ -334,7 +334,7 @@ vid1 = Video.create(
   series_id: series31.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/nba_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
 )
 
 vid2 = Video.create(
@@ -544,7 +544,7 @@ vid13 = Video.create(
   series_id: series1.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/idiot_abroad_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_idiot.jpg'
 )
 
 vid14 = Video.create(
@@ -554,7 +554,7 @@ vid14 = Video.create(
   series_id: series2.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_party_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_tvparty.jpg'
 )
 
 vid15 = Video.create(
@@ -564,7 +564,7 @@ vid15 = Video.create(
   series_id: series5.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/cribs_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_cribs.jpg'
 )
 
 vid16 = Video.create(
@@ -574,7 +574,7 @@ vid16 = Video.create(
   series_id: series6.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/evil_dead_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_evildead.jpg'
 )
 
 vid17 = Video.create(
@@ -584,7 +584,7 @@ vid17 = Video.create(
   series_id: series7.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/simpsons_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_simpsons.jpg'
 )
 
 vid18 = Video.create(
@@ -594,7 +594,7 @@ vid18 = Video.create(
   series_id: series8.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/taxi_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_taxi.jpg'
 )
 
 vid19 = Video.create(
@@ -604,7 +604,7 @@ vid19 = Video.create(
   series_id: series9.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/louie_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_louie.jpg'
 )
 
 vid20 = Video.create(
@@ -614,7 +614,7 @@ vid20 = Video.create(
   series_id: series10.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sunny_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_sunny.jpg'
 )
 
 vid21 = Video.create(
@@ -624,7 +624,7 @@ vid21 = Video.create(
   series_id: series11.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/trigun_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_trigun.jpg'
 )
 
 vid22 = Video.create(
@@ -634,7 +634,7 @@ vid22 = Video.create(
   series_id: series12.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/queen_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_queen.jpg'
 )
 
 vid23 = Video.create(
@@ -644,7 +644,7 @@ vid23 = Video.create(
   series_id: series13.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/ronettes_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_ronettes.jpg'
 )
 
 vid24 = Video.create(
@@ -654,7 +654,7 @@ vid24 = Video.create(
   series_id: series14.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/beachboys_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/beachboys.jpg'
 )
 
 vid25 = Video.create(
@@ -664,7 +664,7 @@ vid25 = Video.create(
   series_id: series15.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/loureed_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_loureed.jpg'
 )
 
 vid26 = Video.create(
@@ -674,7 +674,7 @@ vid26 = Video.create(
   series_id: series16.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/pattismith_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_pattismith.jpg'
 )
 
 vid27 = Video.create(
@@ -684,7 +684,7 @@ vid27 = Video.create(
   series_id: series17.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/blackflag_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_blackflag.jpg'
 )
 
 vid28 = Video.create(
@@ -694,7 +694,7 @@ vid28 = Video.create(
   series_id: series18.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/chetbaker_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_chetbaker.jpg'
 )
 
 vid29 = Video.create(
@@ -704,7 +704,7 @@ vid29 = Video.create(
   series_id: series19.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/bowie_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_bowie.jpg'
 )
 
 vid30 = Video.create(
@@ -714,7 +714,7 @@ vid30 = Video.create(
   series_id: series20.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/aaliyah_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_aaliyah.jpg'
 )
 
 vid31 = Video.create(
@@ -724,7 +724,7 @@ vid31 = Video.create(
   series_id: series21.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/richardhell_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_richardhell.jpg'
 )
 
 vid32 = Video.create(
@@ -734,7 +734,7 @@ vid32 = Video.create(
   series_id: series22.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/marvingaye_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_marvingaye.jpg'
 )
 
 vid33 = Video.create(
@@ -744,7 +744,7 @@ vid33 = Video.create(
   series_id: series23.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/talkingheads_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_talkingheads.jpg'
 )
 
 vid34 = Video.create(
@@ -754,7 +754,7 @@ vid34 = Video.create(
   series_id: series24.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/jackson5_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_jackson5.jpg'
 )
 
 vid35 = Video.create(
@@ -764,7 +764,7 @@ vid35 = Video.create(
   series_id: series25.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/nas_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_nas.jpg'
 )
 
 vid36 = Video.create(
@@ -774,7 +774,7 @@ vid36 = Video.create(
   series_id: series26.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/redbone_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_redbone.jpg'
 )
 
 vid37 = Video.create(
@@ -784,7 +784,7 @@ vid37 = Video.create(
   series_id: series27.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/senna_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_senna.jpg'
 )
 
 vid38 = Video.create(
@@ -794,7 +794,7 @@ vid38 = Video.create(
   series_id: series28.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/ali_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_ali.jpg'
 )
 
 vid39 = Video.create(
@@ -804,7 +804,7 @@ vid39 = Video.create(
   series_id: series29.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/bcone_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_breaking.jpg'
 )
 
 vid40 = Video.create(
@@ -814,7 +814,7 @@ vid40 = Video.create(
   series_id: series30.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/phelps_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_phelps.jpg'
 )
 
 vid41 = Video.create(
@@ -824,7 +824,7 @@ vid41 = Video.create(
   series_id: series32.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/undefeated_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_undefeated.jpg'
 )
 
 vid42 = Video.create(
@@ -834,7 +834,7 @@ vid42 = Video.create(
   series_id: series33.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/goodbadugly_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/classics_goodbadugly.jpg'
 )
 
 vid43 = Video.create(
@@ -844,7 +844,7 @@ vid43 = Video.create(
   series_id: series34.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/streetcar_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/classics_streetcar.jpg'
 )
 
 vid44 = Video.create(
@@ -854,7 +854,7 @@ vid44 = Video.create(
   series_id: series35.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/westside_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/classics_westside.jpg'
 )
 
 vid45 = Video.create(
@@ -864,7 +864,7 @@ vid45 = Video.create(
   series_id: series36.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/enterdragon_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/classics_enterdragon.jpg'
 )
 
 vid46 = Video.create(
@@ -874,7 +874,7 @@ vid46 = Video.create(
   series_id: series37.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/breathless_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/classics_breathless.jpg'
 )
 
 vid47 = Video.create(
@@ -884,7 +884,7 @@ vid47 = Video.create(
   series_id: series38.id,
   episode_num: 1,
   video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/anniehall_video.mp4',
-  thumbnail_url: 'N/A'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/classics_anniehall.jpg'
 )
 
 cat1 = Categorization.create(
