@@ -16,9 +16,10 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 18%;
+  top: 13%;
   left: 4%;
   width: 37%;
+  z-index: 2;
 }
 
 .browse-splash aside text {
@@ -66,10 +67,11 @@
 }
 
 .browser .genreSection {
-  padding-top: 54%;
+  padding-top: 43%;
   margin: 0 auto;
   width: 93%;
   display: flex;
   flex-wrap: wrap;
-  height: 78%
+  height: 78%;
+  z-index: 1;
 }
