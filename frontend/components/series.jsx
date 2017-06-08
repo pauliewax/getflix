@@ -15,12 +15,7 @@ class Series extends React.Component {
   }
 
   handlePlay() {
-    if (this.props.serie.firstEp[0]) {
-      hashHistory.push(`/watch/${this.props.serie.firstEp[0].id}`);
-    } else {
-      hashHistory.push(`/watch/39`);
-      // remove RICKROLL
-    }
+    hashHistory.push(`/watch/${this.props.serie.firstEp[0].id}`);
   }
 
   render()  {
