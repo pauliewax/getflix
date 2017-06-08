@@ -1,0 +1,33 @@
+.footer {
+  background-color: black;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer main {
+  max-width: 1000px;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.footer aside {
+  margin-bottom: 1em;
+}
+
+.footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.footer li {
+  width: 25%;
+  margin-bottom: 16px;
+}
+
+.footer p {
+  font-size: 11px;
+  margin-bottom: 15px;
+}

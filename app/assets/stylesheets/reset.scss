@@ -19,10 +19,11 @@ table, caption, tbody, tfoot, thead, tr, th, td, button, figure {
 }
 
 body {
-  background: #141414;;
+  background: black;
   line-height: 1;
   color: black;
 }
+
 ol, ul {
   list-style: none;
 }
@@ -49,4 +50,24 @@ button:hover {
 
 html {
   overflow-x: hidden;
+}
+
+.genre {
+  min-height: 1000px;
+  background-color: #141414;
+}
+
+.searchPage {
+  min-height: 1000px;
+  background-color: #141414;
+}
+
+.browser {
+  min-height: 1000px;
+  background-color: #141414;
+}
+
+.myList {
+  min-height: 1000px;
+  background-color: #141414;
 }
