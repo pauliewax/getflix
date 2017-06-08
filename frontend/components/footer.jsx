@@ -5,19 +5,28 @@ import { withRouter } from 'react-router';
 class Footer extends React.Component {
   constructor(props) {
       super(props);
+      this.checkPath = this.checkPath.bind(this);
   }
 
-  checkPath(newProps) {
+  componentDidMount() {
+    this.checkPath(this.props);
+  }
+
+  componentWillReceiveProps(newProps) {
+    this.checkPath(newProps);
+  }
+
+  checkPath(someProps) {
     let footer = document.getElementsByClassName('footer')[0];
-    if (newProps.location === '/') {
+    if (someProps.location === '/') {
       footer.classList = ['footer footerLanding'];
-    } else if (newProps.location === '/login') {
+    } else if (someProps.location === '/login') {
       footer.classList = ['footer footerLogin'];
     } else {
       footer.classList = ['footer'];
     }
   }
-  
+
   render() {
 
     return(
