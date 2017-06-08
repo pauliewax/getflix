@@ -56,6 +56,10 @@ class Browse extends React.Component {
          <aside>
            <img className="splash-logo" src="https://s3.us-east-2.amazonaws.com/getflix-pro/getflixoriginal.png" />
            <text>Dry air. Wet code. Escape is not defined. See how it all unfolds when the stack limit is reached in this critically acclaimed spaghetti coder.</text>
+           <div>
+             <button className="splashPlay"><i className="fa fa-play"></i>Play</button>
+             <button className="splashList"><i className="fa fa-check"></i>My List</button>
+           </div>
          </aside>
        </section>
        <main className="genreSection">

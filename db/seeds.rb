@@ -19,7 +19,8 @@ guest = User.create(email: 'Guest', password: 'password')
 genres = Genre.create([
   {name:'TV Shows'},
   {name:'Music'},
-  {name:'Sports'}
+  {name:'Sports'},
+  {name:'Classics'}
 ])
 
 series1 = Series.create(
@@ -267,6 +268,62 @@ title: 'NBA Dunk Competition',
 year: '2016',
 mpaa_rating: 'TV-14',
 description: 'Where amazing happens.',
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+)
+
+series32 = Series.create(
+title: 'Undefeated',
+year: '2011',
+mpaa_rating: 'PG-13',
+description: 'Chronicles three underprivileged students from inner-city Memphis and their volunteer coach who tries to help them beat the odds on and off the field.',
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+)
+
+series33 = Series.create(
+title: 'The Good, the Bad and the Ugly',
+year: '1966',
+mpaa_rating: 'TV-14',
+description: 'A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.',
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+)
+
+series34 = Series.create(
+title: 'A Streetcar Named Desire',
+year: '1951',
+mpaa_rating: 'PG',
+description: 'Disturbed Blanche DuBois moves in with her sister in New Orleans and is tormented by her brutish brother-in-law while her reality crumbles around her.',
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+)
+
+series35 = Series.create(
+title: 'West Side Story',
+year: '1961',
+mpaa_rating: 'PG',
+description: 'Two youngsters from rival New York City gangs fall in love, but tensions between their respective friends build toward tragedy.',
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+)
+
+series36 = Series.create(
+title: 'Enter the Dragon',
+year: '1973',
+mpaa_rating: 'R',
+description: 'A martial artist agrees to spy on a reclusive crime lord using his invitation to a tournament there as cover.',
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+)
+
+series37 = Series.create(
+title: 'Breathless',
+year: '1960',
+mpaa_rating: 'PG-13',
+description: 'A small-time thief steals a car and impulsively murders a motorcycle policeman. Wanted by the authorities, he reunites with a hip American journalism student and attempts to persuade her to run away with him to Italy.',
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+)
+
+series38 = Series.create(
+title: 'Annie Hall',
+year: '1977',
+mpaa_rating: 'PG',
+description: 'Neurotic New York comedian Alvy Singer falls in love with the ditzy Annie Hall.',
 thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
 )
 
@@ -760,6 +817,76 @@ vid40 = Video.create(
   thumbnail_url: 'N/A'
 )
 
+vid41 = Video.create(
+  title: 'Undefeated',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series32.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/undefeated_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid42 = Video.create(
+  title: 'The Good, the Bad and the Ugly',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series33.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/goodbadugly_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid43 = Video.create(
+  title: 'A Streetcar Named Desire',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series34.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/streetcar_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid44 = Video.create(
+  title: 'West Side Story',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series35.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/westside_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid45 = Video.create(
+  title: 'Enter the Dragon',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series36.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/enterdragon_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid46 = Video.create(
+  title: 'Breathless',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series37.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/breathless_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid47 = Video.create(
+  title: 'Annie Hall',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series38.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/anniehall_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
 cat1 = Categorization.create(
   genre_id: genres.first.id,
   media_id: series1.id,
@@ -943,5 +1070,47 @@ cat30 = Categorization.create(
 cat31 = Categorization.create(
   genre_id: genres[2].id,
   media_id: series31.id,
+  media_type: 'Series'
+)
+
+cat32 = Categorization.create(
+  genre_id: genres[2].id,
+  media_id: series32.id,
+  media_type: 'Series'
+)
+
+cat33 = Categorization.create(
+  genre_id: genres[3].id,
+  media_id: series33.id,
+  media_type: 'Series'
+)
+
+cat34 = Categorization.create(
+  genre_id: genres[3].id,
+  media_id: series34.id,
+  media_type: 'Series'
+)
+
+cat35 = Categorization.create(
+  genre_id: genres[3].id,
+  media_id: series35.id,
+  media_type: 'Series'
+)
+
+cat36 = Categorization.create(
+  genre_id: genres[3].id,
+  media_id: series36.id,
+  media_type: 'Series'
+)
+
+cat37 = Categorization.create(
+  genre_id: genres[3].id,
+  media_id: series37.id,
+  media_type: 'Series'
+)
+
+cat38 = Categorization.create(
+  genre_id: genres[3].id,
+  media_id: series38.id,
   media_type: 'Series'
 )
