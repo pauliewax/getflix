@@ -12,8 +12,22 @@
   margin-top: 20px;
 }
 
+.footer .iconPanel {
+  display: inline-block;
+  border: 1px solid #999;
+  margin-bottom: 15px;
+}
+
+.footer i:first-of-type {
+  margin-left: .5em;
+}
+
+.footer i {
+  margin: .5em .5em .5em 0;
+}
+
 .footer aside {
-  margin-bottom: 1em;
+  margin-bottom: 15px;
 }
 
 .footer ul {
@@ -24,7 +38,16 @@
 
 .footer li {
   width: 25%;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
+}
+
+.footer li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer li a:hover {
+  text-decoration: underline;
 }
 
 .footer p {
