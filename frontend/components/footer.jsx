@@ -7,6 +7,17 @@ class Footer extends React.Component {
       super(props);
   }
 
+  checkPath(newProps) {
+    let footer = document.getElementsByClassName('footer')[0];
+    if (newProps.location === '/') {
+      footer.classList = ['footer footerLanding'];
+    } else if (newProps.location === '/login') {
+      footer.classList = ['footer footerLogin'];
+    } else {
+      footer.classList = ['footer'];
+    }
+  }
+  
   render() {
 
     return(

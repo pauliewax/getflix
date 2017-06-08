@@ -1,6 +1,7 @@
 .footer {
-  background-color: black;
-  color: #999;
+  width: 100%;
+  background-color: #141414;
+  color: gray;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,4 +54,14 @@
 .footer p {
   font-size: 11px;
   margin-bottom: 15px;
+}
+
+.footerLanding {
+  background-color: black;
+  color: #999;
+}
+
+.footerLogin {
+  background-color: #f3f3f3;
+  color: #777;
 }
