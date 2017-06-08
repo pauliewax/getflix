@@ -19,8 +19,8 @@ class Browse extends React.Component {
  }
 
  playOriginal() {
-  //  580 = videoId of goodbadugly
-   hashHistory.push(`/watch/580`);
+  //  158 = videoId of goodbadugly
+   hashHistory.push(`/watch/158`);
  }
 
  render()  {

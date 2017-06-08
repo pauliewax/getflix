@@ -14,7 +14,7 @@ class OriginalsMyList extends React.Component {
    let followedSeriesIds = Object.values(newProps.follows).map(follow => follow.series_id);
    let plus = document.getElementsByClassName('originalPlus')[0];
    let check = document.getElementsByClassName('originalCheck')[0];
-   if (followedSeriesIds.includes(682)) {
+   if (followedSeriesIds.includes(218)) {
      plus.classList.add('hideMyList');
      check.classList.remove('hideMyList');
    } else  {
@@ -24,16 +24,16 @@ class OriginalsMyList extends React.Component {
  }
 
  addOriginal() {
-  //  682 = seriesId of goodbadugly
+  //  218 = seriesId of goodbadugly
    let followedSeriesIds = Object.values(this.props.follows).map(follow => follow.series_id);
    let plus = document.getElementsByClassName('originalPlus')[0];
    let check = document.getElementsByClassName('originalCheck')[0];
-   if (followedSeriesIds.includes(682)) {
+   if (followedSeriesIds.includes(218)) {
      let removedFollowId;
      let iterableFollows = Object.values(this.props.follows);
      for (let i = 0; i < iterableFollows.length; i++) {
        let seriesFollow = iterableFollows[i];
-       if ( (seriesFollow.series_id === 682) && (this.props.user.id === seriesFollow.user_id) ) {
+       if ( (seriesFollow.series_id === 218) && (this.props.user.id === seriesFollow.user_id) ) {
          removedFollowId = seriesFollow.id;
        }
      }
@@ -43,7 +43,7 @@ class OriginalsMyList extends React.Component {
    } else {
      this.props.createFollow({
        user_id: this.props.user.id,
-       series_id: 682
+       series_id: 218
      });
      plus.classList.add('hideMyList');
      check.classList.remove('hideMyList');
