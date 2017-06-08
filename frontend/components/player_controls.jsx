@@ -10,11 +10,13 @@ class PlayerControls extends React.Component {
     this.fullScreen = this.fullScreen.bind(this);
     this.toggleSound = this.toggleSound.bind(this);
     this.timeTracker = this.timeTracker.bind(this);
+    this.resetPlayButton = this.resetPlayButton.bind(this);
   }
 
   componentDidMount() {
     let video = document.getElementById("videoPlayer");
     video.addEventListener("timeupdate", this.timeTracker);
+    video.addEventListener("timeupdate", this.resetPlayButton);
   }
 
   timeTracker() {
@@ -24,9 +26,21 @@ class PlayerControls extends React.Component {
     this.setState({seekerVal: value, currentTime: timeNow});
   }
 
+  resetPlayButton() {
+    let video = document.getElementById("videoPlayer");
+    let play = document.getElementById('videoPlay');
+    let pause = document.getElementById('videoPause');
+
+    if (video.currentTime === video.duration) {
+      play.classList.remove('hidePlay');
+      pause.classList.add('hidePlay');
+    }
+  }
+
   componentWillUnmount() {
     let video = document.getElementById("videoPlayer");
     video.removeEventListener("timeupdate", this.timeTracker);
+    video.removeEventListener("timeupdate", this.resetPlayButton);
   }
 
   pressPlay() {

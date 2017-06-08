@@ -27,7 +27,7 @@ series1 = Series.create(
   year: '2010',
   mpaa_rating: 'TV-14',
   description: 'Brit Karl Pilkington has led a sheltered life. Not having done any traveling, he enjoys living within the comforts of what he knows, basically that being what is purely British. As such, his friends, Ricky Gervais and Stephen Merchant, decide to send Karl to various parts of the world to experience unfamiliar cultures.',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/tv_idiot.jpg'
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_idiot.jpg'
 )
 
 series2 = Series.create(
@@ -35,7 +35,7 @@ title: 'TV Party',
 year: '1978',
 mpaa_rating: 'TV-PG',
 description: "Glenn O' Brien hosts a public-access television variety show.",
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/tv_tvparty.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_tvparty.jpg'
 )
 
 series3 = Series.create(
@@ -43,7 +43,7 @@ title: 'Curb Your Enthusiasm',
 year: '2000',
 mpaa_rating: 'TV-MA',
 description: '"Seinfeld" co-creator Larry David plays a version of himself on the improvised series.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/tv_curb.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_curb.jpg'
 )
 
 series4 = Series.create(
@@ -51,7 +51,7 @@ title: 'The Twilight Zone',
 year: '1959',
 mpaa_rating: 'TV-PG',
 description: 'Ordinary people find themselves in extraordinarily astounding situations, which they each try to solve in a remarkable manner.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/tv_twilight.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_twilight.jpg'
 )
 
 series5 = Series.create(
@@ -59,7 +59,7 @@ title: 'MTV Cribs',
 year: '2000',
 mpaa_rating: 'TV-14',
 description: "MTV's Cribs take you on exclusive tours through the domestic sanctuaries that some of today's most favorite stars call home.",
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/tv_cribs.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_cribs.jpg'
 )
 
 series6 = Series.create(
@@ -67,7 +67,7 @@ title: 'Ash vs Evil  Dead',
 year: '2015',
 mpaa_rating: 'TV-MA',
 description: "Ash has spent the last 30 years avoiding responsibility, maturity and the terrors of the Evil Dead until a Deadite plague threatens to destroy all of mankind and Ash becomes mankind's only hope.",
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/151023-news-ash-vs-evil-dead.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_evildead.jpg'
 )
 
 series7 = Series.create(
@@ -75,7 +75,7 @@ title: 'The Simpsons',
 year: '1989',
 mpaa_rating: 'TV-14',
 description: 'The satiric adventures of a working-class family in the misfit city of Springfield.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/the-latest-nfl-stadium-mess-or-old-man-yells-at-cloud-1424186090.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_simpsons.jpg'
 )
 
 series8 = Series.create(
@@ -83,7 +83,7 @@ title: 'Taxi',
 year: '1978',
 mpaa_rating: 'TV-PG',
 description: 'The staff of a New York City taxicab company go about their job while they dream of greater things.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/Taxi-Cast.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_taxi.jpg'
 )
 
 series9 = Series.create(
@@ -91,15 +91,15 @@ title: 'Louie',
 year: '2010',
 mpaa_rating: 'TV-MA',
 description: 'The life of Louis CK, a divorced comedian with two kids living in New York.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/louieheader2_0.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_louie.jpg'
 )
 
 series10 = Series.create(
-title: "It's Always Sunny in Philadelphia ",
+title: "It's Always Sunny in Philadelphia",
 year: '2005',
 mpaa_rating: 'TV-MA',
 description: "Five friends with big egos and slightly arrogant attitudes are the proprietors of an Irish bar in Philadelphia.",
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/679613.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_sunny.jpg'
 )
 
 series11 = Series.create(
@@ -107,7 +107,7 @@ title: 'Trigun',
 year: '1998',
 mpaa_rating: 'TV-14',
 description: 'Vash the Stampede is the most infamous outlaw on the planet Gunsmoke, and with a 60 billion double dollar price on his, head the most sought after!',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/1280x720-JON.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_trigun.jpg'
 )
 
 series12 = Series.create(
@@ -115,7 +115,7 @@ title: 'Queen',
 year: '1970',
 mpaa_rating: 'TV-PG',
 description: 'Queen are a British rock band that formed in London in 1970. Their classic line-up was Freddie Mercury, Brian May, Roger Taylor, and John Deacon.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/music_queen.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_queen.jpg'
 )
 
 series13 = Series.create(
@@ -123,7 +123,7 @@ title: 'The Ronettes',
 year: '1959',
 mpaa_rating: 'TV-PG',
 description: 'The Ronettes were an American girl group from New York City. One of the most popular groups from the 1960s, they placed nine songs on the Billboard Hot 100, five of which became Top 40 hits.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/music_ronettes.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_ronettes.jpg'
 )
 
 series14 = Series.create(
@@ -139,7 +139,7 @@ title: 'Lou Reed',
 year: '1972',
 mpaa_rating: 'TV-MA',
 description: 'Lewis Allan "Lou" Reed was an American musician, singer and songwriter. He was the guitarist, vocalist, and principal songwriter of the Velvet Underground, and his solo career spanned five decades.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/Untitled-1.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_loureed.jpg'
 )
 
 series16 = Series.create(
@@ -147,7 +147,7 @@ title: 'Patti Smith',
 year: '1975',
 mpaa_rating: 'TV-PG',
 description: 'Patricia Lee "Patti" Smith is an American singer-songwriter, poet, and visual artist who became an influential component of the New York City punk rock movement with her 1975 debut album Horses.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/patti.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_pattismith.jpg'
 )
 
 series17 = Series.create(
@@ -155,7 +155,7 @@ title: 'Black Flag',
 year: '1976',
 mpaa_rating: 'TV-MA',
 description: 'Black Flag was an American punk rock band formed in 1976 in Hermosa Beach, California.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/monster-children-henry-rollins-2.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_blackflag.jpg'
 )
 
 series18 = Series.create(
@@ -163,7 +163,7 @@ title: 'Chet Baker',
 year: '1956',
 mpaa_rating: 'TV-PG',
 description: 'Chesney Henry "Chet" Baker, Jr. was an American jazz trumpeter, flugelhornist, and vocalist.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/pg5x3otbejjx.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_chetbaker.jpg'
 )
 
 series19 = Series.create(
@@ -171,7 +171,7 @@ title: 'David Bowie',
 year: '1969',
 mpaa_rating: 'TV-PG',
 description: 'David Robert Jones, known professionally as David Bowie, was an English singer, songwriter and actor.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/maxresdefault3.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_bowie.jpg'
 )
 
 series20 = Series.create(
@@ -179,7 +179,7 @@ title: 'Aaliyah',
 year: '1998',
 mpaa_rating: 'TV-PG',
 description: 'Aaliyah Dana Haughton was an American singer, dancer, actress, and model.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/aaliyah.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_aaliyah.jpg'
 )
 
 series21 = Series.create(
@@ -187,7 +187,7 @@ title: 'Richard Hell & The Voidoids',
 year: '1975',
 mpaa_rating: 'TV-MA',
 description: 'Richard Hell is an American singer, songwriter, bass guitarist and writer. Richard Hell was an innovator of punk music and fashion.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/1363615654753.cached.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_richardhell.jpg'
 )
 
 series22 = Series.create(
@@ -195,7 +195,7 @@ title: 'Marvin Gaye',
 year: '1967',
 mpaa_rating: 'TV-PG',
 description: 'Marvin Gaye was an American singer, songwriter, session drummer and record producer.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/298017.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_marvingaye.jpg'
 )
 
 series23 = Series.create(
@@ -203,7 +203,7 @@ title: 'Talking Heads',
 year: '1977',
 mpaa_rating: 'TV-14',
 description: 'Talking Heads were an American rock band formed in 1975 in New York City and active until 1991. ',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/1076b985e0ec4ff096e04bfb4f93bc47.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_talkingheads.jpg'
 )
 
 series24 = Series.create(
@@ -211,7 +211,7 @@ title: 'Jackson 5',
 year: '1964',
 mpaa_rating: 'TV-PG',
 description: 'The Jackson 5, or Jackson Five, also known as the Jacksons in later years, are an American popular music group.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/music_jackson5.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_jackson5.jpg'
 )
 
 series25 = Series.create(
@@ -219,7 +219,7 @@ title: 'Nas',
 year: '1994',
 mpaa_rating: 'TV-MA',
 description: 'Nasir Bin Olu Dara Jones, better known by his stage name Nas, is an American rapper, record producer, actor and entrepreneur. ',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/music_nas.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_nas.jpg'
 )
 
 series26 = Series.create(
@@ -227,7 +227,7 @@ title: 'Redbone',
 year: '1973',
 mpaa_rating: 'TV-PG',
 description: 'Redbone is a Native American rock group originating in the 1970s with brothers Pat and Lolly Vegas. They reached the Top 5 on the U.S. Billboard Hot 100 chart in 1974 with their No. 5 hit single, "Come and Get Your Love".',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/music_redbone.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/music_redbone.jpg'
 )
 
 series27 = Series.create(
@@ -235,7 +235,7 @@ title: 'Senna',
 year: '2011',
 mpaa_rating: 'TV-14',
 description: "Ayrton Senna becomes a three-time Formula One racing champion and Brazil's national hero before his untimely death at age 34.",
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/sports_senna.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_senna.jpg'
 )
 
 series28 = Series.create(
@@ -243,7 +243,7 @@ title: 'I Am Ali',
 year: '2014',
 mpaa_rating: 'TV-14',
 description: "Muhammad Ali's own audio journals, friends, family and fellow boxers provide insight into the extraordinary life and legendary career of the pugilist.",
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/sports_ali.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_ali.jpg'
 )
 
 series29 = Series.create(
@@ -251,7 +251,7 @@ title: 'Red Bull BC One',
 year: '2013',
 mpaa_rating: 'TV-PG',
 description: "Red Bull BC One is the biggest one-on- one breakdancing competition in the world. Every year, thousands of dancers across the globe vie for a chance to represent at the World Final.",
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/sports_breaking.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_breaking.jpg'
 )
 
 series30 = Series.create(
@@ -259,7 +259,7 @@ title: 'Rule Yourself',
 year: '2016',
 mpaa_rating: 'TV-PG',
 description: "This summer, Michael Phelps is swimming for his last time at the Olympics and collecting a few more gold medals along the way.",
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/sports_phelps.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_phelps.jpg'
 )
 
 series31 = Series.create(
@@ -267,17 +267,17 @@ title: 'NBA Dunk Competition',
 year: '2016',
 mpaa_rating: 'TV-14',
 description: 'Where amazing happens.',
-thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/sports_dunk.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
 )
 
 vid1 = Video.create(
   title: 'NBA Dunk Competition',
-  description: 'Aaron Gordon and Zach LaVine face off in one of the most ridiculous dunk competitions in recent memory.',
-  length: '5m 43s',
+  description: 'N/A',
+  length: 'N/A',
   series_id: series31.id,
   episode_num: 1,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/nbadunks.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/sports_dunk.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/nba_video.mp4',
+  thumbnail_url: 'N/A'
 )
 
 vid2 = Video.create(
@@ -286,8 +286,8 @@ vid2 = Video.create(
   length: '28m',
   series_id: series3.id,
   episode_num: 1,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb1.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb1.jpg'
 )
 
 vid3 = Video.create(
@@ -296,8 +296,8 @@ vid3 = Video.create(
   length: '28m',
   series_id: series3.id,
   episode_num: 2,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb2.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb2.jpg'
 )
 
 vid4 = Video.create(
@@ -306,8 +306,8 @@ vid4 = Video.create(
   length: '28m',
   series_id: series3.id,
   episode_num: 3,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb3.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb3.jpg'
 )
 
 vid5 = Video.create(
@@ -316,8 +316,8 @@ vid5 = Video.create(
   length: '28m',
   series_id: series3.id,
   episode_num: 4,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb4.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb4.jpg'
 )
 
 vid6 = Video.create(
@@ -326,8 +326,8 @@ vid6 = Video.create(
   length: '28m',
   series_id: series3.id,
   episode_num: 5,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb5.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb5.jpg'
 )
 
 vid7 = Video.create(
@@ -336,8 +336,8 @@ vid7 = Video.create(
   length: '28m',
   series_id: series3.id,
   episode_num: 6,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb6.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb6.jpg'
 )
 
 vid8 = Video.create(
@@ -346,8 +346,8 @@ vid8 = Video.create(
   length: '28m',
   series_id: series3.id,
   episode_num: 7,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb7.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb7.jpg'
 )
 
 vid9 = Video.create(
@@ -356,8 +356,8 @@ vid9 = Video.create(
   length: '28m',
   series_id: series3.id,
   episode_num: 8,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb8.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb8.jpg'
 )
 
 vid10 = Video.create(
@@ -366,8 +366,8 @@ vid10 = Video.create(
   length: '28m',
   series_id: series3.id,
   episode_num: 9,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb9.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb9.jpg'
 )
 
 vid11 = Video.create(
@@ -376,8 +376,8 @@ vid11 = Video.create(
   length: '28m',
   series_id: series3.id,
   episode_num: 10,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/curb10.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/curb10.jpg'
 )
 
 vid12 = Video.create(
@@ -386,8 +386,8 @@ vid12 = Video.create(
   length: '24m',
   series_id: series4.id,
   episode_num: 1,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/twilight1.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight1.jpg'
 )
 
 vid12 = Video.create(
@@ -396,8 +396,8 @@ vid12 = Video.create(
   length: '24m',
   series_id: series4.id,
   episode_num: 2,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/twilight2.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight2.jpg'
 )
 
 vid12 = Video.create(
@@ -406,8 +406,8 @@ vid12 = Video.create(
   length: '24m',
   series_id: series4.id,
   episode_num: 3,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/twilight3.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight3.jpg'
 )
 
 vid12 = Video.create(
@@ -416,8 +416,8 @@ vid12 = Video.create(
   length: '24m',
   series_id: series4.id,
   episode_num: 4,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/twilight4.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight4.jpg'
 )
 
 vid12 = Video.create(
@@ -426,8 +426,8 @@ vid12 = Video.create(
   length: '24m',
   series_id: series4.id,
   episode_num: 5,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/twilight5.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight5.jpg'
 )
 
 vid12 = Video.create(
@@ -436,8 +436,8 @@ vid12 = Video.create(
   length: '24m',
   series_id: series4.id,
   episode_num: 6,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/twilight6.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight6.jpg'
 )
 
 vid12 = Video.create(
@@ -446,8 +446,8 @@ vid12 = Video.create(
   length: '24m',
   series_id: series4.id,
   episode_num: 7,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/twilight7.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight7.jpg'
 )
 
 vid12 = Video.create(
@@ -456,8 +456,8 @@ vid12 = Video.create(
   length: '24m',
   series_id: series4.id,
   episode_num: 8,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/twilight8.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight8.jpg'
 )
 
 vid12 = Video.create(
@@ -466,8 +466,8 @@ vid12 = Video.create(
   length: '24m',
   series_id: series4.id,
   episode_num: 9,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/twilight9.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight9.jpg'
 )
 
 vid12 = Video.create(
@@ -476,8 +476,288 @@ vid12 = Video.create(
   length: '24m',
   series_id: series4.id,
   episode_num: 10,
-  video_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/rickroll.mp4',
-  thumbnail_url: 'http://www.pauliewax.com/wp-content/uploads/2017/04/twilight10.jpg'
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight_video.mp4',
+  thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/twilight10.jpg'
+)
+
+vid13 = Video.create(
+  title: 'An Idiot Abroad',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series1.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/idiot_abroad_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid14 = Video.create(
+  title: 'TV Party',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series2.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/tv_party_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid15 = Video.create(
+  title: 'MTV Cribs',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series5.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/cribs_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid16 = Video.create(
+  title: 'Ash vs Evil Dead',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series6.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/evil_dead_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid17 = Video.create(
+  title: 'The Simpsons',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series7.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/simpsons_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid18 = Video.create(
+  title: 'Taxi',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series8.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/taxi_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid19 = Video.create(
+  title: 'Louie',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series9.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/louie_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid20 = Video.create(
+  title: "It's Always Sunny in Philadelphia",
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series10.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sunny_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid21 = Video.create(
+  title: 'Trigun',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series11.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/trigun_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid22 = Video.create(
+  title: 'Queen',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series12.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/queen_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid23 = Video.create(
+  title: 'The Ronettes',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series13.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/ronettes_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid24 = Video.create(
+  title: 'The Beach Boys',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series14.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/beachboys_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid25 = Video.create(
+  title: 'Lou Reed',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series15.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/loureed_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid26 = Video.create(
+  title: 'Patti Smith',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series16.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/pattismith_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid27 = Video.create(
+  title: 'Black Flag',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series17.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/blackflag_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid28 = Video.create(
+  title: 'Chet Baker',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series18.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/chetbaker_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid29 = Video.create(
+  title: 'David Bowie',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series19.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/bowie_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid30 = Video.create(
+  title: 'Aaliyah',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series20.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/aaliyah_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid31 = Video.create(
+  title: 'Richard Hell & The Voidoids',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series21.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/richardhell_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid32 = Video.create(
+  title: 'Marvin Gaye',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series22.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/marvingaye_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid33 = Video.create(
+  title: 'Talking Heads',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series23.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/talkingheads_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid34 = Video.create(
+  title: 'Jackson 5',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series24.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/jackson5_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid35 = Video.create(
+  title: 'Nas',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series25.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/nas_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid36 = Video.create(
+  title: 'Redbone',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series26.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/redbone_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid37 = Video.create(
+  title: 'Senna',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series27.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/senna_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid38 = Video.create(
+  title: 'I Am Ali',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series28.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/ali_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid39 = Video.create(
+  title: 'Red Bull BC One',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series29.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/bcone_video.mp4',
+  thumbnail_url: 'N/A'
+)
+
+vid40 = Video.create(
+  title: 'Rule Yourself',
+  description: 'N/A',
+  length: 'N/A',
+  series_id: series30.id,
+  episode_num: 1,
+  video_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/phelps_video.mp4',
+  thumbnail_url: 'N/A'
 )
 
 cat1 = Categorization.create(
