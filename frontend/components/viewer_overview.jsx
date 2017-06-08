@@ -65,7 +65,7 @@ class SeriesOverview extends React.Component {
   removeFollow(e) {
     let removedFollowId;
     let iterableFollows = Object.values(this.props.follows);
-    for (var i = 0; i < iterableFollows.length; i++) {
+    for (let i = 0; i < iterableFollows.length; i++) {
       let seriesFollow = iterableFollows[i];
       let thisSeries = this.props.seriesDetail.id;
       if ( (seriesFollow.series_id === thisSeries) && (this.props.user.id === seriesFollow.user_id) ) {
