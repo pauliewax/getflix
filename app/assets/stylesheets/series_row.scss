@@ -71,6 +71,11 @@
   transform-origin: center;
 }
 
+.seriesRow li:first-of-type .series {
+  transform-origin: center left;
+}
+
+
 .seriesRow li {
   width: 16.66%;
   margin-right: .2vw;
