@@ -3,15 +3,14 @@ import { connect } from 'react-redux';
 import { hashHistory } from 'react-router';
 import { fetchAllSeries } from '../actions/series_actions';
 import { fetchGenres } from '../actions/genre_actions';
-import { createFollow, deleteFollow } from '../actions/follow_actions';
 import SeriesRow from './series_row';
 import BrowseGenre from './browse_genre';
+import OriginalsMyList from './originals_mylist';
 
 
 class Browse extends React.Component {
  constructor(props) {
    super(props);
-   this.addOriginal = this.addOriginal.bind(this);
    this.playOriginal = this.playOriginal.bind(this);
  }
 
@@ -22,27 +21,6 @@ class Browse extends React.Component {
  playOriginal() {
   //  580 = videoId of goodbadugly
    hashHistory.push(`/watch/580`);
- }
-
- addOriginal() {
-  //  682 = seriesId of goodbadugly
-   let followedSeriesIds = Object.values(this.props.follows).map(follow => follow.series_id);
-   if (followedSeriesIds.includes(682)) {
-     let removedFollowId;
-     let iterableFollows = Object.values(this.props.follows);
-     for (let i = 0; i < iterableFollows.length; i++) {
-       let seriesFollow = iterableFollows[i];
-       if ( (seriesFollow.series_id === 682) && (this.props.user.id === seriesFollow.user_id) ) {
-         removedFollowId = seriesFollow.id;
-       }
-     }
-     this.props.deleteFollow(removedFollowId);
-   } else {
-     this.props.createFollow({
-       user_id: this.props.user.id,
-       series_id: 682
-     });
-   }
  }
 
  render()  {
@@ -87,7 +65,7 @@ class Browse extends React.Component {
            <text>Dry air. Wet code. Escape is not defined. See how it all unfolds when the stack limit is reached in this critically acclaimed spaghetti coder.</text>
            <div>
              <button onClick={this.playOriginal} className="splashPlay"><i className="fa fa-play"></i>Play</button>
-             <button onClick={this.addOriginal} className="splashList"><i className="fa fa-check"></i>My List</button>
+             <OriginalsMyList />
            </div>
          </aside>
        </section>
@@ -104,8 +82,6 @@ const mapStateToProps = (state, ownProps) => {
   return {
     seriesList: state.series.seriesList,
     genres: state.genre,
-    follows: state.follows,
-    user: state.session.currentUser
   };
 };
 
@@ -113,8 +89,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     fetchAllSeries: () => (dispatch(fetchAllSeries())),
     fetchGenres: () => (dispatch(fetchGenres())),
-    createFollow: (follow) => (dispatch(createFollow(follow))),
-    deleteFollow: (followId) => (dispatch(deleteFollow(followId)))
   };
 };
 

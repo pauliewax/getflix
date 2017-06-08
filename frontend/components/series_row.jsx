@@ -69,7 +69,7 @@ class SeriesRow extends React.Component {
       (newProps.seriesDetail === this.props.seriesDetail) &&
       (newProps.follows !== this.props.follows)
     ) {
-      // do nothing, follows have changed but still looking at same item (Only rows on browse page trigger this case)
+      // do nothing, follows have changed but still looking at same item
     } else {
         thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
         thisViewer.classList.remove('viewerShow');
