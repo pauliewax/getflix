@@ -276,7 +276,7 @@ title: 'Undefeated',
 year: '2011',
 mpaa_rating: 'PG-13',
 description: 'Chronicles three underprivileged students from inner-city Memphis and their volunteer coach who tries to help them beat the odds on and off the field.',
-thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_undefeated.jpg'
 )
 
 series33 = Series.create(
@@ -284,7 +284,7 @@ title: 'The Good, the Bad and the Ugly',
 year: '1966',
 mpaa_rating: 'TV-14',
 description: 'A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.',
-thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/classics_goodbadugly.jpg'
 )
 
 series34 = Series.create(
@@ -292,7 +292,7 @@ title: 'A Streetcar Named Desire',
 year: '1951',
 mpaa_rating: 'PG',
 description: 'Disturbed Blanche DuBois moves in with her sister in New Orleans and is tormented by her brutish brother-in-law while her reality crumbles around her.',
-thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/classics_streetcar.jpg'
 )
 
 series35 = Series.create(
@@ -300,7 +300,7 @@ title: 'West Side Story',
 year: '1961',
 mpaa_rating: 'PG',
 description: 'Two youngsters from rival New York City gangs fall in love, but tensions between their respective friends build toward tragedy.',
-thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/classics_westside.jpg'
 )
 
 series36 = Series.create(
@@ -308,7 +308,7 @@ title: 'Enter the Dragon',
 year: '1973',
 mpaa_rating: 'R',
 description: 'A martial artist agrees to spy on a reclusive crime lord using his invitation to a tournament there as cover.',
-thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/classics_enterdragon.jpg'
 )
 
 series37 = Series.create(
@@ -316,7 +316,7 @@ title: 'Breathless',
 year: '1960',
 mpaa_rating: 'PG-13',
 description: 'A small-time thief steals a car and impulsively murders a motorcycle policeman. Wanted by the authorities, he reunites with a hip American journalism student and attempts to persuade her to run away with him to Italy.',
-thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/classics_breathless.jpg'
 )
 
 series38 = Series.create(
@@ -324,7 +324,7 @@ title: 'Annie Hall',
 year: '1977',
 mpaa_rating: 'PG',
 description: 'Neurotic New York comedian Alvy Singer falls in love with the ditzy Annie Hall.',
-thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/sports_dunk.jpg'
+thumbnail_url: 'https://s3.us-east-2.amazonaws.com/getflix-pro/classics_anniehall.jpg'
 )
 
 vid1 = Video.create(
