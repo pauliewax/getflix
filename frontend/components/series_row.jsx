@@ -50,7 +50,6 @@ class SeriesRow extends React.Component {
     let seriesIds = this.props.row.map(serie=>serie.id);
     let thisViewer,
         selectedSerie;
-
     if (newProps.seriesDetail) {
       selectedSerie = document.getElementsByClassName(`serie-${newProps.seriesDetail.id}`)[0];
       for (let i = 0; i < this.props.row.length; i++) {
@@ -66,6 +65,11 @@ class SeriesRow extends React.Component {
         thisViewer.classList.add('viewerShow');
         selectedSerie = document.getElementsByClassName(`serie-${newProps.seriesDetail.id}`)[0];
         selectedSerie.classList.add('highlightSerie');
+    } else if (
+      (newProps.seriesDetail === this.props.seriesDetail) &&
+      (newProps.follows !== this.props.follows)
+    ) {
+      // do nothing, follows have changed but still looking at same item (Only rows on browse page trigger this case)
     } else {
         thisViewer = document.getElementsByClassName(`viewer-${this.props.rowId}`)[0];
         thisViewer.classList.remove('viewerShow');
@@ -90,7 +94,8 @@ class SeriesRow extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    seriesDetail: state.series.seriesDetail
+    seriesDetail: state.series.seriesDetail,
+    follows: state.follows
   };
 };
 
