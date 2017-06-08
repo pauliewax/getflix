@@ -23,11 +23,11 @@ class MyList extends React.Component {
   }
 
   render() {
-    let seriesRows = [];
+    let seriesRows = <p className="emptyList">You haven't added any titles to your list yet.</p>;
     let follows = [];
     let followedSeries = [];
 
-    if (this.props.follows) {
+    if (Object.keys(this.props.follows).length > 0) {
       follows = Object.values(this.props.follows);
       followedSeries = follows.map(follow=>follow.series);
       let rows = this.generateRows(followedSeries);

@@ -16,5 +16,13 @@
   margin: 0 auto;
   width: 93%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+
+}
+
+.myList .emptyList {
+  color: #666;
+  font-size: 18px;
+  margin: 0px;
 }

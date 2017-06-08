@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import Series from './series';
 import SeriesViewer from './series_viewer';
 import { fetchSerie } from '../actions/series_actions';
@@ -67,7 +68,8 @@ class SeriesRow extends React.Component {
         selectedSerie.classList.add('highlightSerie');
     } else if (
       (newProps.seriesDetail === this.props.seriesDetail) &&
-      (newProps.follows !== this.props.follows)
+      (newProps.follows !== this.props.follows) &&
+      (this.props.location !== '/mylist')
     ) {
       // do nothing, follows have changed but still looking at same item
     } else {
@@ -95,7 +97,8 @@ class SeriesRow extends React.Component {
 const mapStateToProps = (state, ownProps) => {
   return {
     seriesDetail: state.series.seriesDetail,
-    follows: state.follows
+    follows: state.follows,
+    location: ownProps.router.location.pathname,
   };
 };
 
@@ -106,4 +109,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SeriesRow);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SeriesRow));
