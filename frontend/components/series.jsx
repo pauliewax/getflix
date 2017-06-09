@@ -10,8 +10,12 @@ class Series extends React.Component {
       this.handlePlay = this.handlePlay.bind(this);
   }
 
-  handleClick() {
+  handleClick(e) {
     this.props.fetchSerie(this.props.serie.id);
+    let thisSerie = $(`.serie-${this.props.serie.id}`).first();
+    $('html, body').animate({
+        scrollTop: thisSerie.offset().top
+    }, 1000, 'swing');
   }
 
   handlePlay() {
